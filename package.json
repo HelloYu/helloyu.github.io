@@ -1,0 +1,26 @@
+{
+	"name": "helloyu-vitepress",
+	"version": "1.0.0",
+	"description": "一位喜欢编程的大叔，善于利用软件解决实际问题！",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "vitepress dev",
+		"build": "vitepress build",
+		"preview": "vitepress preview"
+	},
+	"author": "HelloYu",
+	"license": "ISC",
+	"devDependencies": {
+		"@tailwindcss/typography": "^0.5.10",
+		"@types/node": "^20.8.3",
+		"fast-glob": "^3.3.1",
+		"gray-matter": "^4.0.3",
+		"lodash": "^4.17.21",
+		"markdown-to-txt": "^2.0.1",
+		"tailwindcss": "^3.3.3",
+		"vite-tsconfig-paths": "^4.2.1",
+		"vitepress": "1.0.0-rc.20",
+		"vue": "^3.3.4"
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"baseUrl": ".",
+		"moduleResolution": "bundler",
+		"allowJs": true,
+		"strict": true,
+		"jsx": "preserve"
+	},
+	"include": ["./.vitepress/**/*", "./page"],
+	"exclude": ["node_modules", "./.vitepress/cache", "./.vitepress/dist"]
+}
