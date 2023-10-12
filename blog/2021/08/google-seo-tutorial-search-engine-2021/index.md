@@ -2,7 +2,6 @@
 title: "2021谷歌SEO优化入门：Google搜索引擎是怎么工作的？"
 date: "2021-08-18"
 categories: 
-
   - "SEO教程"
 tags: 
   - "SEO免费教程"
@@ -13,11 +12,11 @@ coverImage: "Google SEO优化-tutorial.jpg"
 
 前段时间，SEO禅写了一篇[SEO禅站点谷歌排名情况分析](https://www.seozen.top/seozen-google-ranking-july.html)文章，记录在这段时间SEO禅在谷歌的排名情况，谷歌还是很给面子的，很多个有流量的关键词已经排名到首页，每天有真实的流量进来，许多其他的关键词也在陆续上升，关键词库在不断扩大：
 
-![seozen-Google SEO优化-keywords-bank](images/seozen-Google SEO优化-keywords-bank-1024x729.png)
+![seozen-google-seo-keywords-bank](images/seozen-google-seo-keywords-bank-1024x729.png)
 
 谷歌SEO禅关键词库
 
-上面是**GSC谷歌站长**后台最近28天的关键词情况，有682个关键词有展现，截止目前，[SEO禅](https://www.seozen.top)发表的文章也才93篇，如果按这样算，那平均每篇文章是7个关键词左右，当然实际肯定是不能这么算的，这里只想说明一件事，如果没有做**谷歌SEO优化**，是不可能有这么大的**SEO关键词库**，靠伪原创和采集的文章，也是不可能达到这样的**SEO点击率**的，点击率就是**点击数/**展现量****，这个比值百分比是越大越好，表明你的文章标题取的很有诱惑力，能抓住用户的眼球，写**SEO文章标题**的方法，SEO禅过一段时间单独再来分析，好了废话这么多，下面就开始分享下**如何做[谷歌SEO](https://www.seozen.top/Google SEO优化-tutorial-starter-guide-2021.html)优化**。
+上面是**GSC谷歌站长**后台最近28天的关键词情况，有682个关键词有展现，截止目前，[SEO禅](https://www.seozen.top)发表的文章也才93篇，如果按这样算，那平均每篇文章是7个关键词左右，当然实际肯定是不能这么算的，这里只想说明一件事，如果没有做**谷歌SEO优化**，是不可能有这么大的**SEO关键词库**，靠伪原创和采集的文章，也是不可能达到这样的**SEO点击率**的，点击率就是**点击数/展现量**，这个比值百分比是越大越好，表明你的文章标题取的很有诱惑力，能抓住用户的眼球，写**SEO文章标题**的方法，SEO禅过一段时间单独再来分析，好了废话这么多，下面就开始分享下**如何做[谷歌SEO](https://www.seozen.top/google-seo-tutorial-starter-guide-2021.html)优化**。
 
 ## 谷歌搜索基本原理
 
