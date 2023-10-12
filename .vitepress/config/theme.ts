@@ -18,8 +18,7 @@ export const themeConfig: DefaultTheme.Config = {
 	},
 	// 编辑链接配置
 	editLink: {
-		pattern:
-			'https://github.com/HelloYu/helloyu-vitepress-blog/edit/main/:path',
+		pattern: 'https://github.com/HelloYu/helloyu.github.io/edit/main/:path',
 		text: '如有不妥，请提PR修正，感谢！',
 	},
 	nav: [
