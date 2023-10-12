@@ -17,12 +17,12 @@ coverImage: "Symbolic-Links-vs-Hard-Links-Illustrated-1024x576-1.png"
 
 ## 什么是inode？
 
-用简单的语言去解释，inode就是一个登录表，上面记录着真正的文件数据在硬盘上的位置，和这些数据的各种信息，比如文件权限信息，文件创建者，大小等信息，这些都是文件的**元(meta)信息**。
+用简单的语言去解释，inode就是一个登记表，上面记录着真正的文件数据在硬盘上的位置，和这些数据的各种信息，比如文件权限信息，文件创建者，大小等信息，这些都是文件的**元(meta)信息**。
 
 ## 硬链接和软链接的区别？
 
 从上图我们可以看出来最直观的区别，就是**hard link**是直接指向`inode`节点的，而`soft link`不是，其实soft link就像是windows的快捷方式，而hard link相当于文件副本，下面用代码作个测试就知道他们之间的区别：
-
+```bash
 \[seozen@Linux\]$ touch f1          #创建一个测试文件f1
 \[seozen@Linux\]$ ln f1 f2          #创建f1的一个硬连接文件f2
 \[seozen@Linux\]$ ln -s f1 f3       #创建f1的一个符号连接文件f3
@@ -31,9 +31,9 @@ total 0
 9797532 -rw-r--r-- 2 seozen seo 0 May 06 08:11 f1
 9797532 -rw-r--r-- 2 seozen seo 0 May 06 08:11 f2
 9797598 lrwxrwxrwx  1 seozen seo 2 May 06 08:11 f3 -> f1
-
+```
 可以看到f1和f2有相同的**inode号**，而软链接f3的inode号就不一样了，这里记住硬链接只能链接同一个硬盘下的内容，而且只能是文件，使用软链接就没有这些限制，他们还有一些特性的区别，用代码解释下：
-
+```bash
 \[seozen@Linux\]$ echo "SEO禅 hello world" >>f1
 \[seozen@Linux\]$ cat f1
 SEO禅 hello world
@@ -46,5 +46,5 @@ SEO禅 hello world
 SEO禅 hello world
 \[seozen@Linux\]$ cat f3
 cat: f3: No such file or directory
-
+```
 向原文件`f1`写入内容从其它文件打开都是一样的，如果把f1删除，对于f2没有影响，但是f3就成了死链接，如果删除f2那这个文件才算真正删除，如果删除f3，对f1和f2都没有影响。
