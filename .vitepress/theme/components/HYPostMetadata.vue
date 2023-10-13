@@ -1,6 +1,6 @@
 <template>
   <div class="meta-wrapper">
-    <div class="meta-item w-full sm:w-fit" v-if="post?.date?.formatted">
+    <div class="meta-item w-full sm:w-fit" v-if="publishedAt">
       <span class="meta-icon date">
         <svg role="img" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
           <title>发布时间</title>
@@ -12,11 +12,11 @@
           </path>
         </svg>
       </span>
-      <time class="meta-content" :datetime="post.date.formatted">{{
-        post.date.formatted
+      <time class="meta-content" :datetime="publishedAt">{{
+        publishedAt
       }}</time>
     </div>
-    <div class="meta-item w-full sm:w-fit" v-if="showCategory && post?.categories?.length">
+    <div class="meta-item w-full sm:w-fit" v-if="showCategory && categories?.length">
       <span class="meta-icon category">
         <svg role="img" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
           <title>所属分类</title>
@@ -26,13 +26,13 @@
         </svg>
       </span>
       <span class="meta-content ">
-        <span v-for="(category, index) in post?.categories" :key="index">
+        <span v-for="(category, index) in categories" :key="index">
           <a :href="withBase(`/archives?category=${category}`)" target="_blank" :title="category">{{ category }}</a>
-          <span v-if="index != post?.categories?.length - 1">, </span>
+          <span v-if="index != categories?.length - 1">, </span>
         </span>
       </span>
     </div>
-    <div class="meta-item tag w-full sm:w-fit" v-if="post?.tags?.length">
+    <div class="meta-item tag w-full sm:w-fit" v-if="tags?.length">
       <span class="meta-icon tag">
         <svg role="img" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
           <title>标签列表</title>
@@ -42,10 +42,10 @@
         </svg>
       </span>
       <span class="meta-content ">
-        <span v-for="(tag, index) in post.tags" :key="index">
+        <span v-for="(tag, index) in tags" :key="index">
           <a :href="withBase(`/archives?tag=${tag}`)" target="_blank" :title="tag">{{ tag
           }}</a>
-          <span v-if="index != post?.tags?.length - 1">, </span>
+          <span v-if="index != tags?.length - 1">, </span>
         </span>
       </span>
     </div>
@@ -53,23 +53,19 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, toRefs } from 'vue';
-import { useData, withBase } from 'vitepress';
-import { Post } from '../composables/posts.data';
-
+import { toRef, toRefs } from 'vue';
+import { withBase } from 'vitepress';
 
 // 定义文章属性
 const props = defineProps<{
-  post: Post,
+  publishedAt: string,
+  categories: string[],
+  tags: string[],
   showCategory?: Boolean
 }>();
 
-const { post } = toRefs(props)
-const showCategory = props.showCategory ?? true
-
-// 初始化文章元数据信息
-const { theme, page } = useData();
-
+const { publishedAt, categories, tags } = toRefs(props)
+const showCategory = toRef(props.showCategory ?? true)
 </script>
 
 <style scoped>

@@ -112,11 +112,11 @@
         <p class="text-sm mb-8">点击上方标签，查看标签下的所有文章</p>
       </div>
       <ul class="divide-y divide-gray-200 dark:divide-slate-200/5">
-        <li class="p-4 flex justify-between flex-col 2xl:flex-row" v-for=" post   of   postsByTag[selectTag]  ">
+        <li class="p-4 flex justify-between flex-col 2xl:flex-row" v-for="post of postsByTag[selectTag]  ">
           <div class="text">
             <a :href="withBase(post.url)" target="_blank">{{ post.title }}</a>
           </div>
-          <Metadata :post="post" />
+          <Metadata :categories="post?.categories" :tags="post?.tags" :published-at="post?.date?.formatted" />
         </li>
       </ul>
     </div>
@@ -142,7 +142,7 @@ const toggleTag = (tagTitle: string) => {
 
 if (inBrowser) {
   const params = new URLSearchParams(window.location.search)
-  const tag = params.get('tag') // returns the number 123
+  const tag = params.get('tag')
   if (tag) {
     toggleTag(tag)
   }

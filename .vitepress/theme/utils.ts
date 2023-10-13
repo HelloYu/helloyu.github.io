@@ -4,41 +4,50 @@ import matter from 'gray-matter'
 import { markdownToTxt } from 'markdown-to-txt'
 
 /**
- * 根据条件标记文章类型
+ * 生成文章描述信息
  */
-export async function generateArticleType(
+export async function generatePageMeta(
 	pageData: PageData,
 	ctx: TransformPageContext
 ) {
+	const content = readFile(pageData.filePath)
+	if (!content) return
+
+	const data = matter(content)
+
+	pageData.frontmatter.articleType = generateArticleType(pageData, ctx)
+	pageData.description = generateArticleDescription(data.content)
+}
+
+/**
+ * 根据条件标记文章类型
+ */
+function generateArticleType(pageData: PageData, ctx: TransformPageContext) {
 	const config = ctx?.siteConfig?.site?.themeConfig
 	const postsPattern = 'blog/'
 	if (pageData.frontmatter.layout == 'home') return
 	if (pageData.relativePath.includes(postsPattern)) {
-		pageData.frontmatter.articleType = 'post'
+		return 'post'
 	} else {
-		pageData.frontmatter.articleType = 'topic'
+		return 'topic'
 	}
 }
 
-/**
- * 生成文章描述信息
- */
-export async function generateDescription(
-	pageData: PageData,
-	ctx: TransformPageContext
-) {
-	const filepath = pageData.filePath
+function generateArticleDescription(content: string): string {
+	// 移除所有html标签
+	const data = content.replace(/<[^>]+>/g, '')
+	// 移除所有连续空格
+	const result = markdownToTxt(data).replace(/\s+/g, ' ')
+	return result.length > 200 ? result.slice(0, 180) : result
+}
+
+export function readFile(filepath: string): string | null {
 	if (fs.existsSync(filepath)) {
 		const content = fs.readFileSync(filepath, 'utf-8')
-		const data = matter(content)
-		const result = markdownToTxt(data.content.replace(/<[^>]+>/g, '')).replace(
-			/\s+/g,
-			' '
-		)
-		pageData.description = result.length > 200 ? result.slice(0, 180) : result
+		return content
 	}
+	return null
 }
-
 /**
  * 获取生肖图标
  *

@@ -19,4 +19,19 @@ export const localSearchOptions: DefaultTheme.LocalSearchOptions = {
 			},
 		},
 	},
+	miniSearch: {
+		searchOptions: {
+			bm25: {
+				k: 1.2,
+				b: 2,
+				d: 0.5,
+			},
+			prefix: true,
+			fuzzy: true,
+			fields: ['title', 'text'],
+			boost: {
+				title: 2,
+			},
+		},
+	},
 }

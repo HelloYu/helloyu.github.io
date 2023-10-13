@@ -26,13 +26,13 @@ export default createContentLoader(POST_FILES, {
 			index == -1 ? EXCERPT_LENGTH : index
 		)
 	},
+	includeSrc: true,
 	transform(raw): Post[] {
 		return raw
-			.map(({ url, frontmatter, excerpt }) => {
+			.map(({ url, frontmatter, excerpt, src }) => {
 				return {
-					title: frontmatter.title,
+					title: generateTitle(frontmatter, src),
 					categories: frontmatter?.categories ?? [],
-					description: excerpt,
 					tags: frontmatter.tags ?? [],
 					url: url,
 					excerpt,
@@ -42,6 +42,23 @@ export default createContentLoader(POST_FILES, {
 			.sort((a, b) => b.date.time - a.date.time)
 	},
 })
+
+function generateTitle(
+	frontmatter: Record<string, any>,
+	src: string | undefined
+): string {
+	if (frontmatter?.title && frontmatter.title !== '') return frontmatter.title
+	if (src) {
+		const regex = /^# (.+)$/gm
+		const match = regex.exec(src)
+
+		if (match) {
+			return match[1]
+		}
+	}
+
+	return ''
+}
 
 function formatDate(raw: string): Post['date'] {
 	const date = new Date(raw)

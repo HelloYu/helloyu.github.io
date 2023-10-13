@@ -34,7 +34,8 @@
               <a :href="withBase(article.url)" class="title inline-block text-base" target="_blank">{{
                 article.title
               }}</a>
-              <Metadata :post="article" />
+              <Metadata :categories="article?.categories" :tags="article?.tags"
+                :published-at="article?.date?.formatted" />
             </span>
           </div>
         </div>

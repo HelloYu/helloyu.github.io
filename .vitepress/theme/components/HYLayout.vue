@@ -2,7 +2,9 @@
 <template>
   <Layout>
     <template #doc-before>
-      <PostHeader />
+      <ClientOnly>
+        <PostHeader v-if="frontmatter.layout !== 'home'" />
+      </ClientOnly>
     </template>
     <template #doc-footer-before>
       <ClientOnly>
@@ -56,7 +58,6 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     )}px at ${x}px ${y}px)`
   ]
 
-
   // @ts-ignore
   await document.startViewTransition(async () => {
     isDark.value = !isDark.value
@@ -72,10 +73,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     }
   )
 
-
 })
-
-
 
 </script>
 <style>
