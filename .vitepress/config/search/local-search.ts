@@ -34,4 +34,10 @@ export const localSearchOptions: DefaultTheme.LocalSearchOptions = {
 			},
 		},
 	},
+	_render(src, env, md) {
+		const html = md.render(src, env)
+		if (env.frontmatter?.title && html.indexOf('h1') == -1)
+			return md.render(`# ${env.frontmatter.title}`) + html
+		return html
+	},
 }

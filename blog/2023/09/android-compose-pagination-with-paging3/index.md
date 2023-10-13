@@ -1,4 +1,5 @@
 ---
+title: 'Android Compose开发：使用Paging3进行分页加载'
 date: '2023-09-15'
 categories:
   - 'Android开发'
@@ -6,7 +7,6 @@ tags:
   - 'Android Compose开发'
 coverImage: 'android-jetpack-paging3.jpg'
 ---
-# Android Compose开发：使用Paging3进行分页加载
 ## Paging3 介绍
 
 Paging 3 是 Android 架构组件的一部分，旨在帮助 Android 应用程序有效地管理和显示大量数据。它专门用于处理分页加载，可以轻松地从网络或本地数据库加载数据，并以分页的方式显示在用户界面上。以下是 Paging 3 的简单介绍：

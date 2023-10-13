@@ -7,7 +7,6 @@ tags:
   - "Android Compose开发"
 coverImage: "android-compose-hilt-dependency-injection.png"
 ---
-# Android Compose开发：使用Hilt实现依赖注入管理
 
 当在 Jetpack Compose 中使用 Hilt 时，可以充分发挥依赖注入的优势，使你的应用更加模块化、可维护和可测试。本文将为你介绍如何在 Compose 中使用 Hilt 进行依赖注入，以及其优势和常见用法。
 ## 什么是Hilt？
