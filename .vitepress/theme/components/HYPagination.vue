@@ -2,7 +2,7 @@
   <nav aria-label="Page navigation ">
     <ul class="list-style-none flex">
       <li v-if="page !== firstPage">
-        <a class="relative block rounded bg-transparent h-[35px] flex items-center justify-center text-center text-xs sm:text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+        <a class="relative block rounded bg-transparent h-[35px] px-2 flex items-center justify-center text-center text-xs sm:text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
           :href="props.url + (page - 1)">上一页</a>
       </li>
       <li v-for="item of pagination">
@@ -15,7 +15,7 @@
         <span v-if="item == moreMark">{{ item }}</span>
       </li>
       <li v-if="page !== lastPage">
-        <a class="relative block rounded bg-transparent h-[35px] flex items-center justify-center text-center text-xs sm:text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+        <a class="relative block rounded bg-transparent h-[35px]  px-2 flex items-center justify-center text-center text-xs sm:text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
           :href="props.url + (page + 1)">下一页</a>
       </li>
     </ul>
