@@ -75,4 +75,4 @@ systemctl list-unit-files | grep httpd
 
 到这里就已经完成了Centos 7配置Apache服务器的步骤，接下来就需要**配置PHP和MySQL**，那就看下一篇文章吧：《[2021最新WordPress安装教程（二）：安装PHP和MySQL](https://www.seozen.top/wordpress-php-mysql-2021.html)》
 
-如果有想学习了解**SEO优化**的朋友，可以看看SEO禅写的《[SEO优化入门一篇就够](https://www.seozen.top/SEO教程-first-step.html)》这篇文章，希望对各位有所帮助，有什么不懂得可以留言评论。
+如果有想学习了解**SEO优化**的朋友，可以看看SEO禅写的《[SEO优化入门一篇就够](https://www.seozen.top/seo-course-first-step.html)》这篇文章，希望对各位有所帮助，有什么不懂得可以留言评论。

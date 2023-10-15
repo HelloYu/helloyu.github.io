@@ -110,4 +110,4 @@ define( 'NONCE\_SALT',       'put your unique phrase here' );
 
 SEO禅在开发WordPress主题或者插件的时候，已经不再使用传统的开发环境，这里推荐大家使用Docker开发WordPress，一个命令就可以，可以看看SEO禅写的使用[Docker配置WordPress开发](https://www.seozen.top/docker-wordpress-develop.html)中的介绍，希望对各位有帮助，有什么疑问可以留言评论，SEO禅已经可以评论咯！
 
-如果有想要学习SEO优化的朋友，可以看看这篇文章入门[SEO优化入门一篇就够-SEO教程（2021年最新）](https://www.seozen.top/SEO教程-first-step.html)
+如果有想要学习SEO优化的朋友，可以看看这篇文章入门[SEO优化入门一篇就够-SEO教程（2021年最新）](https://www.seozen.top/seo-course-first-step.html)

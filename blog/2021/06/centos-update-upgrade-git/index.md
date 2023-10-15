@@ -43,11 +43,11 @@ git version 2.24.1
 
 各位是不是在比较靠前的位置看到SEO禅的这篇文章呢？有没有兴趣学习下SEO优化呢？收不收费啊？SEO禅是开源文化的推崇者，所有**SEO资源免费**免费分享给大家，那图啥？一个是自身技术的沉淀和提升，一个是可以帮助别人，当然有机会也可以进行合作，下面是一些关于SEO优化的文章，有兴趣可以看看：
 
-- [SEO优化入门一篇就够-SEO教程（2021年最新）](https://www.seozen.top/SEO教程-first-step.html "SEO优化入门一篇就够-SEO教程（2021年最新）")
+- [SEO优化入门一篇就够-SEO教程（2021年最新）](https://www.seozen.top/seo-course-first-step.html "SEO优化入门一篇就够-SEO教程（2021年最新）")
 
 - [什么是SEO外链？怎么做网站外链？](https://www.seozen.top/seo-external-links.html "什么是SEO外链？怎么做网站外链？")
 
-- [SEO新手入门系列2021（一）：SEO金字塔](https://www.seozen.top/seo-tutorial-moz-serial-2021-outline.html)
+- [SEO新手入门系列（一）：SEO金字塔](https://www.seozen.top/seo-tutorial-moz-serial-2021-outline.html)
 
 - [2021最新网站排名SEO优化方案](https://www.seozen.top/seo-website-ranking-checklist.html)
 

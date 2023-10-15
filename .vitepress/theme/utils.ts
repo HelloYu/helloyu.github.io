@@ -41,6 +41,14 @@ function generateArticleDescription(content: string): string {
 	return result.length > 200 ? result.slice(0, 180) : result
 }
 
+// 读取子目录名称
+export function getSubdirNames(dirPath: string): string[] {
+	return fs
+		.readdirSync(dirPath, { withFileTypes: true })
+		.filter((dirent) => dirent.isDirectory())
+		.map((dirent) => dirent.name)
+}
+
 export function readFile(filepath: string): string | null {
 	if (fs.existsSync(filepath)) {
 		const content = fs.readFileSync(filepath, 'utf-8')
