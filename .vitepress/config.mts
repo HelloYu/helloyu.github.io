@@ -5,8 +5,8 @@ import { generatePageMeta } from './theme/utils'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	lang: 'zh-CN',
-	title: '爱编程的大叔',
-	description: '一位喜欢编程的大叔，善于利用软件解决实际问题！',
+	title: '编程大叔',
+	description: '一位喜欢编程的普通人，善于利用软件解决实际问题！',
 	themeConfig,
 	async transformPageData(pageData: PageData, ctx: TransformPageContext) {
 		await generatePageMeta(pageData, ctx)
