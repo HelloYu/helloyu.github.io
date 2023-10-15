@@ -5,7 +5,7 @@ import { generatePageMeta } from './theme/utils'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	lang: 'zh-CN',
-	title: 'Hello Yu',
+	title: '爱编程的大叔',
 	description: '一位喜欢编程的大叔，善于利用软件解决实际问题！',
 	themeConfig,
 	async transformPageData(pageData: PageData, ctx: TransformPageContext) {
@@ -13,4 +13,7 @@ export default defineConfig({
 	},
 	cleanUrls: true,
 	lastUpdated: true,
+	sitemap: {
+		hostname: 'https://helloyu.github.io',
+	},
 })
