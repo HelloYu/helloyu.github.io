@@ -22,11 +22,17 @@ export const themeConfig: DefaultTheme.Config = {
 		text: '如有不妥，请提PR修正，感谢！',
 	},
 	nav: [
-		// {
-		// 	text: 'Guide',
-		// 	link: '/guide/what-is-vitepress-blog',
-		// 	activeMatch: '/guide/',
-		// },
+		{
+			text: 'Android',
+			activeMatch: '/android/',
+			items: [
+				{
+					text: 'Jetcpack Compose',
+					link: '/android/jetpack-compose-introduction',
+					activeMatch: '/android/',
+				},
+			],
+		},
 		{
 			text: '标签',
 			link: '/tags',
@@ -38,9 +44,9 @@ export const themeConfig: DefaultTheme.Config = {
 			activeMatch: '/archives',
 		},
 	],
-	// sidebar: {
-	// 	'/guide/': sidebarGuide(),
-	// },
+	sidebar: {
+		'/android/': sidebarAndroid(),
+	},
 	search: {
 		// 搜索配置（二选一）
 		// provider: 'algolia',
@@ -66,32 +72,11 @@ export const themeConfig: DefaultTheme.Config = {
 		linkLabel: '返回首页',
 	},
 }
-// function sidebarGuide() {
-// 	return [
-// 		{
-// 			text: 'Introduction',
-// 			collapsed: false,
-// 			items: [
-// 				{
-// 					text: 'What is VitePress Blog?',
-// 					link: '/guide/what-is-vitepress-blog',
-// 				},
-// 				{ text: 'Getting Started', link: '/guide/getting-started' },
-// 				{ text: 'Roadmap', link: '/guide/roadmap' },
-// 				{ text: 'Credits', link: '/guide/credits' },
-// 			],
-// 		},
-// 		{
-// 			text: 'Front Matter',
-// 			collapsed: false,
-// 			items: [
-// 				{ text: 'Post Front Matter', link: '/guide/frontmatter-post' },
-// 				{ text: 'Author Front Matter', link: '/guide/frontmatter-author' },
-// 			],
-// 		},
-// 		{
-// 			text: 'Config & API Reference',
-// 			link: '/reference/config',
-// 		},
-// 	]
-// }
+function sidebarAndroid() {
+	return [
+		{
+			text: '初识Jetpack Compose',
+			link: '/android/jetpack-compose-introduction',
+		},
+	]
+}
