@@ -13,14 +13,14 @@ tags:
 ## Interceptor
 
 在Android端，我们请求后端接口一般是以下代码：
-```
+```kotlin
     @POST("auth/current-user")
     suspend fun getCurrentUser(
         @Header("authorization") token: String,
     ): Response<SuccessResponse<AuthResponse>>
 ```
 如果每个接口都这么写，那就有很多重复的`header`代码，我们可以利用okhttp提供的`Interceptor`来实现默认添加授权header信息的功能：
-```
+```kotlin
 class AuthInterceptor @Inject constructor() : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val token = runBlocking {
@@ -45,7 +45,7 @@ class AuthInterceptor @Inject constructor() : Interceptor {
 ## Authenticator
 
 当`AccessToken`过期的时候，接口会返回401代码，但是这时候我们一般还有`RefreshToken`，这个时长要比普通的Token长的多，我们只要通过这个向后台请求新的AccessToken就可以，我们可以利用OkHttp中的`Authenticator`来实现这个功能：
-```
+```kotlin
 class AuthAuthenticator @Inject constructor() : Authenticator {
     override fun authenticate(route: Route?, response: Response): Request? {
 
@@ -108,7 +108,7 @@ class AuthAuthenticator @Inject constructor() : Authenticator {
 上面首先判断是否是401的情况，不过正常也只有401的情况才会激活Authenticator，这里要是觉得多余可以去掉，只是保险起见，下面判断了两种Token是否都有值，如果是第一次登录，大多数情况应该都是空的，就没必要重复请求，上面需要注意的地方都有注释，有什么不懂的留言评论就好，之后把上面的代码注入到Retrofit中就行。
 
 ## Retrofit注入OkHttp依赖
-```
+```kotlin
 @InstallIn(SingletonComponent::class)
 @Module
 object NetworkModule {

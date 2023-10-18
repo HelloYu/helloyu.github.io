@@ -63,7 +63,7 @@ class MainActivity : ComponentActivity()
 ### 第三步：定义依赖项
 
 使用 Hilt 的注解来定义你的依赖项，如 `@Module`、`@Provides` 等。
-```
+```kotlin
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -81,7 +81,7 @@ object MyModule {
 ### 第四步：在Compose中使用依赖
 
 在需要注入依赖的 Composable 函数上使用 `@HiltViewModel` 注解，并使用 `viewModel()` 函数来获取注入的 ViewModel。
-```
+```kotlin
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.viewmodel.compose.viewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

@@ -85,7 +85,7 @@ implementation("androidx.paging:paging-compose:3.2.1")
 
 创建一个自定义的 `PagingSource`，该源负责从数据源加载数据，这个类在 Paging3 中会被不断激活，进行数据更新。
 
-```
+```kotlin
 import androidx.paging.PagingSource
 
 class CustomPagingSource(private val api: YourApiService) : PagingSource<Int, YourDataItem>() {
@@ -118,7 +118,7 @@ return null
 
 使用自定义的 `PagingSource` 和 `PagingConfig` 创建一个 `Pager`。
 
-```
+```kotlin
 val pagingSource = CustomPagingSource(api) // 替换为您的 PagingSource
 val pagingConfig = PagingConfig(pageSize = 20)
 
@@ -132,7 +132,7 @@ pagingSourceFactory = { pagingSource }
 
 在 Composable 中，使用 `collectAsLazyPagingItems` 扩展函数将分页数据转换为 `LazyPagingItems`。
 
-```
+```kotlin
 val lazyPagingItems: LazyPagingItems<List<String>> = items.collectAsLazyPagingItems()
 val state: LazyListState = rememberLazyListState()
 

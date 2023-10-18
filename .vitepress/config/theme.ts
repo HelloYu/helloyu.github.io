@@ -87,6 +87,30 @@ function sidebarAndroid() {
 			text: '初识Jetpack Compose',
 			link: '/android/jetpack-compose-introduction',
 		},
+		{
+			text: '集成Hilt进行依赖注入-代码解耦',
+			link: '/android/jetpack-compose-hilt-dependency-injection/',
+		},
+		{
+			text: '集成Room进行本地数据存储',
+			link: '/android/jetpack-compose-persist-data-with-room/',
+		},
+		{
+			text: '集成Retrofit进行JWT授权和自动刷新Token',
+			link: '/android/jetpack-compose-jwt-authentication-and-refresh-token-in-android-with-retrofit-interceptor-authenticator/',
+		},
+		{
+			text: '集成Paging3进行数据分页查询',
+			link: '/android/jetpack-compose-pagination-with-paging3/',
+		},
+		{
+			text: '集成Navigation页面路由导航',
+			link: '/android/jetpack-compose-navigation/',
+		},
+		{
+			text: 'Compose中的State状态管理',
+			link: '/android/jetpack-compose-remember-mutablestateof-derivedstateof-remembersaveable/',
+		},
 	]
 }
 

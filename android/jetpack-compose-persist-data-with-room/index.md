@@ -20,8 +20,8 @@ kapt "androidx.room:room-compiler:2.4.0"
 ## 步骤二：定义实体类
 
 创建 Room 数据库的实体类，这些实体类将映射到数据库中的表。
-```
-@Entity(tableName = "task\_table")
+```kotlin
+@Entity(tableName = "task_table")
 data class Task(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val title: String,
@@ -31,10 +31,10 @@ data class Task(
 ## 步骤三：创建DAO接口
 
 创建用于访问数据库的 DAO（Data Access Object）接口。
-```
+```kotlin
 @Dao
 interface TaskDao {
-    @Query("SELECT \* FROM task\_table")
+    @Query("SELECT * FROM task_table")
     fun getAllTasks(): Flow<List<Task>>
 
     @Insert
@@ -44,8 +44,8 @@ interface TaskDao {
 ## 步骤四：创建Room数据库
 
 创建 Room 数据库，将实体类和 DAO 接口与数据库关联。
-```
-@Database(entities = \[Task::class\], version = 1)
+```kotlin
+@Database(entities = [Task::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun taskDao(): TaskDao
 
@@ -58,7 +58,7 @@ abstract class AppDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "app\_database"
+                    "app_database"
                 ).build()
                 INSTANCE = instance
                 instance
@@ -70,7 +70,7 @@ abstract class AppDatabase : RoomDatabase() {
 ## 步骤五：创建Repository
 
 创建一个 Repository，用于将数据库操作封装起来，提供给 ViewModel 使用。
-```
+```kotlin
 class TaskRepository @Inject constructor(private val taskDao: TaskDao) {
 
     fun getAllTasks(): Flow<List<Task>> {
@@ -85,7 +85,7 @@ class TaskRepository @Inject constructor(private val taskDao: TaskDao) {
 ## 步骤六：创建ViewModel
 
 创建一个 ViewModel，用于管理数据和与数据库交互。
-```
+```kotlin
 @HiltViewModel
 class TaskViewModel @Inject constructor(private val taskRepository: TaskRepository) : ViewModel() {
 
@@ -101,7 +101,7 @@ class TaskViewModel @Inject constructor(private val taskRepository: TaskReposito
 ## 步骤七：在Composable中使用Room数据
 
 在 Composable 函数中使用 Hilt 的 `hiltViewModel()` 函数来获取 ViewModel，并从 ViewModel 中获取 Room 数据。
-```
+```kotlin
 @Composable
 fun TaskListScreen(viewModel: TaskViewModel = hiltViewModel<TaskViewModel>()) {
     val tasks by viewModel.allTasks.collectAsState()

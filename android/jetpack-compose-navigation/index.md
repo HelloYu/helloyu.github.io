@@ -21,18 +21,18 @@ Jetpack Compose Navigation 是 Jetpack Compose 库中的一部分，专为简化
 首先，我们需要在项目的 `build.gradle` 文件中添加 Compose Navigation 的依赖项：
 ```
 dependencies {
-    def nav\_version = "2.7.1"
+    def nav_version = "2.7.1"
 
-    implementation "androidx.navigation:navigation-compose:$nav\_version"
+    implementation "androidx.navigation:navigation-compose:$nav_version"
 }
 ```
 ### 定义导航关系
 
 在 Compose Navigation 中，导航关系由 Composable 函数表示。在 `NavHost` 中定义这些关系，如下所示：
-```
-NavHost(navController = navController, startDestination = "destination\_home") {
-    composable("destination\_home") { HomeScreen() }
-    composable("destination\_details/{itemId}") { backStackEntry ->
+```kotlin
+NavHost(navController = navController, startDestination = "destination_home") {
+    composable("destination_home") { HomeScreen() }
+    composable("destination_details/{itemId}") { backStackEntry ->
         val itemId = backStackEntry.arguments?.getString("itemId")
         DetailsScreen(itemId)
     }
@@ -43,8 +43,8 @@ NavHost(navController = navController, startDestination = "destination\_home") {
 ### 导航到其他目标
 
 要在 Composable 函数中触发导航，只需使用 `NavController` 的 `navigate` 方法：
-```
-Button(onClick = { navController.navigate("destination\_details/123") }) {
+```kotlin
+Button(onClick = { navController.navigate("destination_details/123") }) {
     Text(text = "Go to Details")
 }
 ```
@@ -53,8 +53,8 @@ Button(onClick = { navController.navigate("destination\_details/123") }) {
 ## 参数传递和接收
 
 Compose Navigation 支持类型安全的参数传递和接收。使用 `navigate` 方法传递参数，然后在目标的 `composable` 中通过 `backStackEntry.arguments` 来接收参数。
-```
-    composable("destination\_details/{itemId}") { backStackEntry ->
+```kotlin
+    composable("destination_details/{itemId}") { backStackEntry ->
         val itemId = backStackEntry.arguments?.getString("itemId")
         DetailsScreen(itemId)
     }
