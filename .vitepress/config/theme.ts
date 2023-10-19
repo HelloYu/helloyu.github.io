@@ -72,7 +72,7 @@ export const themeConfig: DefaultTheme.Config = {
 		showFooter: true, // 是否显示页脚
 		icpRecordCode: '', // ICP备案号
 		publicSecurityRecordCode: '', // 联网备案号
-		copyright: `Copyright © 2021-${new Date().getFullYear()} HelloYu`, // 版权信息
+		copyright: `Copyright © 2021-${new Date().getFullYear()} 哈喽鱼`, // 版权信息
 	},
 	notFound: {
 		title: '页面未找到',
@@ -84,32 +84,63 @@ export const themeConfig: DefaultTheme.Config = {
 function sidebarAndroid() {
 	return [
 		{
-			text: '初识Jetpack Compose',
-			link: '/android/jetpack-compose-introduction',
+			text: '基础知识',
+			items: [
+				{
+					text: '初识Jetpack Compose',
+					link: '/android/jetpack-compose-introduction',
+				},
+				{
+					text: 'Compose中的State状态管理',
+					link: '/android/jetpack-compose-remember-mutablestateof-derivedstateof-remembersaveable/',
+				},
+			],
 		},
 		{
-			text: '集成Hilt进行依赖注入-代码解耦',
-			link: '/android/jetpack-compose-hilt-dependency-injection/',
+			text: '基础组件相关',
+			items: [
+				{
+					text: '集成Hilt进行依赖注入-代码解耦',
+					link: '/android/jetpack-compose-hilt-dependency-injection/',
+				},
+				{
+					text: '集成Room进行本地数据存储',
+					link: '/android/jetpack-compose-persist-data-with-room/',
+				},
+				{
+					text: '集成Retrofit进行JWT授权和自动刷新Token',
+					link: '/android/jetpack-compose-jwt-authentication-and-refresh-token-in-android-with-retrofit-interceptor-authenticator/',
+				},
+				{
+					text: '集成Paging3进行数据分页查询',
+					link: '/android/jetpack-compose-pagination-with-paging3/',
+				},
+				{
+					text: '集成Navigation页面路由导航',
+					link: '/android/jetpack-compose-navigation/',
+				},
+			],
 		},
 		{
-			text: '集成Room进行本地数据存储',
-			link: '/android/jetpack-compose-persist-data-with-room/',
-		},
-		{
-			text: '集成Retrofit进行JWT授权和自动刷新Token',
-			link: '/android/jetpack-compose-jwt-authentication-and-refresh-token-in-android-with-retrofit-interceptor-authenticator/',
-		},
-		{
-			text: '集成Paging3进行数据分页查询',
-			link: '/android/jetpack-compose-pagination-with-paging3/',
-		},
-		{
-			text: '集成Navigation页面路由导航',
-			link: '/android/jetpack-compose-navigation/',
-		},
-		{
-			text: 'Compose中的State状态管理',
-			link: '/android/jetpack-compose-remember-mutablestateof-derivedstateof-remembersaveable/',
+			text: '摄像头图库相关',
+			items: [
+				{
+					text: '获取Camera相应权限',
+					link: '/android/jetpack-compose-building-photo-app-with-camerax-and-coroutines-part-one-device-permissions/',
+				},
+				{
+					text: '使用CameraX进行相机预览',
+					link: '/android/jetpack-compose-building-photo-app-with-camerax-and-coroutines-part-two-preview/',
+				},
+				{
+					text: '使用CameraX进行相机截图',
+					link: '/android/jetpack-compose-building-photo-app-with-camerax-and-coroutines-part-three-capture-picture/',
+				},
+				{
+					text: '从图库中选择图片',
+					link: '/android/jetpack-compose-building-photo-app-with-camerax-and-coroutines-part-four-select-photo/',
+				},
+			],
 		},
 	]
 }
