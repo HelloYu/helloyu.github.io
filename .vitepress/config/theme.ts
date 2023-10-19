@@ -72,7 +72,7 @@ export const themeConfig: DefaultTheme.Config = {
 		showFooter: true, // 是否显示页脚
 		icpRecordCode: '', // ICP备案号
 		publicSecurityRecordCode: '', // 联网备案号
-		copyright: `Copyright © 2021-${new Date().getFullYear()} 哈喽鱼`, // 版权信息
+		copyright: `Copyright © 2021-${new Date().getFullYear()} 哈喽余`, // 版权信息
 	},
 	notFound: {
 		title: '页面未找到',
