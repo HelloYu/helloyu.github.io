@@ -19,12 +19,12 @@ CameraX 是由 Google 推出的 Jetpack 库，用于简化将相机功能集成�
 
 首先我们在Module层级的`build.gradle`写入CameraX的依赖库：
 ```
-    implementation "androidx.camera:camera-camera2:$camerax\_version"
-    implementation "androidx.camera:camera-lifecycle:$camerax\_version"
-    implementation "androidx.camera:camera-view:$camerax\_version"
+    implementation "androidx.camera:camera-camera2:$camerax_version"
+    implementation "androidx.camera:camera-lifecycle:$camerax_version"
+    implementation "androidx.camera:camera-view:$camerax_version"
 ```
 SEO禅用`camerax_version = '1.2.2'`的版本，你们自己根据需要选择版本，我们需要一个[CameraProvider](https://developer.android.com/reference/androidx/camera/core/CameraProvider)来提供相机的访问，直接对`Context`进行扩展：
-```
+```kotlin
 suspend fun Context.getCameraProvider(): ProcessCameraProvider = suspendCoroutine { continuation ->
         ProcessCameraProvider.getInstance(this).also { future ->
             future.addListener({
@@ -37,12 +37,12 @@ val Context.executor: Executor
     get() = ContextCompat.getMainExecutor(this)
 ```
 接下去我们需要一个View来预览相机的实时取景，需要使用[AndroidView](https://developer.android.com/jetpack/compose/migrate/interoperability-apis/views-in-compose)在Compose中使用PreviewView：
-```
+```kotlin
 @Composable
 fun CameraPreview(
     modifier: Modifier = Modifier,
-    scaleType: PreviewView.ScaleType = PreviewView.ScaleType.FILL\_CENTER,
-    cameraSelector: CameraSelector = CameraSelector.DEFAULT\_BACK\_CAMERA
+    scaleType: PreviewView.ScaleType = PreviewView.ScaleType.FILL_CENTER,
+    cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
 ) {
     val coroutineScope = rememberCoroutineScope()
     val lifecycleOwner = LocalLifecycleOwner.current
@@ -52,8 +52,8 @@ fun CameraPreview(
             val previewView = PreviewView(context).apply {
                 this.scaleType = scaleType
                 layoutParams = ViewGroup.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH\_PARENT,
-                    ViewGroup.LayoutParams.MATCH\_PARENT
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT
                 )
             }
 
@@ -83,12 +83,12 @@ fun CameraPreview(
 }
 ```
 这里的`factory`最后返回了previewView，这里主要是用了[PreviewView](https://developer.android.com/reference/androidx/camera/view/PreviewView)去显示相机的预览图，之后我们调用下就可以看到图像：
-```
+```kotlin
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            PhotoAppWithCameraX\_ComposeTheme {
+            PhotoAppWithCameraX_ComposeTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background) {
@@ -101,7 +101,7 @@ class MainActivity : ComponentActivity() {
                                 Text("O noes! No Camera!")
                                 Spacer(modifier = Modifier.height(8.dp))
                                 Button(onClick = {
-                                    context.startActivity(Intent(Settings.ACTION\_APPLICATION\_DETAILS\_SETTINGS).apply {
+                                    context.startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
                                         data = Uri.fromParts("package", context.packageName, null)
                                     })
                                 }) {
@@ -121,3 +121,7 @@ class MainActivity : ComponentActivity() {
 ![](https://www.seozen.top/wp-content/uploads/2023/06/b4f475d3f80f6506c5b64a76a277a8b-356x768.jpg?v=1686208424)
 
 完整的代码可以访问：[AndroidCameraXWithJetpackCompose](https://github.com/HelloYu/AndroidCameraXWithJetpackCompose)
+
+
+参考资料：
+[Declare dependencies](https://developer.android.com/training/camerax/architecture#dependencies)
