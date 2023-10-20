@@ -29,17 +29,17 @@ export const themeConfig: DefaultTheme.Config = {
 	nav: [
 		{
 			text: 'Android',
-			activeMatch: '/android/',
+			activeMatch: '/android/*',
 			items: [
 				{
 					text: 'Jetcpack Compose',
 					link: '/android/jetpack-compose-introduction',
-					activeMatch: '/android/',
+					activeMatch: '/android/jetpack-compose-*',
 				},
 				{
 					text: '常见开发问题FAQ',
 					link: '/android/faq/android-faq-aar-not-work/',
-					activeMatch: '/android/faq',
+					activeMatch: '/android/faq/*',
 				},
 			],
 		},
