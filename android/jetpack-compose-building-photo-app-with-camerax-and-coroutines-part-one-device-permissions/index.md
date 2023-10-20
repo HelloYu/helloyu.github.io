@@ -44,7 +44,7 @@ private fun Rationale(
     onRequestPermission: () -> Unit
 ) {
     AlertDialog(
-        onDismissRequest = { /\* Don't \*/ },
+        onDismissRequest = { /* Don't */ },
         title = {
             Text(text = "Permission request")
         },
@@ -87,7 +87,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            PhotoAppWithCameraX\_ComposeTheme {
+            PhotoAppWithCameraX_ComposeTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background) {
@@ -100,7 +100,7 @@ class MainActivity : ComponentActivity() {
                                 Text("O noes! No Camera!")
                                 Spacer(modifier = Modifier.height(8.dp))
                                 Button(onClick = {
-                                    context.startActivity(Intent(Settings.ACTION\_APPLICATION\_DETAILS\_SETTINGS).apply {
+                                    context.startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
                                         data = Uri.fromParts("package", context.packageName, null)
                                     })
                                 }) {
