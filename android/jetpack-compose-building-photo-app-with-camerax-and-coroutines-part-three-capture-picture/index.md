@@ -24,7 +24,7 @@ coverImage: "CameraX-1.jpg"
 ![](https://www.seozen.top/wp-content/uploads/2023/06/29a7b45364057a11398a32aaf806efc-356x768.jpg?v=1686224505)
 
 首先创建一个按钮的Compose函数：
-```
+```kotlin
 @Composable
 fun CapturePictureButton(
     modifier: Modifier = Modifier,
@@ -40,7 +40,7 @@ fun CapturePictureButton(
         border = BorderStroke(2.dp, Color.Black),
         contentPadding = contentPadding,
         colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Black),
-        onClick = { /\* GNDN \*/ },
+        onClick = { /* GNDN */ },
         enabled = false
     ) {
         Button(
@@ -59,11 +59,11 @@ fun CapturePictureButton(
 }
 ```
 之后我们改造下之前的CameraPreview函数：
-```
+```kotlin
 @Composable
 fun CameraPreview(
     modifier: Modifier = Modifier,
-    scaleType: PreviewView.ScaleType = PreviewView.ScaleType.FILL\_CENTER,
+    scaleType: PreviewView.ScaleType = PreviewView.ScaleType.FILL_CENTER,
     onUseCase: (UseCase) -> Unit = { }
 ) {
     AndroidView(
@@ -72,8 +72,8 @@ fun CameraPreview(
             val previewView = PreviewView(context).apply {
                 this.scaleType = scaleType
                 layoutParams = ViewGroup.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH\_PARENT,
-                    ViewGroup.LayoutParams.MATCH\_PARENT
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT
                 )
             }
             onUseCase(Preview.Builder()
@@ -88,13 +88,13 @@ fun CameraPreview(
 }
 ```
 我们再新建一个CameraCaputre函数：
-```
+```kotlin
 @ExperimentalPermissionsApi
 @ExperimentalCoroutinesApi
 @Composable
 fun CameraCapture(
     modifier: Modifier = Modifier,
-    cameraSelector: CameraSelector = CameraSelector.DEFAULT\_BACK\_CAMERA,
+    cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA,
     onImageFile: (File) -> Unit = { }
 ) {
     val context = LocalContext.current
@@ -108,7 +108,7 @@ fun CameraCapture(
                 Button(
                     onClick = {
                         context.startActivity(
-                            Intent(Settings.ACTION\_APPLICATION\_DETAILS\_SETTINGS).apply {
+                            Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
                                 data = Uri.fromParts("package", context.packageName, null)
                             }
                         )
@@ -126,7 +126,7 @@ fun CameraCapture(
             val imageCaptureUseCase by remember {
                 mutableStateOf(
                     ImageCapture.Builder()
-                        .setCaptureMode(CAPTURE\_MODE\_MAXIMIZE\_QUALITY)
+                        .setCaptureMode(CAPTURE_MODE_MAXIMIZE_QUALITY)
                         .build()
                 )
             }
@@ -168,7 +168,7 @@ fun CameraCapture(
 }
 ```
 再对`ImageCapture`方法扩展一个`takePicture`的功能：
-```
+```kotlin
 suspend fun ImageCapture.takePicture(executor: Executor): File {
     val photoFile = withContext(Dispatchers.IO) {
         kotlin.runCatching {
@@ -198,13 +198,13 @@ suspend fun ImageCapture.takePicture(executor: Executor): File {
 }
 ```
 最后调用CameraCaputre：
-```
+```kotlin
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalPermissionsApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            PhotoAppWithCameraX\_ComposeTheme {
+            PhotoAppWithCameraX_ComposeTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background) {
