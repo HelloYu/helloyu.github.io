@@ -1,4 +1,4 @@
-export const SITE_TITLE = '哈喽余'
+export const SITE_TITLE = 'Hello Yu'
 export const PAGE_SIZE = 10
 export const POST_FILES = ['blog/**/*.md', 'android/**/*.md', 'seo/**/*.md']
 export const EXCERPT_MARK = '<!--more-->'

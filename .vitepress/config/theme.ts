@@ -78,9 +78,9 @@ export const themeConfig: DefaultTheme.Config = {
 	// @ts-ignore
 	footerConfig: {
 		showFooter: true, // 是否显示页脚
-		icpRecordCode: '', // ICP备案号
-		publicSecurityRecordCode: '', // 联网备案号
-		copyright: `Copyright © 2021-${new Date().getFullYear()} 哈喽余`, // 版权信息
+		icpRecordCode: '闽ICP备2021000243号', // ICP备案号
+		publicSecurityRecordCode: '闽公网安备 35070202100199号', // 联网备案号
+		copyright: `Copyright © 2021-${new Date().getFullYear()} Hello Yu`, // 版权信息
 	},
 	notFound: {
 		title: '页面未找到',
