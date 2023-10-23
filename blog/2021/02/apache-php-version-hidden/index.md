@@ -3,7 +3,7 @@ title: "隐藏Apache和PHP版本信息"
 date: "2021-02-19"
 categories: 
   - "Linux教程"
-  - "我记录"
+  - "SEO禅"
 tags: 
   - "Apache"
   - "网站安全优化"

@@ -2,13 +2,13 @@
 title: "我网站新版V2上线测试"
 date: "2021-06-26"
 categories: 
-  - "我记录"
+  - "SEO禅"
 tags: 
   - "SEO网站优化"
 coverImage: "seo-lighthouse-scores.png"
 ---
 
-[我第一版本V1.0](https://www.helloyu.top/我记录-1.html)，上线已经有半年的时间，写了将近70篇的文章，也慢慢有人浏览了，这两天在V1.0的基础上，重构我站点，最大的改动就是用了新的技术，我V2.0使用**Laravel Blade**模板引擎，让代码更简洁，网站速度更快，现在基本是500-1000ms的打开速度，这对于1M宽带1GB内存的主机来说，在我技术范围内应该算是极限了，下面先看看新版V2.0PC端的载入速度：
+[我第一版本V1.0](https://www.helloyu.top/SEO禅-1.html)，上线已经有半年的时间，写了将近70篇的文章，也慢慢有人浏览了，这两天在V1.0的基础上，重构我站点，最大的改动就是用了新的技术，我V2.0使用**Laravel Blade**模板引擎，让代码更简洁，网站速度更快，现在基本是500-1000ms的打开速度，这对于1M宽带1GB内存的主机来说，在我技术范围内应该算是极限了，下面先看看新版V2.0PC端的载入速度：
 
 ![seozen-new-version-loading-time](images/seozen-new-version-loading-time-1024x640.png)
 

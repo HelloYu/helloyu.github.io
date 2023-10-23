@@ -2,7 +2,7 @@
 title: "我站点谷歌SEO优化排名情况分析"
 date: "2021-08-07"
 categories: 
-  - "我记录"
+  - "SEO禅"
 tags: 
   - "SEO网站优化"
   - "我"

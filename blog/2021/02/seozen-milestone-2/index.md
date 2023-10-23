@@ -2,7 +2,7 @@
 title: "我被百度收录"
 date: "2021-02-12"
 categories: 
-  - "我记录"
+  - "SEO禅"
 tags: 
   - "我"
 coverImage: "Screen-Shot-2021-02-08-at-19.44.12.png"

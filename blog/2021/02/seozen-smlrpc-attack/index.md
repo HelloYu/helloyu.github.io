@@ -2,7 +2,7 @@
 title: "我被XMLRPC爆破攻击"
 date: "2021-02-21"
 categories: 
-  - "我记录"
+  - "SEO禅"
   - "WordPress教程"
 tags: 
   - "我"

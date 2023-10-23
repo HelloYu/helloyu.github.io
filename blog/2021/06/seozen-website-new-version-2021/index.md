@@ -2,7 +2,7 @@
 title: "我站点改版V2.0.0计划"
 date: "2021-06-17"
 categories: 
-  - "我记录"
+  - "SEO禅"
 tags: 
   - "我"
 coverImage: "seozen-new-version-plan.png"

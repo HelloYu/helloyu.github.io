@@ -2,7 +2,7 @@
 title: "我网站记录"
 date: "2021-01-16"
 categories: 
-  - "我记录"
+  - "SEO禅"
 tags: 
   - "我"
 coverImage: "seo-fx-ll-5.jpg"

@@ -2,7 +2,7 @@
 title: "参加百度搜索优化基础知识考试"
 date: "2021-05-21"
 categories: 
-  - "我记录"
+  - "SEO"
 tags: 
   - "百度SEO"
 coverImage: "WX20210521-151311@2x.png"

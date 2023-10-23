@@ -2,7 +2,7 @@
 title: "我站点内链建设"
 date: "2021-02-28"
 categories: 
-  - "我记录"
+  - "SEO禅"
 tags: 
   - "SEO爬虫"
   - "我"
