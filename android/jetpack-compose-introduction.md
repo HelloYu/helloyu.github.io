@@ -33,6 +33,9 @@ dependencies {
     implementation "androidx.activity:activity-compose:1.3.0-rc01"
 }
 ```
+::: tip
+因为Compose还在不断地开发演进，所以版本众多，最近Google出了一个BOM的方式批量的方式去决定依赖版本，可以参考使用[Using the Bill of Materials](https://developer.android.com/jetpack/compose/bom)
+:::
 <!--more-->
 ### 步骤 2：创建 Composable 函数
 
@@ -88,3 +91,6 @@ class MainActivity : ComponentActivity() {
 这只是一个简单的快速入门指南，帮助你了解如何开始使用 Jetpack Compose。Jetpack Compose 提供了丰富的 UI 组件和功能，以支持更复杂的应用程序界面，包括处理用户输入、列表和导航等。
 
 为了更好地了解 Jetpack Compose 的功能和使用方法，可以查看官方文档和示例代码。祝你在使用 Jetpack Compose 开发应用程序时获得成功！
+
+参考资料：
+[](https://developer.android.com/jetpack/compose/setup)
