@@ -2,13 +2,13 @@
 title: "参加百度搜索优化基础知识考试"
 date: "2021-05-21"
 categories: 
-  - "SEO禅记录"
+  - "我记录"
 tags: 
   - "百度SEO"
 coverImage: "WX20210521-151311@2x.png"
 ---
 
-最近有个活动，参加《百度搜索优化基础知识大全》学习，学习完所有基础SEO内容之后，可以参加一个测试，如果100%通过，那就可以获得一次抽奖机会，免费获得百度送的一些小礼品，地址[在这里](https://zy.baidu.com/act/seo?isResponsible=1)。下面是SEO禅答的题，拿去不谢，为什么时间那么短？因为刷了三次！
+最近有个活动，参加《百度搜索优化基础知识大全》学习，学习完所有基础SEO内容之后，可以参加一个测试，如果100%通过，那就可以获得一次抽奖机会，免费获得百度送的一些小礼品，地址[在这里](https://zy.baidu.com/act/seo?isResponsible=1)。下面是我答的题，拿去不谢，为什么时间那么短？因为刷了三次！
 
 ![seozen-baidu-seo-basic-reward](images/seozen-baidu-seo-basic-reward.png)
 

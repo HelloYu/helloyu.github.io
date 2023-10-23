@@ -11,7 +11,7 @@ tags:
 coverImage: "laravel.jpg"
 ---
 
-SEO禅准备写一个完整的**Laravel入门系列教程**，从**部署开发环境**到项目**部署生产服务器**，这是这个系列的第二篇，第一篇说的是**如何配置Laravel开发环境**，这篇教大家如何将开发好的项目部署到生产服务器，这里SEO禅选的是Debian9的Linux版本，这两篇之后，就会开始介绍如何使用Laravel进行项目开发，SEO禅将带大家使用Laravel做一个类似进销存系统的项目，下面开始分享今天的内容。
+我准备写一个完整的**Laravel入门系列教程**，从**部署开发环境**到项目**部署生产服务器**，这是这个系列的第二篇，第一篇说的是**如何配置Laravel开发环境**，这篇教大家如何将开发好的项目部署到生产服务器，这里我选的是Debian9的Linux版本，这两篇之后，就会开始介绍如何使用Laravel进行项目开发，我将带大家使用Laravel做一个类似进销存系统的项目，下面开始分享今天的内容。
 
 ## 安装配置Apache2
 
@@ -53,7 +53,7 @@ vim /etc/apache2/sites-available/seozen.top.conf
 
 ServerAdmin mr.yu1991@gmail.com
 ServerName seozen.top
-ServerAlias www.seozen.top
+ServerAlias www.helloyu.top
 DocumentRoot /var/www/html/seozen.top/public
 
 <Directory /var/www/html/seozen.top>
@@ -175,7 +175,7 @@ systemctl status mysql
 
 Debian9安装MySQL运行成功
 
-可以看到状态已经是Active，你们按照教程安装的是MySQL8，SEO禅用得这个是MariabDB，[MariaDB](https://zh.wikipedia.org/zh-hans/MariaDB)是MySQL的开源版本，语法都是一样的，可以直接使用，这里就不再去安装MySQL8版本。
+可以看到状态已经是Active，你们按照教程安装的是MySQL8，我用得这个是MariabDB，[MariaDB](https://zh.wikipedia.org/zh-hans/MariaDB)是MySQL的开源版本，语法都是一样的，可以直接使用，这里就不再去安装MySQL8版本。
 
 到这里三个关键的基础环境：Apache，PHP，MySQL(MariaDB)已经安装完成，都是用得apt进行安装，如果安装过程中安装出错运行不起来，可以通过如下命令卸载：
 
@@ -196,13 +196,13 @@ systemctl restart apache2
 
 ### 安装Git
 
-SEO禅部署项目现在都是先上传到Github，之后用git命令去同步下载部署，这样在后期项目更新修改bug，就能很高效的更新服务器代码，这里我们先使用apt命令安装下Git：
+我部署项目现在都是先上传到Github，之后用git命令去同步下载部署，这样在后期项目更新修改bug，就能很高效的更新服务器代码，这里我们先使用apt命令安装下Git：
 
 ```
 apt install git
 ```
 
-安装完成，需要配置SSH秘钥信息，参考SEO禅写的[2021使用SSH连接Github详细教程](https://www.seozen.top/ssh-github-keygen-2021.html)，怎么从github拉取项目SEO禅在这里就不说了，这个自己不会的先到其他地方看看，拉去完自己的项目之后，需要修改下目录权限：
+安装完成，需要配置SSH秘钥信息，参考我写的[2021使用SSH连接Github详细教程](https://www.helloyu.top/ssh-github-keygen-2021.html)，怎么从github拉取项目我在这里就不说了，这个自己不会的先到其他地方看看，拉去完自己的项目之后，需要修改下目录权限：
 
 ```
 chown -R 你的账号:www-data /var/www/html/seozen.top/
@@ -239,7 +239,7 @@ composer install
 
 ### 配置MySQL链接
 
-哇，已经到这一步了真的不容易，休息下配置下数据库链接，再修改几个参数，我们的Laravel项目就能跑起来了，首先我们需要为Laravel项目创建一个数据库和数据库用户，这里参考《[2021最新WordPress安装教程（三）：安装WordPress详细步骤](https://www.seozen.top/wordpress-setup-steps-2021.html)》文章中MySQL创建WordPress数据库的内容。
+哇，已经到这一步了真的不容易，休息下配置下数据库链接，再修改几个参数，我们的Laravel项目就能跑起来了，首先我们需要为Laravel项目创建一个数据库和数据库用户，这里参考《[2021最新WordPress安装教程（三）：安装WordPress详细步骤](https://www.helloyu.top/wordpress-setup-steps-2021.html)》文章中MySQL创建WordPress数据库的内容。
 
 ### 修改Laravel配置文件
 
@@ -257,7 +257,7 @@ APP_NAME=项目名称
 APP_ENV=production
 APP_KEY=
 APP_DEBUG=false
-APP_URL=http://www.seozen.top
+APP_URL=http://www.helloyu.top
 
 LOG_CHANNEL=stack
 LOG_LEVEL=debug
@@ -296,4 +296,4 @@ php artisan view:clear
 php artisan optimize
 ```
 
-到这里Laravel项目应该就能跑起来，如果其中有什么问题跑步起来，可以给SEO禅留言评论。
+到这里Laravel项目应该就能跑起来，如果其中有什么问题跑步起来，可以给我留言评论。

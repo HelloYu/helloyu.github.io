@@ -10,7 +10,7 @@ tags:
 coverImage: "wordpress-theme-development-modularization.png"
 ---
 
-距离SEO禅写《[2021从零开始开发WordPress主题教程（一）：了解目录结构](https://www.seozen.top/wordpress-theme-develop-hierarchy.html)》已经有很长的一段时间，现才有时间继续写第二篇，放心一定不会太监，只是还没想好要怎么写，现在有了大概的思路，就暂时记录下来，前一篇文章简单介绍了WordPress主题开发的基本要求，那就是目录下面必须包含，`index.php`和`style.css`这两个文件，一个主题可大可小，但是肯定不止两个文件，这篇就说下WordPress主题的**模块化开发**。
+距离我写《[2021从零开始开发WordPress主题教程（一）：了解目录结构](https://www.helloyu.top/wordpress-theme-develop-hierarchy.html)》已经有很长的一段时间，现才有时间继续写第二篇，放心一定不会太监，只是还没想好要怎么写，现在有了大概的思路，就暂时记录下来，前一篇文章简单介绍了WordPress主题开发的基本要求，那就是目录下面必须包含，`index.php`和`style.css`这两个文件，一个主题可大可小，但是肯定不止两个文件，这篇就说下WordPress主题的**模块化开发**。
 
 开发过前端的朋友们肯定很熟悉模块化，因为不管你使用什么框架，配合ES6的模块化和Webpack打包工具的支持，都能将一个大的前端系统划分成不同的模块，不同的组件，WordPress是使用PHP语言编写的，PHP也有语言级别的模块化支持，比如`require`和`include`，这些是语言层面提供的模块化支持，但是这篇重点说的是WordPress自身提供的模块化支持。
 
@@ -75,4 +75,4 @@ style.css
 
 其他都在后面慢慢会介绍到，这里说下`functions.php`文件，当主题通过`style.css`识别之后，如果主题是启用状态，wordpress就会去读取functions.php的内容，这相当于整个主题的`main`入口函数，无论是如何模块化，最终的入口是在这个文件，记住这点很重要。
 
-其实要真正进行模块化开发，还需要介绍到class，但是这是PHP语言和设计模式的东西了，不是一两篇文章能介绍完的，这个系列应该是从易到难的一个渐进式**WordPress主题开发教程**，先使用简单的方法去实现一个主题，之后再根据设计模式来进行改进。下一篇开始正式进入《[从零开始开发WordPress主题教程](https://www.seozen.top/wordpress-theme-development-seozen-dummy.html)》这个系列的教程。
+其实要真正进行模块化开发，还需要介绍到class，但是这是PHP语言和设计模式的东西了，不是一两篇文章能介绍完的，这个系列应该是从易到难的一个渐进式**WordPress主题开发教程**，先使用简单的方法去实现一个主题，之后再根据设计模式来进行改进。下一篇开始正式进入《[从零开始开发WordPress主题教程](https://www.helloyu.top/wordpress-theme-development-seozen-dummy.html)》这个系列的教程。

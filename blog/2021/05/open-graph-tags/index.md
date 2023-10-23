@@ -9,29 +9,29 @@ tags:
 coverImage: "og-image-ea5947be7b89c28de3ca5e2662840b4a-840fa.jpeg"
 ---
 
-网络从2000年到今天这20年间飞速的发展起来，能在网络上获取到的内容也越来越丰富，SEO禅是99年有了自己第一台个从电脑，那时候是一台有着“大屁股”显示器的TCL台式机，那时候网络上还没有像现在这么多类型的资源，多数都是上上BBS论坛，发个贴，浏览浏览让人心情“愉悦”的图片，视频都很少见，因为那时候还ADSL拨号，下载的速度就50kb左右，回到今天的话题`OG标签`，OG标签的出现其实和`JSON-LD`有着相同的SEO意义，都是为了将网络上的内容，进行结构化，富媒体化，方便第三方调用显示。
+网络从2000年到今天这20年间飞速的发展起来，能在网络上获取到的内容也越来越丰富，我是99年有了自己第一台个从电脑，那时候是一台有着“大屁股”显示器的TCL台式机，那时候网络上还没有像现在这么多类型的资源，多数都是上上BBS论坛，发个贴，浏览浏览让人心情“愉悦”的图片，视频都很少见，因为那时候还ADSL拨号，下载的速度就50kb左右，回到今天的话题`OG标签`，OG标签的出现其实和`JSON-LD`有着相同的SEO意义，都是为了将网络上的内容，进行结构化，富媒体化，方便第三方调用显示。
 
 ## 什么是OG标签
 
 OG全称是Open Graph Protocol，中文是**开放内容协议**，也称为OG标签，最开始的时候是被一些社交软件广泛使用，Fackbook、renren、微博等，现在搜索引擎和一些第三方服务也支持了OG标签，比如IMD影评网站。
 
-SEO禅的博客也是有OG标签的，只不过是使用了Yoast SEO插件来实现的，这是《 Linux入门：grep命令基础使用》这篇文章`head`内的`OG标签`代码：
+我的博客也是有OG标签的，只不过是使用了Yoast SEO插件来实现的，这是《 Linux入门：grep命令基础使用》这篇文章`head`内的`OG标签`代码：
 
 <meta property="og:locale" content="zh\_CN" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Linux入门：grep命令基础使用 - SEO禅" />
+<meta property="og:title" content="Linux入门：grep命令基础使用 - 我" />
 <meta property="og:description" content="我们在使用Linux的时候，要查找一些特定的内容，最经常使用的命令就是grep，它是Global Regula \[&hellip;\]" />
-<meta property="og:url" content="https://www.seozen.top/linux-grep-command.html" />
-<meta property="og:site\_name" content="SEO禅" />
+<meta property="og:url" content="https://www.helloyu.top/linux-grep-command.html" />
+<meta property="og:site\_name" content="我" />
 <meta property="article:published\_time" content="2021-04-20T12:22:00+00:00" />
 <meta property="article:modified\_time" content="2021-04-05T04:08:12+00:00" />
-<meta property="og:image" content="https://www.seozen.top/wp-content/uploads/2021/04/grep-commands-in-linux.png" />
+<meta property="og:image" content="https://www.helloyu.top/wp-content/uploads/2021/04/grep-commands-in-linux.png" />
 <meta property="og:image:width" content="800" />
 <meta property="og:image:height" content="400" />
 
 ## OG标签知识
 
-使用OG标签是为了之后进行社会化分享作的准备，SEO禅虽然现在还没有开社交分享功能，但是日后可能会开，WordPress很方便，但是如果是自己单独开发的网站，就要提前把功能加进去，有的社交平台也会通过分享的链接地址自动提取里面的OG标签，生成结构化数据，我们来熟悉下OG标签：
+使用OG标签是为了之后进行社会化分享作的准备，我虽然现在还没有开社交分享功能，但是日后可能会开，WordPress很方便，但是如果是自己单独开发的网站，就要提前把功能加进去，有的社交平台也会通过分享的链接地址自动提取里面的OG标签，生成结构化数据，我们来熟悉下OG标签：
 
 // 普通类
 og:locale //网站语言

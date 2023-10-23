@@ -12,7 +12,7 @@ tags:
 coverImage: "php.png"
 ---
 
-这是 **2021最新WordPress安装教程**系列的第二篇文章，前一篇文章《 [2021最新WordPress安装教程（一）：Centos7安装Apache](https://www.seozen.top/wordpress-apache-setup-2021.html)》已经完整的介绍了如何在Centos7上使用 **YUM安装Apache**，下面要介绍如何使用YUM安装PHP和MySQL。
+这是 **2021最新WordPress安装教程**系列的第二篇文章，前一篇文章《 [2021最新WordPress安装教程（一）：Centos7安装Apache](https://www.helloyu.top/wordpress-apache-setup-2021.html)》已经完整的介绍了如何在Centos7上使用 **YUM安装Apache**，下面要介绍如何使用YUM安装PHP和MySQL。
 
 ## 安装PHP 7.4库
 
@@ -81,4 +81,4 @@ systemctl status mysqld.service
 ```
 ## 安装配置WordPress
 
-到这里，我们已经基本算是安装好PHP和MySQL，WordPress安装环境基本上已经配置好，下面我们就来正式开始**安装WordPress**吧，参看下一篇文章：《[2021最新WordPress安装教程（三）：安装WordPress详细步骤](https://www.seozen.top/WordPress安装-steps-2021.html)》
+到这里，我们已经基本算是安装好PHP和MySQL，WordPress安装环境基本上已经配置好，下面我们就来正式开始**安装WordPress**吧，参看下一篇文章：《[2021最新WordPress安装教程（三）：安装WordPress详细步骤](https://www.helloyu.top/WordPress安装-steps-2021.html)》

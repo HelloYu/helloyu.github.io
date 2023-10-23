@@ -10,7 +10,7 @@ tags:
 coverImage: "content-security-policy.png"
 ---
 
-今天SEO禅要来聊聊**CSP(Content Security Policy)内容安全策略**，这是HTTP层的内容，主要目的就是**设置安全白名单**，前面SEO禅已经介绍过**[XSS跨站脚本攻击](https://www.seozen.top/web-seo-security-xss-2021.html)**，CSP的作用主要就是防止加载不安全的内容，就算网站有可以注入JS脚本的地方，只要不加载和访问外部资源，也会相对安全些。
+今天我要来聊聊**CSP(Content Security Policy)内容安全策略**，这是HTTP层的内容，主要目的就是**设置安全白名单**，前面我已经介绍过**[XSS跨站脚本攻击](https://www.helloyu.top/web-seo-security-xss-2021.html)**，CSP的作用主要就是防止加载不安全的内容，就算网站有可以注入JS脚本的地方，只要不加载和访问外部资源，也会相对安全些。
 
 ## 如何启用CSP
 
@@ -31,7 +31,7 @@ Header set Content-Security-Policy "default-src 'self';"
 
 ## CSP指令选项
 
-上面只是简单的介绍了一些指令，CSP提供许多指令选择，SEO禅简单介绍下，需要使用还是要看官方文档。
+上面只是简单的介绍了一些指令，CSP提供许多指令选择，我简单介绍下，需要使用还是要看官方文档。
 
 ### connect-src 连接资源
 
@@ -76,7 +76,7 @@ CSP的指令选项还有不少，可以参看MDN的[CSP文档](https://developer
 Content-Security-Policy: script-src 'self' https://*.seozen.top
 ```
 
-上面一个白名单表示：除了自身域名和所有seozen.top域名是https协议的，其余外部JS资源一律阻止加载，即使是http://www.seozen.top这样的域名也是无法加载的，因为协议不符合要求。
+上面一个白名单表示：除了自身域名和所有seozen.top域名是https协议的，其余外部JS资源一律阻止加载，即使是http://www.helloyu.top这样的域名也是无法加载的，因为协议不符合要求。
 
 如果有多个外部资源，可以并排，中间使用空格分割，一种选项末尾使用`;`分割，如：
 

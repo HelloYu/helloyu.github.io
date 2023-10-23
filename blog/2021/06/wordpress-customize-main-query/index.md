@@ -9,7 +9,7 @@ tags:
 coverImage: "WordPress-Pre-get-posts-filter.jpeg"
 ---
 
-在进行WordPress开发的时候，我们经常要去自定义一些参数，比如说把一些文章排除，今天SEO禅就来分享下，如何自定义主循环**Main** **Query**，我们在刚开始开发WordPress，所有的主题模板一定会有下面这段代码：
+在进行WordPress开发的时候，我们经常要去自定义一些参数，比如说把一些文章排除，今天我就来分享下，如何自定义主循环**Main** **Query**，我们在刚开始开发WordPress，所有的主题模板一定会有下面这段代码：
 
 ```
 if ( have_posts() ) {
@@ -44,7 +44,7 @@ WP\_Query对象解析
 
 ## pre\_get\_posts自定义
 
-上面讲了这么多，还没说到如何实际去自定义这个主循环，自定义的方法肯定不止一种，这里只介绍SEO禅认为最合理的一种，那就是[pre\_get\_posts hook](https://developer.wordpress.org/reference/hooks/pre_get_posts/)，这个过滤钩子是在执行实际查询前生效，把查询条件自定义后返回，再继续进行实际的查询，下面就拿SEO禅博客举例，在[SEO禅V2.0版本](https://www.seozen.top/seozen-website-new-version-2021.html)中，有一个**所见所闻所想**模块，这个模块的内容是平时SEO禅个人的所见所闻所想，但是这块内容也会出现在主循环上，主循环只想有和**SEO优化**有关的内容，所以就要想办法把他们去除掉，看下面的代码：
+上面讲了这么多，还没说到如何实际去自定义这个主循环，自定义的方法肯定不止一种，这里只介绍我认为最合理的一种，那就是[pre\_get\_posts hook](https://developer.wordpress.org/reference/hooks/pre_get_posts/)，这个过滤钩子是在执行实际查询前生效，把查询条件自定义后返回，再继续进行实际的查询，下面就拿我博客举例，在[我V2.0版本](https://www.helloyu.top/seozen-website-new-version-2021.html)中，有一个**所见所闻所想**模块，这个模块的内容是平时我个人的所见所闻所想，但是这块内容也会出现在主循环上，主循环只想有和**SEO优化**有关的内容，所以就要想办法把他们去除掉，看下面的代码：
 
 ```
 // 从主查询中移除所见所闻所想文章
@@ -64,4 +64,4 @@ function remove_isee_ihear_ithink_posts_from_main_query($query)
 add_action('pre_get_posts', __NAMESPACE__ . '\\remove_isee_ihear_ithink_posts_from_main_query');
 ```
 
-`category`有直接排除的参数，但是使用的是`id`作为条件，SEO禅比较懒，不想去查id，因为`slug`别名是自己设置的肯定比较熟悉，就直接使用别名好了，但是没有现成的参数支持，那我们就使用`tax_query`组一个，具体的参数可以查看WP\_Query中的[tax\_query部分](https://developer.wordpress.org/reference/classes/wp_query/#taxonomy-parameters)，上面的`__NAMESPACE__` 是因为SEO禅使用的是Laravel来开发的WordPress，你们自己的就按平时的写法就行。这里只是简单的举个例子，自己可以去看看文档，根据自己的实际需求进行调整。
+`category`有直接排除的参数，但是使用的是`id`作为条件，我比较懒，不想去查id，因为`slug`别名是自己设置的肯定比较熟悉，就直接使用别名好了，但是没有现成的参数支持，那我们就使用`tax_query`组一个，具体的参数可以查看WP\_Query中的[tax\_query部分](https://developer.wordpress.org/reference/classes/wp_query/#taxonomy-parameters)，上面的`__NAMESPACE__` 是因为我使用的是Laravel来开发的WordPress，你们自己的就按平时的写法就行。这里只是简单的举个例子，自己可以去看看文档，根据自己的实际需求进行调整。

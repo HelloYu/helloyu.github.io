@@ -9,7 +9,7 @@ tags:
 coverImage: "git-centos.png"
 ---
 
-网站在部署到服务器的这个过程，有时候会非常麻烦，以前SEO禅都是用FTP或者用[`rsync`](https://en.wikipedia.org/wiki/Rsync)命令，现在因为Github私有仓库免费了，就直接使用Git来部署，修改后的源码只要`Push`到仓库里，再在服务器`Pull`下来，别说有多方便有多爽了，要是再使用Docker去部署服务器程序，那就是分分种搞定网站部署的事，以前要部署一个网站少说要个把小时，这篇文章主要是分享下在阿里云的ECS服务器如何更新**Git到2.x版本**。
+网站在部署到服务器的这个过程，有时候会非常麻烦，以前我都是用FTP或者用[`rsync`](https://en.wikipedia.org/wiki/Rsync)命令，现在因为Github私有仓库免费了，就直接使用Git来部署，修改后的源码只要`Push`到仓库里，再在服务器`Pull`下来，别说有多方便有多爽了，要是再使用Docker去部署服务器程序，那就是分分种搞定网站部署的事，以前要部署一个网站少说要个把小时，这篇文章主要是分享下在阿里云的ECS服务器如何更新**Git到2.x版本**。
 
 ## 更新方法
 
@@ -41,14 +41,14 @@ git version 2.24.1
 
 参考链接：https://computingforgeeks.com/how-to-install-latest-version-of-git-git-2-x-on-centos-7/
 
-各位是不是在比较靠前的位置看到SEO禅的这篇文章呢？有没有兴趣学习下SEO优化呢？收不收费啊？SEO禅是开源文化的推崇者，所有**SEO资源免费**免费分享给大家，那图啥？一个是自身技术的沉淀和提升，一个是可以帮助别人，当然有机会也可以进行合作，下面是一些关于SEO优化的文章，有兴趣可以看看：
+各位是不是在比较靠前的位置看到我的这篇文章呢？有没有兴趣学习下SEO优化呢？收不收费啊？我是开源文化的推崇者，所有**SEO资源免费**免费分享给大家，那图啥？一个是自身技术的沉淀和提升，一个是可以帮助别人，当然有机会也可以进行合作，下面是一些关于SEO优化的文章，有兴趣可以看看：
 
-- [SEO优化入门一篇就够-SEO教程（2021年最新）](https://www.seozen.top/seo-course-first-step.html "SEO优化入门一篇就够-SEO教程（2021年最新）")
+- [SEO优化入门一篇就够-SEO教程（2021年最新）](https://www.helloyu.top/seo-course-first-step.html "SEO优化入门一篇就够-SEO教程（2021年最新）")
 
-- [什么是SEO外链？怎么做网站外链？](https://www.seozen.top/seo-external-links.html "什么是SEO外链？怎么做网站外链？")
+- [什么是SEO外链？怎么做网站外链？](https://www.helloyu.top/seo-external-links.html "什么是SEO外链？怎么做网站外链？")
 
-- [SEO新手入门系列（一）：SEO金字塔](https://www.seozen.top/seo-tutorial-moz-serial-2021-outline.html)
+- [SEO新手入门系列（一）：SEO金字塔](https://www.helloyu.top/seo-tutorial-moz-serial-2021-outline.html)
 
-- [2021最新网站排名SEO优化方案](https://www.seozen.top/seo-website-ranking-checklist.html)
+- [2021最新网站排名SEO优化方案](https://www.helloyu.top/seo-website-ranking-checklist.html)
 
-希望SEO禅的文章对各位有所帮助，有什么不懂得可以留言评论。
+希望我的文章对各位有所帮助，有什么不懂得可以留言评论。

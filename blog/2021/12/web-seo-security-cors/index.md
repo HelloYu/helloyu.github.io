@@ -18,7 +18,7 @@ coverImage: "web-seo-security-cors.png"
 
 CORS资源请求错误
 
-如果没有遇到，那你就还需要多努力努力了，这个错误就是今天SEO禅要说的**CORS（Cross-origin resource sharing）跨域资源共享**，这是在前端开发中再常见不过的问题，比如我们本地开发，使用的域名地址是`localhost`，或者IP如`192.x.x.x`之类的，如果请求后端API服务器和前端服务器不是同一个，就会有CORS错误，为什么会产生这种错误呢？
+如果没有遇到，那你就还需要多努力努力了，这个错误就是今天我要说的**CORS（Cross-origin resource sharing）跨域资源共享**，这是在前端开发中再常见不过的问题，比如我们本地开发，使用的域名地址是`localhost`，或者IP如`192.x.x.x`之类的，如果请求后端API服务器和前端服务器不是同一个，就会有CORS错误，为什么会产生这种错误呢？
 
 ## CORS问题的起因
 
@@ -57,7 +57,7 @@ Content-type的值仅限于：
 ```
 GET /cors HTTP/1.1
 Origin: https://example.com
-Host: www.seozen.top
+Host: www.helloyu.top
 Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
 Connection: keep-alive
@@ -123,4 +123,4 @@ Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 
 也就是说要指定明确的允许请求列表，和请求方法。
 
-关于CORS的问题暂时SEO禅就说这么多，以前我们解决跨域资源请求时候还会用到JSONP，现在基本很少使用，使用CORS机制的比较多一些，有什么问题可以留言评论，要是有什么说的不对的地方欢迎点出。
+关于CORS的问题暂时我就说这么多，以前我们解决跨域资源请求时候还会用到JSONP，现在基本很少使用，使用CORS机制的比较多一些，有什么问题可以留言评论，要是有什么说的不对的地方欢迎点出。

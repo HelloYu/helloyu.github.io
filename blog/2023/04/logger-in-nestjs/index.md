@@ -10,7 +10,7 @@ tags:
 coverImage: "nest-logger.png"
 ---
 
-在日常开发中，我们都或多或少要用到日志服务去排查Bug，尤其是线上环境的时候，很多情况是可以通过分析错误日志去解决的，如果没有打印出错误日志，在线上就不容易查出问题，下面SEO禅将借用在《[Clean Architecture在NestJS中的实践](https://www.seozen.top/clean-architecture-with-nestjs-best-practice-init.html)》实现的代码，来加入日志打印功能。
+在日常开发中，我们都或多或少要用到日志服务去排查Bug，尤其是线上环境的时候，很多情况是可以通过分析错误日志去解决的，如果没有打印出错误日志，在线上就不容易查出问题，下面我将借用在《[Clean Architecture在NestJS中的实践](https://www.helloyu.top/clean-architecture-with-nestjs-best-practice-init.html)》实现的代码，来加入日志打印功能。
 
 ## NestJS内置Logger
 

@@ -10,11 +10,11 @@ tags:
 coverImage: "linux-backup-git-github.jpg"
 ---
 
-在前一篇文章SEO禅分享了如何使用cron命令去**备份MySQL数据库**，这篇文章要分享下，如何定时把服务器数据远程备份到Github上去，Github免费了私库，那是真的香，很多以前很麻烦的操作，现在用github作为中转同步，就变的方便不少。
+在前一篇文章我分享了如何使用cron命令去**备份MySQL数据库**，这篇文章要分享下，如何定时把服务器数据远程备份到Github上去，Github免费了私库，那是真的香，很多以前很麻烦的操作，现在用github作为中转同步，就变的方便不少。
 
 ## 备份前准备
 
-首先我们使用的是Git程序，肯定要先下载git，如果是Centos服务器，可以使用**Yum命令下载**，当然如果你下载之后发现不是2.x版本的git，可以看看SEO禅之前写的在[centos7上升级git](https://www.seozen.top/centos-update-upgrade-git.html)的文章，因为我们使用的是SSH的方式去连接Github，所以要先搞定[怎么用ssh连接github](https://www.seozen.top/ssh-github-keygen-2021.html)，这里为了方便，在生成ssh秘钥的时候，**不要输入密码**，直接为空，完成上面两个操作，就可以继续下面的操作了。
+首先我们使用的是Git程序，肯定要先下载git，如果是Centos服务器，可以使用**Yum命令下载**，当然如果你下载之后发现不是2.x版本的git，可以看看我之前写的在[centos7上升级git](https://www.helloyu.top/centos-update-upgrade-git.html)的文章，因为我们使用的是SSH的方式去连接Github，所以要先搞定[怎么用ssh连接github](https://www.helloyu.top/ssh-github-keygen-2021.html)，这里为了方便，在生成ssh秘钥的时候，**不要输入密码**，直接为空，完成上面两个操作，就可以继续下面的操作了。
 
 ## 准备Github仓库
 
@@ -22,7 +22,7 @@ coverImage: "linux-backup-git-github.jpg"
 
 ## 编写Shell备份脚本
 
-在前面SEO禅写的[Linux入门：使用cron自动备份WordPress MySQL数据库](https://www.seozen.top/linux-cron-mysqldump-backup-wordpress.html)最后提到，要使用shell脚本去执行自动化备份任务，今天我们就先写一个超级简单的Git备份脚本，代码如下：
+在前面我写的[Linux入门：使用cron自动备份WordPress MySQL数据库](https://www.helloyu.top/linux-cron-mysqldump-backup-wordpress.html)最后提到，要使用shell脚本去执行自动化备份任务，今天我们就先写一个超级简单的Git备份脚本，代码如下：
 
 ```
 #!/bin/bash
@@ -34,7 +34,7 @@ git add . && git commit -m "$(date)" && git push origin main
 
 ## 设置自动备份任务
 
-把上面那段代码保存为一个脚本文件，这里SEO禅就命名为`sql_backup.sh`文件，你们自己想命名什么自己随便了，不懂怎么创建文件？可以看看[Linux入门：Vim使用技巧](https://www.seozen.top/linux-vim-tips.html)，还需要为创建的shell文件添加执行权限：
+把上面那段代码保存为一个脚本文件，这里我就命名为`sql_backup.sh`文件，你们自己想命名什么自己随便了，不懂怎么创建文件？可以看看[Linux入门：Vim使用技巧](https://www.helloyu.top/linux-vim-tips.html)，还需要为创建的shell文件添加执行权限：
 
 ```
 chmod +x sql_backup.sh
@@ -44,7 +44,7 @@ chmod +x sql_backup.sh
 
 ```
 ./sql_backup.sh
-[root@www.seozen.top seozen_database_backup]# ./sql_backup.sh
+[root@www.helloyu.top seozen_database_backup]# ./sql_backup.sh
 [main 3286fee] Thu Aug 19 12:34:40 CST 2021
  1 file changed, 1 insertion(+), 1 deletion(-)
 Enumerating objects: 7, done.
@@ -63,11 +63,11 @@ To github.com:seozen/seozen.top-sql.git
 00 01 * * 2  ~/sql_backup.sh >> ~/cron_log.log 2>&1
 ```
 
-上面的指令看不懂？可以看看[Linux入门：Cron计划任务](https://www.seozen.top/linux-cron-jobs.html)这篇文章，大概表达的是在每个星期二凌晨1点执行这个shell脚本文件，然后把输出日志到cron\_log文件中去。
+上面的指令看不懂？可以看看[Linux入门：Cron计划任务](https://www.helloyu.top/linux-cron-jobs.html)这篇文章，大概表达的是在每个星期二凌晨1点执行这个shell脚本文件，然后把输出日志到cron\_log文件中去。
 
 ## 将SSH-Agent加入开机启动
 
-我们前面把SSH秘钥加入给SSH-Agent管理，但是其实有个问题，就是秘钥是再内存中的，如果服务器重启，那个秘钥就需要重新加入，这时候我们可以把下面这两段代码加入`~/.bashrc`文件，如果像SEO禅一样使用的是zsh命令程序，可以加入`~/.zshrc`文件中：
+我们前面把SSH秘钥加入给SSH-Agent管理，但是其实有个问题，就是秘钥是再内存中的，如果服务器重启，那个秘钥就需要重新加入，这时候我们可以把下面这两段代码加入`~/.bashrc`文件，如果像我一样使用的是zsh命令程序，可以加入`~/.zshrc`文件中：
 
 ```
 eval "$(ssh-agent -s)"

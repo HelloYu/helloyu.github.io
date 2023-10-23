@@ -11,11 +11,11 @@ tags:
 coverImage: "google-1-1.jpeg"
 ---
 
-谷歌Google Search Console对于做谷歌SEO优化的人来说应该是再熟悉不过，自从新版上线之后，增加了一个非常有用的功能**Crawl Stats**中文解释为“爬虫统计”，今天SEO禅就跟大家分享一下这个牛逼到不行的功能在网站排名优化上有什么用处。
+谷歌Google Search Console对于做谷歌SEO优化的人来说应该是再熟悉不过，自从新版上线之后，增加了一个非常有用的功能**Crawl Stats**中文解释为“爬虫统计”，今天我就跟大家分享一下这个牛逼到不行的功能在网站排名优化上有什么用处。
 
 ## Crawl stats位置
 
-说实在的，SEO禅不知道谷歌大神们怎么想的，把这么好的功能放到一个很不起眼的地方，一般没有去特别看你不会注意到有这个功能，Crawl stats的位置在Settings里面，点开如下图的位置：
+说实在的，我不知道谷歌大神们怎么想的，把这么好的功能放到一个很不起眼的地方，一般没有去特别看你不会注意到有这个功能，Crawl stats的位置在Settings里面，点开如下图的位置：
 
 ![谷歌Search Console Crawling](images/谷歌Search-Console-Crawling.png)
 
@@ -23,11 +23,11 @@ coverImage: "google-1-1.jpeg"
 
 ![Crawl Stats 爬虫爬取次数](images/Crawl-Stas-爬虫爬取次数.jpg)
 
-可以看到SEO禅这两个月**谷歌Googlebot**大概来了604次，从2月15号以后频次上涨，这其实正好对应了我做网站内链和外链优化的时间。
+可以看到我这两个月**谷歌Googlebot**大概来了604次，从2月15号以后频次上涨，这其实正好对应了我做网站内链和外链优化的时间。
 
 ![谷歌 Crawl stats 数据](images/谷歌-Crawl-stats-数据.png)
 
-往下可以看到各`HOST`的请求次数，因为我做了全站301跳转到`www.seozen.top`域名下，所以这个数据也是符合预期的，如果做了301跳转和这里的结果不一样的，要好好看看是不是[全站301重定向规则](https://www.seozen.top/301-https-seo.html)写错了。
+往下可以看到各`HOST`的请求次数，因为我做了全站301跳转到`www.helloyu.top/seo`域名下，所以这个数据也是符合预期的，如果做了301跳转和这里的结果不一样的，要好好看看是不是[全站301重定向规则](https://www.helloyu.top/seo/301-https-seo.html)写错了。
 
 ## SEO优化应用
 

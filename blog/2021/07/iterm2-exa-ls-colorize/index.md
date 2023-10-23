@@ -8,7 +8,7 @@ tags:
 coverImage: "exa-replace-ls.png"
 ---
 
-前面一篇已经介绍了如何在[iterm2安装zsh和oh-my-zsh](https://www.seozen.top/wp-admin/post.php?post=769&action=edit)，这篇文章SEO禅要分享一个很不错得**shell程序**——**exa**.
+前面一篇已经介绍了如何在[iterm2安装zsh和oh-my-zsh](https://www.helloyu.top/wp-admin/post.php?post=769&action=edit)，这篇文章我要分享一个很不错得**shell程序**——**exa**.
 
 > A modern replacement for `ls`.
 > 
@@ -52,4 +52,4 @@ alias ls="exa"
 
 最后要使用下source命令更新生效下配置文件`source ~/.zshrc`
 
-exa更多使用方法，SEO禅会在其他的文章分享，今晚失眠，随手写了这篇文章，希望对各位有帮助。
+exa更多使用方法，我会在其他的文章分享，今晚失眠，随手写了这篇文章，希望对各位有帮助。

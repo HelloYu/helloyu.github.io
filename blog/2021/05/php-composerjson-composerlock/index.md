@@ -9,7 +9,7 @@ tags:
 coverImage: "b62e9e14-b20f-4b2c-9d03-99c2ed8776dc.jpeg"
 ---
 
-PHP开发的朋友一定很快就会接触到**composer包管理器**，SEO禅在刚开始使用Composer的时候有点懵，为什么有两个文件，`composer.json`和`composer.lock`，刚开始的时候真没搞懂，为什么不像`NPM`一样就一个`package.json`就行了呢？后来慢慢的深入才发现这种机制的好处。
+PHP开发的朋友一定很快就会接触到**composer包管理器**，我在刚开始使用Composer的时候有点懵，为什么有两个文件，`composer.json`和`composer.lock`，刚开始的时候真没搞懂，为什么不像`NPM`一样就一个`package.json`就行了呢？后来慢慢的深入才发现这种机制的好处。
 
 首先我们来看看一个`composer.json`代码例子:
 

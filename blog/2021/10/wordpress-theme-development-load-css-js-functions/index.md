@@ -10,7 +10,7 @@ tags:
 coverImage: "Wordpress-Theme-Development-functions.jpeg"
 ---
 
-在上一篇文章中，我们已经使用get\_header，get\_footer等函数把一个页面分割成多个文件，这篇文章要来说说如何载入CSS/JS前端文件，我们可以打开[Chrome Developer Tool](https://www.seozen.top/developer-tools-network-seo.html)查看项目源码，可以看到如下的代码：
+在上一篇文章中，我们已经使用get\_header，get\_footer等函数把一个页面分割成多个文件，这篇文章要来说说如何载入CSS/JS前端文件，我们可以打开[Chrome Developer Tool](https://www.helloyu.top/developer-tools-network-seo.html)查看项目源码，可以看到如下的代码：
 
 ![SEOZEN-wordpress-theme-development-html-source-code](images/SEOZEN-wordpress-theme-development-html-source-code-1024x640.jpg)
 
@@ -49,7 +49,7 @@ functions.php文件在主题启用后，会被WordPress载入作为主题的功�
 
 ## 载入CSS/JS文件
 
-functions.php要完成的功能很多，放在一篇文章是说不完的，以后SEO禅会单独写文章专门介绍，这里我们先进行加载CSS/JS文件，在上一节课的源代码基础上我们作一些修改，创建一个css文件和js文件：
+functions.php要完成的功能很多，放在一篇文章是说不完的，以后我会单独写文章专门介绍，这里我们先进行加载CSS/JS文件，在上一节课的源代码基础上我们作一些修改，创建一个css文件和js文件：
 
 ```
 // functions.php
@@ -87,6 +87,6 @@ WordPress主题开发载入CSS/JS文件
 
 可以看到`head`和`</body>`标签内已经有我们在functions.php中注册的CSS/JS文件，当然还有很多WordPress自带加载的文件，这些都是可以通过在functions.php中进行自定义删除，这里暂时不说，到这里我们已经可以自己加载自定义的CSS/JS文件，后续我们还可以通过WordPress提供的Condition Tag去根据不同的界面实现动态加载资源文件，这样对于提升加载速度也有一定的帮助。
 
-这篇教程就到这，下篇教程SEO禅会教各位如何使用Loop主循环读取Post文章，有什么不懂得可以留言，回头见！
+这篇教程就到这，下篇教程我会教各位如何使用Loop主循环读取Post文章，有什么不懂得可以留言，回头见！
 
 本篇教程Github地址：[WordPress主题开发-加载CSS/JS文件](https://github.com/HelloYu/seozen-dummy/tree/02-加载CSS/JS资源文件)

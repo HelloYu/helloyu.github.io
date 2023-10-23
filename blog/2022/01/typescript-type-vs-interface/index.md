@@ -8,7 +8,7 @@ tags:
 coverImage: "type-vs-interface-typescript.png"
 ---
 
-在学习TypeScript的时候，SEO禅觉得最迷惑的地方就是Type和Interface到底有什么区别？看着好像没什么区别？那为什么要有这两个不同的关键字呢，找到一篇文章说的还不错，翻译过来分享给各位。
+在学习TypeScript的时候，我觉得最迷惑的地方就是Type和Interface到底有什么区别？看着好像没什么区别？那为什么要有这两个不同的关键字呢，找到一篇文章说的还不错，翻译过来分享给各位。
 
 ## 声明合并
 
@@ -24,7 +24,7 @@ interface SEO {
 };
 
 const seozen: SEO = {
-  name: "SEO禅",
+  name: "我",
   level: "Awesome"
 };
 ```
@@ -36,7 +36,7 @@ const seozen: SEO = {
 ```
 class Person {
   printName = () => {
-    console.log("我叫SEO禅")
+    console.log("我叫我")
   }
 };
 
@@ -45,12 +45,12 @@ interface SEOZEN extends Person {
 };
 
 class NewSEOZEN implements SEOZEN {
-  name: "SEO禅";
+  name: "我";
   constructor(engine:string) {
     this.name = name
   }
   printName = () => {
-    console.log("SEO禅优化")
+    console.log("我优化")
   }
 };
 ```

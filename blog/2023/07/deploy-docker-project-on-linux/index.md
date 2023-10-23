@@ -11,11 +11,11 @@ tags:
 coverImage: "docker-nestjs.jpg"
 ---
 
-SEO禅现在所有的服务端都是基于Docker开发，所以在上线部署的时候也是使用Docker，最近对一个项目的服务端进行重构了下，要上新的服务器，这里就记录分享下整个过程。
+我现在所有的服务端都是基于Docker开发，所以在上线部署的时候也是使用Docker，最近对一个项目的服务端进行重构了下，要上新的服务器，这里就记录分享下整个过程。
 
 ## 安装Docker在Linux
 
-SEO禅使用的服务器是Centos，可以直接YUM来安装，这也是[Docker官网推荐安装方式](https://docs.docker.com/engine/install/centos/#install-using-the-repository)：
+我使用的服务器是Centos，可以直接YUM来安装，这也是[Docker官网推荐安装方式](https://docs.docker.com/engine/install/centos/#install-using-the-repository)：
 ```
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -35,7 +35,7 @@ sudo docker run hello-world
 ```
 sudo yum install git
 ```
-安装好后，发现并不能直接拉仓库的数据，因为还没授权，可以参考[Git如何配置SSH](https://www.seozen.top/ssh-github-keygen-2021.html)这篇文章。
+安装好后，发现并不能直接拉仓库的数据，因为还没授权，可以参考[Git如何配置SSH](https://www.helloyu.top/ssh-github-keygen-2021.html)这篇文章。
 
 ## 使用Docker脚本部署
 

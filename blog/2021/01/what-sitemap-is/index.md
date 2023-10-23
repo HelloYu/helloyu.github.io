@@ -25,8 +25,8 @@ coverImage: "sitemap.png"
 
 打开一个**sitemap.txt**格式的网站地图文件，大致是以下样式：
 
-- https://www.seozen.top/robots-mislead-seo.html
-- https://www.seozen.top/search-engine.html
+- https://www.helloyu.top/robots-mislead-seo.html
+- https://www.helloyu.top/search-engine.html
 - https://ww.seozen.top/robots-seo.html
 
 此文本文件需要遵循以下规则：

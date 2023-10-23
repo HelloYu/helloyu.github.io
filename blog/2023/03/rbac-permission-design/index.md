@@ -113,7 +113,7 @@ RBAC0模型如下:
 
 有了上述的权限模型,设计表结构就不难了,下面是多系统下的表结构,简单设计下,主要提供思路:![](https://note.youdao.com/yws/public/resource/13e45ac31576fe901e85f3c64ac06332/xmlnote/62B8100495FB43338719E3140ED9BFA0/2208)
 
-[![](images/RBAC-p.png)](https://www.seozen.top/wp-content/uploads/2023/03/RBAC-p.png)
+[![](images/RBAC-p.png)](https://www.helloyu.top/wp-content/uploads/2023/03/RBAC-p.png)
 
 ### 4.权限框架
 

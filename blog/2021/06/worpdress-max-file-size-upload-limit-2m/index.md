@@ -17,7 +17,7 @@ coverImage: "maxfileuploadsize.png"
 
 ## 服务器根目录php.ini文件
 
-SEO禅自己使用的是这个方法，使用PHP的配置文件`php.ini`去设置，在WordPress站点的根目录创建这个文件，然后把下面的代码拷贝到文件中，再重启下Apache应该生效了。
+我自己使用的是这个方法，使用PHP的配置文件`php.ini`去设置，在WordPress站点的根目录创建这个文件，然后把下面的代码拷贝到文件中，再重启下Apache应该生效了。
 
 upload\_max\_filesize = 64M
 post\_max\_size = 64M
@@ -36,7 +36,7 @@ php\_value max\_input\_time 300
 
 ## functions.php文件
 
-最后一种办法是修改主题的`functions.php`文件，这是最不推荐的一种，因为大部份使用的主题都是第三方开发的，如果修改这个文件，在下次更新的时候里面的代码就会被覆盖，或者更新失败，很多自定义的功能可以放到插件或者`child theme`去完成，这些内容SEO禅会在其它文章介绍，下面是加入的代码：
+最后一种办法是修改主题的`functions.php`文件，这是最不推荐的一种，因为大部份使用的主题都是第三方开发的，如果修改这个文件，在下次更新的时候里面的代码就会被覆盖，或者更新失败，很多自定义的功能可以放到插件或者`child theme`去完成，这些内容我会在其它文章介绍，下面是加入的代码：
 
 @ini\_set( 'upload\_max\_size' , '64M' );
 @ini\_set( 'post\_max\_size', '64M');

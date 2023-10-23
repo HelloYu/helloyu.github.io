@@ -40,8 +40,8 @@ sudo vim /etc/apache2/extra/httpd-vhost.conf
 ```
 ServerAdmin mr.yu1991@gmail.com  
 DocumentRoot "/Library/WebServer/Documents/theme-develop/"
-ServerName www.seozen.top
-ServerAlias www.seozen.top
+ServerName www.helloyu.top
+ServerAlias www.helloyu.top
   <Directory "/Library/WebServer/Documents/theme-develop/">
                Options Indexes FollowSymLinks MultiViews
                AllowOverride None
@@ -64,7 +64,7 @@ sudo vim /etc/hosts
 ```
 在文件最尾巴加上一句解析：
 ```
-127.0.0.1        www.seozen.top //刚配好的虚拟站点目录
+127.0.0.1        www.helloyu.top //刚配好的虚拟站点目录
 ```
 保存退出，之后再重启Apache服务器：
 ```
@@ -74,4 +74,4 @@ sudo apachectl restart
 ```
 apachectl -S
 ```
-`S`是大写，这个命令可以查看虚拟主机配置情况，之后在浏览器输入`www.seozen.top`看看是不是可以运行了。
+`S`是大写，这个命令可以查看虚拟主机配置情况，之后在浏览器输入`www.helloyu.top`看看是不是可以运行了。

@@ -8,11 +8,11 @@ tags:
 coverImage: "oh-my-zsh.png"
 ---
 
-一直在找机会写这篇文章，今天SEO禅把硬盘格式化，升级了MacOS到最新的**Big Sur**，正好补上这篇，使用**iterm2**学习和工作已经有段时间，真得越用越喜欢，希望能分享一些有用得东西给大家，其他系统怎么配置要去别的文章看看，这篇文章只说如何在MacOS配置**iterm2+zsh+oh-my-zsh**，如果有哪里不对的地方，可以留言指出。
+一直在找机会写这篇文章，今天我把硬盘格式化，升级了MacOS到最新的**Big Sur**，正好补上这篇，使用**iterm2**学习和工作已经有段时间，真得越用越喜欢，希望能分享一些有用得东西给大家，其他系统怎么配置要去别的文章看看，这篇文章只说如何在MacOS配置**iterm2+zsh+oh-my-zsh**，如果有哪里不对的地方，可以留言指出。
 
 ## 安装iterm2
 
-首先我们先要[下载iterm2](https://iterm2.com/downloads.html)，SEO禅下载的版本是**iTerm2 3.4.8 (OS 10.14+)**，反正下载最新版的就是。
+首先我们先要[下载iterm2](https://iterm2.com/downloads.html)，我下载的版本是**iTerm2 3.4.8 (OS 10.14+)**，反正下载最新版的就是。
 
 ## 安装zsh+oh-my-zsh
 
@@ -48,13 +48,13 @@ iterm2使用material design配色
 
 ## 更换zsh默认主题
 
-zsh默认的主题并不是每个人都喜欢，所以下面SEO禅来说下如何更换主题，因为`oh-my-zsh`已经有带了一些主题，我们配置下，更换下主题就好，打开配置文件：
+zsh默认的主题并不是每个人都喜欢，所以下面我来说下如何更换主题，因为`oh-my-zsh`已经有带了一些主题，我们配置下，更换下主题就好，打开配置文件：
 
 ```
 vim ~/.zshrc
 ```
 
-可以看到当前的主题是`ZSH_THEME="robbyrussell"`，可以访问[oh-my-zsh主题](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)列表查看有什么主题可以更换，也可以安装其他主题，SEO禅安装的是一款叫`powerlevel10k`的主题，可以看看主题的[github库](https://github.com/romkatv/powerlevel10k#oh-my-zsh)，如果你们也喜欢的话，运行下面命令先下载主题：
+可以看到当前的主题是`ZSH_THEME="robbyrussell"`，可以访问[oh-my-zsh主题](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)列表查看有什么主题可以更换，也可以安装其他主题，我安装的是一款叫`powerlevel10k`的主题，可以看看主题的[github库](https://github.com/romkatv/powerlevel10k#oh-my-zsh)，如果你们也喜欢的话，运行下面命令先下载主题：
 
 ```
 git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -84,4 +84,4 @@ powerlevel10k配置过程
 
 powerlevel10k配置效果
 
-每个人喜好不一样，如果不满意命令行输入`p10k configure`进行重新配置，SEO禅对这个效果还不是特别满意，后续还会花点时间继续调整，比如上面的文件夹颜色太单一，这个需要使用其他插件来换配色，到时候会分享在其他文章，这篇文章就先写到这。
+每个人喜好不一样，如果不满意命令行输入`p10k configure`进行重新配置，我对这个效果还不是特别满意，后续还会花点时间继续调整，比如上面的文件夹颜色太单一，这个需要使用其他插件来换配色，到时候会分享在其他文章，这篇文章就先写到这。

@@ -9,7 +9,7 @@ tags:
 coverImage: "wordpress-install.png"
 ---
 
-这篇文章是《2021最新WordPress安装教程》系列文章中的第四篇文章，如果没有看前面几篇文章，建议各位朋友返回去先看看前面的文章，如果在使用 **WordPress建站**过程中有什么问题，可以留言给我，我看到一定会回复。前一篇文章《 [2021最新WordPress安装教程（三）](https://www.seozen.top/WordPress安装-steps-2021.html)》中，已经基本把WordPress安装前期准备详细教给各位，下面这篇文章，将具体开始讲解 **如何安装配置WordPress**。
+这篇文章是《2021最新WordPress安装教程》系列文章中的第四篇文章，如果没有看前面几篇文章，建议各位朋友返回去先看看前面的文章，如果在使用 **WordPress建站**过程中有什么问题，可以留言给我，我看到一定会回复。前一篇文章《 [2021最新WordPress安装教程（三）](https://www.helloyu.top/WordPress安装-steps-2021.html)》中，已经基本把WordPress安装前期准备详细教给各位，下面这篇文章，将具体开始讲解 **如何安装配置WordPress**。
 
 ## Wget下载WordPress
 
@@ -108,6 +108,6 @@ define( 'NONCE\_SALT',       'put your unique phrase here' );
 
 **WordPress安装教程**到这里基本就结束了，用了四篇文章，从零开始手把手教大家怎么安装WordPress，如果还有什么不懂的地方，朋友们可以在下面留言，我看到一定会第一时间回复，如果在使用WordPress过程中遇到什么问题，可以第一时间给我留言，接下来我还会继续写一些文章来介绍WordPress的相关内容，比如说：WordPress主题开发，WordPress插件开发，WordPress使用DIVI快速建站等内容，想要做好**搜索引擎优化**，WordPress是非常好的建站帮手，SEO优化不是单一的技术，你掌控的知识，经验，技术越多，你在SEO方面就能做的更出色。
 
-SEO禅在开发WordPress主题或者插件的时候，已经不再使用传统的开发环境，这里推荐大家使用Docker开发WordPress，一个命令就可以，可以看看SEO禅写的使用[Docker配置WordPress开发](https://www.seozen.top/docker-wordpress-develop.html)中的介绍，希望对各位有帮助，有什么疑问可以留言评论，SEO禅已经可以评论咯！
+我在开发WordPress主题或者插件的时候，已经不再使用传统的开发环境，这里推荐大家使用Docker开发WordPress，一个命令就可以，可以看看我写的使用[Docker配置WordPress开发](https://www.helloyu.top/docker-wordpress-develop.html)中的介绍，希望对各位有帮助，有什么疑问可以留言评论，我已经可以评论咯！
 
-如果有想要学习SEO优化的朋友，可以看看这篇文章入门[SEO优化入门一篇就够-SEO教程（2021年最新）](https://www.seozen.top/seo-course-first-step.html)
+如果有想要学习SEO优化的朋友，可以看看这篇文章入门[SEO优化入门一篇就够-SEO教程（2021年最新）](https://www.helloyu.top/seo-course-first-step.html)

@@ -12,7 +12,7 @@ tags:
 coverImage: "csrf-cross-site-request-forgery.jpg"
 ---
 
-SEO禅在上一篇文章**[跨站脚本攻击XSS](https://www.seozen.top/web-seo-security-xss-2021.html)**中介绍了客户端最常见的**安全攻击漏洞**，今天再来介绍一个同样很热门的一种攻击方法**[CSRF跨站请求伪造攻击](https://baike.baidu.com/item/跨站请求伪造/13777878?fromtitle=CSRF&fromid=2735433&fr=aladdin)**，CSRF英文全称：**cross-site request forgery**，和XSS都有**Cross-Site**，但是他们的概念并不相同，XSS主要是通过获取受害者的Cookie，之后通过使用Cookie来完成攻击操作，而CSRF是直接伪造受害者身份，来达到攻击目的，这篇文章SEO禅来说说**什么是CSRF跨站请求伪造**和**怎么防范CSRF攻击**。
+我在上一篇文章**[跨站脚本攻击XSS](https://www.helloyu.top/web-seo-security-xss-2021.html)**中介绍了客户端最常见的**安全攻击漏洞**，今天再来介绍一个同样很热门的一种攻击方法**[CSRF跨站请求伪造攻击](https://baike.baidu.com/item/跨站请求伪造/13777878?fromtitle=CSRF&fromid=2735433&fr=aladdin)**，CSRF英文全称：**cross-site request forgery**，和XSS都有**Cross-Site**，但是他们的概念并不相同，XSS主要是通过获取受害者的Cookie，之后通过使用Cookie来完成攻击操作，而CSRF是直接伪造受害者身份，来达到攻击目的，这篇文章我来说说**什么是CSRF跨站请求伪造**和**怎么防范CSRF攻击**。
 
 ## 什么是跨站请求伪造CSRF？
 
@@ -51,7 +51,7 @@ email=hacker@email.com
 ```
 <html>
   <body>
-    <form action="https://www.seozen.top/password/change" method="POST">
+    <form action="https://www.helloyu.top/password/change" method="POST">
       <input type="hidden" name="password" value="我是攻击者设置的密码" />
     </form>
     <script>
@@ -65,7 +65,7 @@ email=hacker@email.com
 
 ## 跨站请求伪造防范
 
-我们知道了CSRF的攻击原理和需要满足的条件，那我们就应该能很容易的想到如何去防范CSRF攻击，方法有很多，这里SEO禅只说一个比较简单，也比较流行的方法：客户端添加随机码让攻击者无法获取，这个就破坏了其中三个条件中的一个，增加了验证码，比如[Laravel框架提供的CSRF防护](https://laravel.com/docs/8.x/csrf)：
+我们知道了CSRF的攻击原理和需要满足的条件，那我们就应该能很容易的想到如何去防范CSRF攻击，方法有很多，这里我只说一个比较简单，也比较流行的方法：客户端添加随机码让攻击者无法获取，这个就破坏了其中三个条件中的一个，增加了验证码，比如[Laravel框架提供的CSRF防护](https://laravel.com/docs/8.x/csrf)：
 
 ```
 <form method="POST" action="/profile">
@@ -76,4 +76,4 @@ email=hacker@email.com
 </form>
 ```
 
-就是在表单中插入一段随机码，之后同表单一起传回服务器进行认证，服务器事先会存储这个随机码，如果这个表单是第三方攻击者伪造的，这个随机码肯定是验证不通过的，具体在每个框架和语言都有不同的实现，但是原理都差不多，SEO禅这篇CSRF跨站请求伪造的文章就分享到这，有什么不懂得可以留言。
+就是在表单中插入一段随机码，之后同表单一起传回服务器进行认证，服务器事先会存储这个随机码，如果这个表单是第三方攻击者伪造的，这个随机码肯定是验证不通过的，具体在每个框架和语言都有不同的实现，但是原理都差不多，我这篇CSRF跨站请求伪造的文章就分享到这，有什么不懂得可以留言。

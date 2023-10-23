@@ -9,7 +9,7 @@ tags:
 coverImage: "Wordpress-Development.jpg"
 ---
 
-前面已经通过《 [2021最新WordPress安装教程（一）：Centos7安装Apache](https://www.seozen.top/wordpress-apache-setup-2021.html)》和《 [2021最新WordPress安装教程（二）：配置PHP和MySQL](https://www.seozen.top/wordpress-php-mysql-2021.html)》两篇文章来介绍了WordPress安装的基础环境配置，现在这篇文章，我们就来正式安装WordPress。
+前面已经通过《 [2021最新WordPress安装教程（一）：Centos7安装Apache](https://www.helloyu.top/wordpress-apache-setup-2021.html)》和《 [2021最新WordPress安装教程（二）：配置PHP和MySQL](https://www.helloyu.top/wordpress-php-mysql-2021.html)》两篇文章来介绍了WordPress安装的基础环境配置，现在这篇文章，我们就来正式安装WordPress。
 
 ## Apache开启PHP支持
 
@@ -98,4 +98,4 @@ show grants for username@localhost
 
 ## 搭建WordPress网站
 
-通过三篇文章，已经详细的讲解如何安装WordPress的安装环境，下面我们开始正式的进行安装配置WordPress，请参看下一篇文章《[2021最新WordPress安装教程（四）：搭建WordPress网站](https://www.seozen.top/wordpress-install-2021.html)》
+通过三篇文章，已经详细的讲解如何安装WordPress的安装环境，下面我们开始正式的进行安装配置WordPress，请参看下一篇文章《[2021最新WordPress安装教程（四）：搭建WordPress网站](https://www.helloyu.top/wordpress-install-2021.html)》

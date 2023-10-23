@@ -9,11 +9,11 @@ tags:
 coverImage: "NestJS.png"
 ---
 
-玩过Java的同学，肯定知道**AOP（Aspect Oriented Programming）**切面编程的概念，NestJS中也能见到AOP的影子，今天就跟SEO禅一起学习下NestJS中的请求周期的概念，如下图：
+玩过Java的同学，肯定知道**AOP（Aspect Oriented Programming）**切面编程的概念，NestJS中也能见到AOP的影子，今天就跟我一起学习下NestJS中的请求周期的概念，如下图：
 
 ![](images/image-1-1920x1374.png)
 
-在开始之前，SEO禅想先说一个猜想，也就是AOP实现的原理，像不像[WordPress开发](https://www.seozen.top/tag/wordpress-develop)中的Hook机制？或者是React开发中的Hook？就是在特定的代码位置，加载执行用户特定的代码，无论名称怎么变，Middleware、Interceptors、Pipes还是Guards，其实都是Hook或者说是AOP，只是他们执行的位置和作用有所区别。
+在开始之前，我想先说一个猜想，也就是AOP实现的原理，像不像[WordPress开发](https://www.helloyu.top/tag/wordpress-develop)中的Hook机制？或者是React开发中的Hook？就是在特定的代码位置，加载执行用户特定的代码，无论名称怎么变，Middleware、Interceptors、Pipes还是Guards，其实都是Hook或者说是AOP，只是他们执行的位置和作用有所区别。
 
 ## NestJS请求周期
 

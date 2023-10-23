@@ -8,7 +8,7 @@ tags:
 coverImage: "android-gradle.png"
 ---
 
-SEO禅今天打开以前的一个安卓项目，想做些修改，运行的时候遇到了如下的错误提示：
+我今天打开以前的一个安卓项目，想做些修改，运行的时候遇到了如下的错误提示：
 ```
 Caused by: org.gradle.api.internal.artifacts.ivyservice.DefaultLenientConfiguration$ArtifactResolveException: Could not resolve all files for configuration ':app:debugRuntimeClasspath'.
 ```

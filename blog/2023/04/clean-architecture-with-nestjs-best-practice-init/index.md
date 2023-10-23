@@ -9,7 +9,7 @@ tags:
 coverImage: "clean-architecture.png"
 ---
 
-在前一篇文章《[\[ChatGPT\]Clean Architecture架构在NestJS中的实现](https://www.seozen.top/clean-architecture-in-nestjs-by-chatgpt.html)》，SEO禅用ChatGPT生成了一些关于**clean architecture**的介绍，但是感觉不够通顺，也不够严谨，在这篇文章SEO禅会进行示例介绍，从零开始搭建一个Clean Architecture(简称CA)的NestJS项目，CA中关键的四个点：Entities(不是指代数据库的entity)、Use Cases 业务用例、Interface Adapaters 接口适配器（Controller/Presenter等）、Frameworks & Drivers 框架和驱动，现在不理解没关系，接着往下看，SEO禅用实例来讲解。
+在前一篇文章《[\[ChatGPT\]Clean Architecture架构在NestJS中的实现](https://www.helloyu.top/clean-architecture-in-nestjs-by-chatgpt.html)》，我用ChatGPT生成了一些关于**clean architecture**的介绍，但是感觉不够通顺，也不够严谨，在这篇文章我会进行示例介绍，从零开始搭建一个Clean Architecture(简称CA)的NestJS项目，CA中关键的四个点：Entities(不是指代数据库的entity)、Use Cases 业务用例、Interface Adapaters 接口适配器（Controller/Presenter等）、Frameworks & Drivers 框架和驱动，现在不理解没关系，接着往下看，我用实例来讲解。
 
 ## 初始化项目
 
@@ -39,7 +39,7 @@ coverImage: "clean-architecture.png"
 
 ![](images/image-24.png)
 
-但是我们还需要连接数据库，这里SEO禅选择MongoDB作为数据库，在连接数据库前，首先我们来获取下数据库的配置信息，使用`@nestjs/config`包来载入我们的配置信息：
+但是我们还需要连接数据库，这里我选择MongoDB作为数据库，在连接数据库前，首先我们来获取下数据库的配置信息，使用`@nestjs/config`包来载入我们的配置信息：
 ```
 pnpm i @nestjs/config
 ```
@@ -89,7 +89,7 @@ bootstrap();
 ```
 The term 'NODE\_ENV=development' is not recognized as the name of a cmdlet, function, script file, or operable program
 ```
-这里SEO禅使用了cross-env来声明`NODE_ENV=local`，防止在多平台下报错，安装下这个包：
+这里我使用了cross-env来声明`NODE_ENV=local`，防止在多平台下报错，安装下这个包：
 ```
  pnpm i -D cross-env
 ```
@@ -99,7 +99,7 @@ The term 'NODE\_ENV=development' is not recognized as the name of a cmdlet, func
 
 ## 效验项目配置
 
-上面已经可以读到配置文件中的参数信息，那在使用前，我们需要对参数进行效验，防止因为格式错误而导致一些问题，这里SEO禅使用的是自定义效验函数的方法，可以参考官方文档[Custom validate function](https://docs.nestjs.com/techniques/configuration#custom-validate-function)
+上面已经可以读到配置文件中的参数信息，那在使用前，我们需要对参数进行效验，防止因为格式错误而导致一些问题，这里我使用的是自定义效验函数的方法，可以参考官方文档[Custom validate function](https://docs.nestjs.com/techniques/configuration#custom-validate-function)
 
 首先安装下面的两个包：
 ```
@@ -123,7 +123,7 @@ export const MongoDBEnvironmentConfig =  registerAs('database', (): IMongoDBConf
   };
 });
 ```
-这里`environmentValidationUtil`是SEO禅对上面两个包的封装，代码如下：
+这里`environmentValidationUtil`是我对上面两个包的封装，代码如下：
 ```
 export function environmentValidationUtil(
   config: Record<string, unknown>, 

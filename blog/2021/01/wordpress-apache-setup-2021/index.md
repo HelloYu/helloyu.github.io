@@ -10,7 +10,7 @@ tags:
 coverImage: "wordpress-blog.png"
 ---
 
-一转眼2020年已经过去了，看网络上很多WordPress的安装教程都比较旧，有些写的不太详细，WordPress是站长最喜欢的一款**建站系统**，数据统计到2020年为止，WordPress在所有网站的市占率已经达到35.7%，[SEO禅](https://www.seozen.top/)也是使用WordPress搭建的网站，在新的一年，我觉得有必要写几篇详细的文章来介绍**如何安装WordPress**，所以就有了《2021年最新WordPress安装教程系列》。
+一转眼2020年已经过去了，看网络上很多WordPress的安装教程都比较旧，有些写的不太详细，WordPress是站长最喜欢的一款**建站系统**，数据统计到2020年为止，WordPress在所有网站的市占率已经达到35.7%，[我](https://www.helloyu.top/)也是使用WordPress搭建的网站，在新的一年，我觉得有必要写几篇详细的文章来介绍**如何安装WordPress**，所以就有了《2021年最新WordPress安装教程系列》。
 
 ## WordPress安装环境
 
@@ -73,6 +73,6 @@ systemctl list-unit-files | grep httpd
 ```
 ## 安装PHP和MySQL
 
-到这里就已经完成了Centos 7配置Apache服务器的步骤，接下来就需要**配置PHP和MySQL**，那就看下一篇文章吧：《[2021最新WordPress安装教程（二）：安装PHP和MySQL](https://www.seozen.top/wordpress-php-mysql-2021.html)》
+到这里就已经完成了Centos 7配置Apache服务器的步骤，接下来就需要**配置PHP和MySQL**，那就看下一篇文章吧：《[2021最新WordPress安装教程（二）：安装PHP和MySQL](https://www.helloyu.top/wordpress-php-mysql-2021.html)》
 
-如果有想学习了解**SEO优化**的朋友，可以看看SEO禅写的《[SEO优化入门一篇就够](https://www.seozen.top/seo-course-first-step.html)》这篇文章，希望对各位有所帮助，有什么不懂得可以留言评论。
+如果有想学习了解**SEO优化**的朋友，可以看看我写的《[SEO优化入门一篇就够](https://www.helloyu.top/seo-course-first-step.html)》这篇文章，希望对各位有所帮助，有什么不懂得可以留言评论。

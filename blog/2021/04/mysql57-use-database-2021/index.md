@@ -23,7 +23,7 @@ mysql> SHOW DATABASES;
 | tmp      |
 +----------+
 ```
-如果不是管理员账号是看不到MySQL这个数据库的，你们是不是要问这个MySQL命令SEO禅哪找的？前一篇《[2021MySQL 5.7简明教程（一）：使用MySQL Help](https://www.seozen.top/mysql57-help-command-2021.html)》文章介绍了`help`的使用，其中这个命令是在`Administration`下，按顺利输入`help contents`\>`help Administration`就能看到：
+如果不是管理员账号是看不到MySQL这个数据库的，你们是不是要问这个MySQL命令我哪找的？前一篇《[2021MySQL 5.7简明教程（一）：使用MySQL Help](https://www.helloyu.top/mysql57-help-command-2021.html)》文章介绍了`help`的使用，其中这个命令是在`Administration`下，按顺利输入`help contents`\>`help Administration`就能看到：
 ```
 mysql> help Administration
 You asked for help about help category: "Administration"
@@ -60,7 +60,7 @@ topics:
    SHOW DATABASES
    ......
 ```
-所以以后使用到的命令基本都是可以用`help`指令来找到的，如果找不到，那就是你找的不够，下面SEO禅就不会再提怎么去找这些指令了。
+所以以后使用到的命令基本都是可以用`help`指令来找到的，如果找不到，那就是你找的不够，下面我就不会再提怎么去找这些指令了。
 
 ## use使用数据库
 
@@ -97,4 +97,4 @@ mysql> select database();
 +------------+
 1 row in set (0.00 sec)
 ```
-这篇文章先介绍到这里，下一篇文章SEO禅会介绍如何操作数据库表等内容，参看《MySQL 5.7简明教程2021（三）：操作数据库表》
+这篇文章先介绍到这里，下一篇文章我会介绍如何操作数据库表等内容，参看《MySQL 5.7简明教程2021（三）：操作数据库表》

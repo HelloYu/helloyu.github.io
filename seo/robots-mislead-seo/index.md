@@ -5,7 +5,7 @@ categories:
   - "SEO教程"
   - "WordPress教程"
 tags: 
-  - "SEO禅"
+  - "我"
   - "WordPress"
   - "SEO爬虫"
   - "Google SEO优化"
@@ -14,11 +14,11 @@ coverImage: "robots-1.png"
 
 对于一个新站来说，搜索引擎爬虫来抓你的网站，他们就跟大爷一样，要好吃好喝的供着，你不能让别人自己端茶倒水，把别人累个半死，你说这样他回去会跟他主子（搜索引擎）说什么好话么？
 
-那怎么让他们吃好喝好呢？其实也简单，就是让他们少做点，我们多做点，对于一个网站，那就是把目录结构尽量扁平话，但是要掌握好一个度，凡事过了就物极必反，蜘蛛来你网站，你肯定要想办法第一时间把最好的文章，最想排名的关键词让它带走，对于站长来说唯一能和蜘蛛交流的办法，就是`robots.txt`文件了，不知道这个东西？那可以看看这篇文章先《[robots.txt文件介绍](https://www.seozen.top/robots-seo.html)》
+那怎么让他们吃好喝好呢？其实也简单，就是让他们少做点，我们多做点，对于一个网站，那就是把目录结构尽量扁平话，但是要掌握好一个度，凡事过了就物极必反，蜘蛛来你网站，你肯定要想办法第一时间把最好的文章，最想排名的关键词让它带走，对于站长来说唯一能和蜘蛛交流的办法，就是`robots.txt`文件了，不知道这个东西？那可以看看这篇文章先《[robots.txt文件介绍](https://www.helloyu.top/seo/robots-seo.html)》
 
 ## 搜索引擎无用的网页
 
-因为SEO禅这个站是使用WordPress搭建的，WordPress默认使用的是一个虚拟的robots.txt文件，内容比较简单，没有屏蔽`feed页面`，这个页面对搜索引擎来说没什么作用，谷歌也基本不收录
+因为我这个站是使用WordPress搭建的，WordPress默认使用的是一个虚拟的robots.txt文件，内容比较简单，没有屏蔽`feed页面`，这个页面对搜索引擎来说没什么作用，谷歌也基本不收录
 
 ![](images/Screen-Shot-2021-03-02-at-10.10.26.png)
 
@@ -54,7 +54,7 @@ Disallow: /attachment/
 Allow:/wp-content/uploads/
 Allow:/wp-content/themes/seozen2021/
 Allow:/wp-content/plugins/
-Sitemap:https://www.seozen.top/sitemap.xml
+Sitemap:https://www.helloyu.top/seo/sitemap.xml
 ```
 上面这些规则简单的介绍下：
 
@@ -92,4 +92,4 @@ Sitemap:https://www.seozen.top/sitemap.xml
 
 ![robots文件设置错误对收录影响](images/robots文件设置错误对收录影响.jpg)
 
-因为这个操作，导致谷歌对SEO禅的收录不升还降了一点，我重新配置了robots.txt文件，观察一下过几天的情况再看看。
+因为这个操作，导致谷歌对我的收录不升还降了一点，我重新配置了robots.txt文件，观察一下过几天的情况再看看。

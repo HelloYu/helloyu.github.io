@@ -9,7 +9,7 @@ tags:
 coverImage: "Symbolic-Links-vs-Hard-Links-Illustrated-1024x576-1.png"
 ---
 
-在用Windows系统的时候，大家肯定会经常使用快捷方式去链接一些秘密文件，这些文件一般都藏在很深很深的目录里面，有时候自己都忘记在哪，但是在夜深人静的时候，就会悄悄点开这些文件，欣赏这世间的美好，哈哈，扯远了，SEO禅是正经人，话说回来在Linux系统下，也是有这样的功能，他们被分为：硬（hard）链接和 符号（symbolic）链接，符号链接我们也经常称为软链接，下面看一张图区分下硬链接和符号软件的区别在哪：
+在用Windows系统的时候，大家肯定会经常使用快捷方式去链接一些秘密文件，这些文件一般都藏在很深很深的目录里面，有时候自己都忘记在哪，但是在夜深人静的时候，就会悄悄点开这些文件，欣赏这世间的美好，哈哈，扯远了，我是正经人，话说回来在Linux系统下，也是有这样的功能，他们被分为：硬（hard）链接和 符号（symbolic）链接，符号链接我们也经常称为软链接，下面看一张图区分下硬链接和符号软件的区别在哪：
 
 ![links_diagram](images/links_diagram.png)
 
@@ -34,16 +34,16 @@ total 0
 ```
 可以看到f1和f2有相同的**inode号**，而软链接f3的inode号就不一样了，这里记住硬链接只能链接同一个硬盘下的内容，而且只能是文件，使用软链接就没有这些限制，他们还有一些特性的区别，用代码解释下：
 ```bash
-[seozen@Linux]$ echo "SEO禅 hello world" >>f1
+[seozen@Linux]$ echo "我 hello world" >>f1
 [seozen@Linux]$ cat f1
-SEO禅 hello world
+我 hello world
 [seozen@Linux]$ cat f2
-SEO禅 hello world
+我 hello world
 [seozen@Linux]$ cat f3
-SEO禅 hello world
+我 hello world
 [seozen@Linux]$ rm -f f1
 [seozen@Linux]$ cat f2
-SEO禅 hello world
+我 hello world
 [seozen@Linux]$ cat f3
 cat: f3: No such file or directory
 ```

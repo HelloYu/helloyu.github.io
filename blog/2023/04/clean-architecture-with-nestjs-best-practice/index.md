@@ -11,7 +11,7 @@ tags:
 coverImage: "clean-architecture-core.png"
 ---
 
-上一篇文章《[Clean Architecture在NestJS中的实践（二）：连接MongoDB数据库(Dockerization)](https://www.seozen.top/clean-architecture-with-nestjs-best-practice-mongodb-dockerization.html)》SEO禅已经介绍了如何使用Docker配置一个MongoDB服务，并使用Mongoose连接和使用数据库，上一篇文章的代码在`CatModule`中调用Mongoose包来使用MongoDB数据库，这样的耦合性太高了一点，不利于后期更换数据库，而且会在service中编写大量业务代码，Clean Architecture架构就是将业务代码抽象为`usecase`，并且在调用framework的时候以接口的形式作进一步抽象，下面SEO禅首先介绍CA架构的核心内容。
+上一篇文章《[Clean Architecture在NestJS中的实践（二）：连接MongoDB数据库(Dockerization)](https://www.helloyu.top/clean-architecture-with-nestjs-best-practice-mongodb-dockerization.html)》我已经介绍了如何使用Docker配置一个MongoDB服务，并使用Mongoose连接和使用数据库，上一篇文章的代码在`CatModule`中调用Mongoose包来使用MongoDB数据库，这样的耦合性太高了一点，不利于后期更换数据库，而且会在service中编写大量业务代码，Clean Architecture架构就是将业务代码抽象为`usecase`，并且在调用framework的时候以接口的形式作进一步抽象，下面我首先介绍CA架构的核心内容。
 
 ## UsecaseProxy
 
@@ -167,10 +167,10 @@ export class CreateUsersUsecase {
   }
 }
 ```
-可以看到我们插入一条用户信息，这里是看不到有任何第三方框架的东西，依赖也都是domain层的内容，到这里应该会比较清楚要如何在NestJS中实现Clean Architecture架构了吧，接下去的任何扩展，都是以这个为基础去做，把地基建好，接来下就是一些非常机械化的复制粘贴操作了，SEO禅就不做过多讲解了，文章末尾会贴出源码地址，最好能把前两篇文章都看看：
+可以看到我们插入一条用户信息，这里是看不到有任何第三方框架的东西，依赖也都是domain层的内容，到这里应该会比较清楚要如何在NestJS中实现Clean Architecture架构了吧，接下去的任何扩展，都是以这个为基础去做，把地基建好，接来下就是一些非常机械化的复制粘贴操作了，我就不做过多讲解了，文章末尾会贴出源码地址，最好能把前两篇文章都看看：
 
 《[Clean Architecture在NestJS中的实践（一）：项目初始化](http://clean-architecture-with-nestjs-best-practice-init)》
 
-《[Clean Architecture在NestJS中的实践（二）：连接MongoDB数据库(Dockerization)](https://www.seozen.top/clean-architecture-with-nestjs-best-practice-mongodb-dockerization.html)》
+《[Clean Architecture在NestJS中的实践（二）：连接MongoDB数据库(Dockerization)](https://www.helloyu.top/clean-architecture-with-nestjs-best-practice-mongodb-dockerization.html)》
 
 Github: [clean-architecture-with-nestjs](https://github.com/HelloYu/clean-architecture-with-nestjs) (不要忘记star下哦！)

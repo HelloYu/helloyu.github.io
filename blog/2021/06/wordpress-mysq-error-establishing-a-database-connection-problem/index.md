@@ -10,12 +10,12 @@ tags:
 coverImage: "WordPress-manage-website-data.png"
 ---
 
-SEO禅在使用WordPress上传图片的时候，遇到**error establishing a database connection problem**，查看了MySQL的错误日志，文件位置一般在`/var/log/mysqld.log`，看到一段话：out of memory,Cannot allocate memory for the buffer pool，因为SEO禅这个服务器才1GB的内存，MySQL自然就分配不到太多的内存，所以没有多余内存分配给MySQL也很正常，既然知道哪里有问题，那我们就来解决它，有两种解决办法：
+我在使用WordPress上传图片的时候，遇到**error establishing a database connection problem**，查看了MySQL的错误日志，文件位置一般在`/var/log/mysqld.log`，看到一段话：out of memory,Cannot allocate memory for the buffer pool，因为我这个服务器才1GB的内存，MySQL自然就分配不到太多的内存，所以没有多余内存分配给MySQL也很正常，既然知道哪里有问题，那我们就来解决它，有两种解决办法：
 
 - 增加swap虚拟内存
 - 修改innodb\_buffer\_pool\_size大小
 
-这里SEO禅选择增加`swap虚拟内存`，因为实际内存就1G，如果增加了`innodb_buffer_pool_size`的大小，其它应用的内存肯定会分配的少了，[虚拟内存](https://www.baidu.com/link?url=Z8_gPEcgWfyfITo_faaKf1HbpKqsri0vwMVYIPoZfH1DT_dL7tngKb9UlY96bUBtlveobwKogdFNl8gGTd-wdR5GJRCLGCA85fDCbtdO7CB6kWT4CpxHtYXCyLc6aZvg&wd=&eqid=d3147db6000012e70000000660a7808c)使用的是硬盘空间，合理的分配虚拟内存可以减少服务器压力，提升服务器响应速度。
+这里我选择增加`swap虚拟内存`，因为实际内存就1G，如果增加了`innodb_buffer_pool_size`的大小，其它应用的内存肯定会分配的少了，[虚拟内存](https://www.baidu.com/link?url=Z8_gPEcgWfyfITo_faaKf1HbpKqsri0vwMVYIPoZfH1DT_dL7tngKb9UlY96bUBtlveobwKogdFNl8gGTd-wdR5GJRCLGCA85fDCbtdO7CB6kWT4CpxHtYXCyLc6aZvg&wd=&eqid=d3147db6000012e70000000660a7808c)使用的是硬盘空间，合理的分配虚拟内存可以减少服务器压力，提升服务器响应速度。
 
 ## swap虚拟文件
 

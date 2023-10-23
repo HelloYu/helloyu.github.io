@@ -8,7 +8,7 @@ tags:
 coverImage: "logo2x.jpeg"
 ---
 
-从MacOS默认的Terminal终端，切换到[iterm2](https://iterm2.com/)下已经有一段时间了，分享一些SEO禅在使用iterm2的经验心得，下面是当前使用的iterm2的样式界面：
+从MacOS默认的Terminal终端，切换到[iterm2](https://iterm2.com/)下已经有一段时间了，分享一些我在使用iterm2的经验心得，下面是当前使用的iterm2的样式界面：
 
 ![iterm2-terminal](images/iterm2-terminal.png)
 
@@ -16,13 +16,13 @@ coverImage: "logo2x.jpeg"
 
 ZSH\_THEME="powerlevel10k/powerlevel10k"
 
-不懂怎么配置?没关系，收藏SEO禅的网站，过一段时间再来看看就会有《教你如何玩转iterm2：zsh和oh-my-zsh》这篇文章，你可以按照里面的步骤去一步一步完成iterm的安装到oh-my-zsh的配置，最后也可以拥有强大和舒适的终端shell，保证你慢慢会喜欢上使用shell command的快感。
+不懂怎么配置?没关系，收藏我的网站，过一段时间再来看看就会有《教你如何玩转iterm2：zsh和oh-my-zsh》这篇文章，你可以按照里面的步骤去一步一步完成iterm的安装到oh-my-zsh的配置，最后也可以拥有强大和舒适的终端shell，保证你慢慢会喜欢上使用shell command的快感。
 
 ## 常用快捷键
 
 ⌘: command ⇧: shift ⌥: alt ^: control
 
-记住MacOS上这四个常用的快捷键意思，SEO禅经常看着符号有时候想不起来，下面的快捷键会使用到这些符号，以下是使用默认的`Profile`进行的测试，有些快捷键可能和你现在装的有点区别，如果效果不一样看看是不是当前的配置问题。
+记住MacOS上这四个常用的快捷键意思，我经常看着符号有时候想不起来，下面的快捷键会使用到这些符号，以下是使用默认的`Profile`进行的测试，有些快捷键可能和你现在装的有点区别，如果效果不一样看看是不是当前的配置问题。
 
 ## Tabs
 
@@ -46,6 +46,6 @@ Iterm2是支持多面板在同一个窗口里面，这功能其实很方便进�
 
 ![iterm2-profiles](images/iterm2-profiles.png)
 
-你可以自己新建一个profile，也可以改默认的，之后选择`Keys`菜单，再点下面的`+`号，Action选择\`Send Escape Sequence，`Esc + b`表示光标回退一个单词，`Esc + f`表示光标前进一个单词，上面的shortcut自己设置，SEO禅使用的是`⌘+d`和`⌘+f`。
+你可以自己新建一个profile，也可以改默认的，之后选择`Keys`菜单，再点下面的`+`号，Action选择\`Send Escape Sequence，`Esc + b`表示光标回退一个单词，`Esc + f`表示光标前进一个单词，上面的shortcut自己设置，我使用的是`⌘+d`和`⌘+f`。
 
 Iterm2还有很多很方便的操作，这篇文章就分享到这。

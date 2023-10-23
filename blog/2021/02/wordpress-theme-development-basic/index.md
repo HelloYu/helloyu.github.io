@@ -9,18 +9,18 @@ tags:
 coverImage: "wp.jpg"
 ---
 
-最近在给SEO禅开发一个简洁的WordPress主题，在网上转了一圈，既然发现这几年都没有像样的WordPress主题开发教程，不是太旧，就是有头没尾，还有的就是我也看不懂，可能水平不够吧！ 2021年WordPress的市占率已经超过37%，难道数据是假的（开玩笑）？既然没有，那SEO禅就写一个吧，希望能给各位没什么基础想学习**WordPress主题开发**的朋友一点提示。不懂怎么安装WordPress的朋友可以参考：[2021最新WordPress安装教程（一）：Centos7安装Apache](https://www.seozen.top/wordpress-apache-setup-2021.html "2021最新WordPress安装教程（一）：Centos7安装Apache")
+最近在给我开发一个简洁的WordPress主题，在网上转了一圈，既然发现这几年都没有像样的WordPress主题开发教程，不是太旧，就是有头没尾，还有的就是我也看不懂，可能水平不够吧！ 2021年WordPress的市占率已经超过37%，难道数据是假的（开玩笑）？既然没有，那我就写一个吧，希望能给各位没什么基础想学习**WordPress主题开发**的朋友一点提示。不懂怎么安装WordPress的朋友可以参考：[2021最新WordPress安装教程（一）：Centos7安装Apache](https://www.helloyu.top/wordpress-apache-setup-2021.html "2021最新WordPress安装教程（一）：Centos7安装Apache")
 
 > 没有PHP，HTML，CSS基础的朋友可能会有点吃力，但是我尽量说的详细点。
 
 ## WordPress主题开发基础文件
 
-SEO禅刚开始学习WordPress主题开发的时候是一头雾水，没人教，就在网上查资料，可是查到的资料看完很多也就巴拉巴拉，脑袋里面还是一坨浆糊，可能是自己笨，但是后面，在油管上看了一些主题开发的视频，感觉思路就要清晰多了，按SEO禅的理解，如果想学习WordPress主题开发，首先要从WordPress主题的目录结构下手，WordPress规定，一个主题必须包含以下两个文件：
+我刚开始学习WordPress主题开发的时候是一头雾水，没人教，就在网上查资料，可是查到的资料看完很多也就巴拉巴拉，脑袋里面还是一坨浆糊，可能是自己笨，但是后面，在油管上看了一些主题开发的视频，感觉思路就要清晰多了，按我的理解，如果想学习WordPress主题开发，首先要从WordPress主题的目录结构下手，WordPress规定，一个主题必须包含以下两个文件：
 
 - `index.php`
 - `style.css`
 
-首先`index`文件就不用多介绍了，这就跟`Hello World`一样常见，我们在`wp-content/themes/`目录下面新建一个文件夹，SEO禅命名为`SEOZEN2021`，你们自己随意，之后向里面添加`index.php`和`style.css`两个文件。在**style.css**文件头部申明一下模板信息如下：
+首先`index`文件就不用多介绍了，这就跟`Hello World`一样常见，我们在`wp-content/themes/`目录下面新建一个文件夹，我命名为`SEOZEN2021`，你们自己随意，之后向里面添加`index.php`和`style.css`两个文件。在**style.css**文件头部申明一下模板信息如下：
 ```
 @charset "UTF-8";
 
@@ -28,7 +28,7 @@ SEO禅刚开始学习WordPress主题开发的时候是一头雾水，没人教�
 Theme Name: SEOZEN Theme 2021
 Theme URI: https://github.com/HelloYu/seozen-theme-2021.git
 Author: Alan Yu
-Author URI: https://www.seozen.top/
+Author URI: https://www.helloyu.top/
 Description: this theme was create for seozen.top site.
 Requires at least: 5.3
 Tested up to: 5.6
@@ -67,4 +67,4 @@ WordPress主题开发第一节的内容就算结束了，知识点不多，就�
 - style.css文件内申明Template Name 后台就可以看到此主题。
 - WordPress文件的层次结构，页面具有覆盖特性。
 
-下一节我们来学习WordPress模块化的内容：《[2021从零开始开发WordPress主题教程（二）：模块化开发](https://www.seozen.top/wordpress-theme-development-modularization.html)》
+下一节我们来学习WordPress模块化的内容：《[2021从零开始开发WordPress主题教程（二）：模块化开发](https://www.helloyu.top/wordpress-theme-development-modularization.html)》

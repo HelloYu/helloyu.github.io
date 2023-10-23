@@ -29,7 +29,7 @@ coverImage: "Data-Dictionaries-e1680625783232.jpg"
 
 将上边变化灵活的配置项叫做：“**普通配置项**”
 
-将上边固定的配置项（**每个配置项都有一个代码**）：“**业务代码**”（上图好像图文不匹配--SEO禅）
+将上边固定的配置项（**每个配置项都有一个代码**）：“**业务代码**”（上图好像图文不匹配--我）
 
 ## 1.3数据字典表结构
 
@@ -63,7 +63,7 @@ coverImage: "Data-Dictionaries-e1680625783232.jpg"
 
 ![](images/image-14.png)
 
-（这里感觉设计有点冗余，区分普通配置项和业务配置项，而且是不同字段存储的，可以参考《[数据字典的使用与设计](https://www.seozen.top/data-dictionary-design-for-software-architecture.html)》。——SEO禅）
+（这里感觉设计有点冗余，区分普通配置项和业务配置项，而且是不同字段存储的，可以参考《[数据字典的使用与设计](https://www.helloyu.top/data-dictionary-design-for-software-architecture.html)》。——我）
 
 ## 1.4数据字典使用
 

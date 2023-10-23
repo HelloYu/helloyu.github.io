@@ -117,4 +117,4 @@ export class MyWebSocketService {
 
 综上所述，NestJS 借鉴了 Node.js 的异步编程风格，并且提供了多种异步编程技术，使得开发者可以使用适合自己的编程风格来处理异步操作。
 
-此文由ChatGPT生成，只是作为学习补充材料，入门学习NestJS可以参考《[NestJS基础知识要点整理–分享脑图](https://www.seozen.top/nestjs-learning-for-beginners-basic-knowledge.html)》
+此文由ChatGPT生成，只是作为学习补充材料，入门学习NestJS可以参考《[NestJS基础知识要点整理–分享脑图](https://www.helloyu.top/nestjs-learning-for-beginners-basic-knowledge.html)》

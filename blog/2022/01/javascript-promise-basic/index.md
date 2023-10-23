@@ -8,7 +8,7 @@ tags:
 coverImage: "javascript-promise.jpeg"
 ---
 
-最近SEO禅都在巩固复习基础知识，把自己对前端基础知识的理解记录下来，这些都是自己的看法，并不一定对，SEO禅只是觉得这样理解对自己来说合情合理，符合逻辑，所以要是觉得SEO禅有哪里说错的地方，可以评论留言指出，欢迎批判指正。
+最近我都在巩固复习基础知识，把自己对前端基础知识的理解记录下来，这些都是自己的看法，并不一定对，我只是觉得这样理解对自己来说合情合理，符合逻辑，所以要是觉得我有哪里说错的地方，可以评论留言指出，欢迎批判指正。
 
 ## Promise是什么？
 
@@ -22,11 +22,11 @@ coverImage: "javascript-promise.jpeg"
 
 ## Promise为了解决什么问题？
 
-在ES6引入Promise主要是为了解决传统回调地狱（Callback Hell）的问题，这里SEO禅就不过多解释，不懂回调地狱自己搜索下。
+在ES6引入Promise主要是为了解决传统回调地狱（Callback Hell）的问题，这里我就不过多解释，不懂回调地狱自己搜索下。
 
 ## Promise内部实现
 
-简单了解了Promise是什么和它解决什么样的问题之后，SEO禅来带各位用代码实现一个简单的Promise。
+简单了解了Promise是什么和它解决什么样的问题之后，我来带各位用代码实现一个简单的Promise。
 
 ### Promise内部状态
 
@@ -50,14 +50,14 @@ const REJECTED = 'rejected'
 let promise = new Promise((resolve,reject)=>{
      
     let xhr = new XMLHttpRequest()
-        xhr.open('Post','https://www.seozen.top')
+        xhr.open('Post','https://www.helloyu.top')
         xhr.send('SEO优化')
      
     xhr.addEventListener('load',()=>{
        resolve('OK知道了') 
     })
     xhr.addEventListener('error',()=>{
-       reject('找不到SEO禅了') 
+       reject('找不到我了') 
     })
 })
 
@@ -184,6 +184,6 @@ MyPromise.prototype.catch = function (callback) {
  })
 ```
 
-上面的代码SEO禅做了一处改造`executor(resolve.bind(this), reject.bind(this));`，因为resolve和reject内部都使用了`this`，这里使用bind来绑定这两个函数内部this的指向，因为他们是在executor内部直接调用，相当于this指向了window对象（非严格模式），this的指向问题具体内容，SEO禅会放在其他文章来说，当然你也可以使用let that = this的方式来保存this对象，在两个函数内部使用`that`来调用。
+上面的代码我做了一处改造`executor(resolve.bind(this), reject.bind(this));`，因为resolve和reject内部都使用了`this`，这里使用bind来绑定这两个函数内部this的指向，因为他们是在executor内部直接调用，相当于this指向了window对象（非严格模式），this的指向问题具体内容，我会放在其他文章来说，当然你也可以使用let that = this的方式来保存this对象，在两个函数内部使用`that`来调用。
 
-从上面代码我们看出来，一个Promise只有一种结束状态，状态只要确定，就不能再改变了，所以reject方法调用是无效的，这个从最开始的源码`this.status === PENDING`中也可以看出来，到这里最简单的版本应该算已经完成了，但是离真正的Promise还很远，下一篇文章SEO禅会分享，如何实现Promise异步和链式调用，这篇文章暂时就分享到这里。
+从上面代码我们看出来，一个Promise只有一种结束状态，状态只要确定，就不能再改变了，所以reject方法调用是无效的，这个从最开始的源码`this.status === PENDING`中也可以看出来，到这里最简单的版本应该算已经完成了，但是离真正的Promise还很远，下一篇文章我会分享，如何实现Promise异步和链式调用，这篇文章暂时就分享到这里。

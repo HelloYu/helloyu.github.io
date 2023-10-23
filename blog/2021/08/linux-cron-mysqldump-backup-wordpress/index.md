@@ -11,11 +11,11 @@ tags:
 coverImage: "linux-mysql-backup-cron-job.png"
 ---
 
-作为**SEO站长**，定时备份**网站数据库**是必须要会，也一定要做的事，SEO禅前面已经写过一篇文章简单介绍[Linux定时任务程序Cron](https://www.seozen.top/linux-cron-jobs.html)，今天就来实际使用cron定时自动备份WordPress的MySQL数据库，定时备份数据库一般有两个操作，首先是按一个间隔实际备份导出[MySQL数据库](https://www.seozen.top/mysql57-help-command-2021.html)到特定位置存放，其次是要定期删除冗余的数据库备份文件，今天SEO禅分享下，如何在**Centos服务器**上定时备份数据库。
+作为**SEO站长**，定时备份**网站数据库**是必须要会，也一定要做的事，我前面已经写过一篇文章简单介绍[Linux定时任务程序Cron](https://www.helloyu.top/linux-cron-jobs.html)，今天就来实际使用cron定时自动备份WordPress的MySQL数据库，定时备份数据库一般有两个操作，首先是按一个间隔实际备份导出[MySQL数据库](https://www.helloyu.top/mysql57-help-command-2021.html)到特定位置存放，其次是要定期删除冗余的数据库备份文件，今天我分享下，如何在**Centos服务器**上定时备份数据库。
 
 ## 创建MySQL备份目录
 
-正常情况，在Linux中，比如日志文件，会随着时间推移不断增加大小的文件，都喜欢放在`/var`路径下，也可以放在个人目录`~/`下，SEO禅选择在个人目录下创建一个数据库备份目录，运行如下命令：
+正常情况，在Linux中，比如日志文件，会随着时间推移不断增加大小的文件，都喜欢放在`/var`路径下，也可以放在个人目录`~/`下，我选择在个人目录下创建一个数据库备份目录，运行如下命令：
 
 ```
 mkdir ~/seozen_database_backup
@@ -25,7 +25,7 @@ mkdir ~/seozen_database_backup
 
 ## MySQLDump使用说明
 
-mysqldump看名字感觉有点像倒垃圾的意思，但是却是[备份MySQL数据库](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)的程序，使用它，我们可以备份单个数据库，多个数据库，单个表，多个表，也可以备份远程数据库，功能一定都不像它名字听上去那么『垃圾』，首先和SEO禅来看看语法：
+mysqldump看名字感觉有点像倒垃圾的意思，但是却是[备份MySQL数据库](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)的程序，使用它，我们可以备份单个数据库，多个数据库，单个表，多个表，也可以备份远程数据库，功能一定都不像它名字听上去那么『垃圾』，首先和我来看看语法：
 
 ```
 mysqldump -u [username] –p[password] [database_name] > /path/to/[database_name].sql
@@ -41,7 +41,7 @@ mysqldump -u [username] –p[password] [database_name] > /path/to/[database_name
 mysqldump -u root -p[password] --all-databases > /var/seozen_database_backup/all-databases.sql
 ```
 
-上面这条命令是备份所有的数据库到`seozen_database_backup`目录中，注意关键的地方是：一定要使用`root`用户权限。备份单个数据库的命令就是上面最开始的时候那个，这里SEO禅就不再介绍，下面介绍下备份多个数据库的命令：
+上面这条命令是备份所有的数据库到`seozen_database_backup`目录中，注意关键的地方是：一定要使用`root`用户权限。备份单个数据库的命令就是上面最开始的时候那个，这里我就不再介绍，下面介绍下备份多个数据库的命令：
 
 ```
 mysqldump -u root -p[password] [database_1_name] [database_2_name] >  ~/seozen_database_backup/[database_names].sql
@@ -79,7 +79,7 @@ MySQL使用**mysqldump备份和恢复**数据库就暂时介绍这么多，下�
 
 ## 定时WordPress备份任务
 
-上面已经分享了备份和恢复MySQL数据库，现在来讲下使用Cron定时备份任务，Cron是Linux的定时服务程序，而`crontab`有两个意思：一个是管理定时任务的程序，一个是cron**定时任务存放的表叫作crontab**，具体可以看看SEO禅写的[](https://www.seozen.top/linux-cron-jobs.html)[Linux定时任务程序Cron](https://www.seozen.top/linux-cron-jobs.html)介绍，里面对语法会介绍的比较多点，下面我们就来实现下备份定时：
+上面已经分享了备份和恢复MySQL数据库，现在来讲下使用Cron定时备份任务，Cron是Linux的定时服务程序，而`crontab`有两个意思：一个是管理定时任务的程序，一个是cron**定时任务存放的表叫作crontab**，具体可以看看我写的[](https://www.helloyu.top/linux-cron-jobs.html)[Linux定时任务程序Cron](https://www.helloyu.top/linux-cron-jobs.html)介绍，里面对语法会介绍的比较多点，下面我们就来实现下备份定时：
 
 ```
 sudo crontab -e
@@ -107,7 +107,7 @@ less /var/log/cron
 
 ## 实际环境备份数据库
 
-跟着[SEO禅](https://www.seozen.top/)分享的内容，做到这步应该是能够自动定时备份数据库了，但是还是不够完善，前面我们直接把密码写在**crontab表**里，当这个任务执行的时候，要是正好有其他用户使用`ps ax`命令是可以看到密码的，我们可以把密码存放在`my.cnf`文件中，然后使用`--defaults-extra-file=/path/to/.my.cnf`参数加载进来，首先我们先创建文件：
+跟着[我](https://www.helloyu.top/)分享的内容，做到这步应该是能够自动定时备份数据库了，但是还是不够完善，前面我们直接把密码写在**crontab表**里，当这个任务执行的时候，要是正好有其他用户使用`ps ax`命令是可以看到密码的，我们可以把密码存放在`my.cnf`文件中，然后使用`--defaults-extra-file=/path/to/.my.cnf`参数加载进来，首先我们先创建文件：
 
 ```
 sudo vim ~/.my.cnf
@@ -126,4 +126,4 @@ password=YOUR_PASSWORD_HERE
 00 02 * * * mysqldump --defaults-extra-file=~/.my.cnf -u root [database_name] | gzip -c > ~/seozen_database_backup/wp_seozen.`date +\%Y-\%m-\%d`.sql.gz
 ```
 
-这里SEO禅加入时间字段来显示备份时间`date +%Y-%m-%d`，比如**2021-07-30**这种格式，方便区分，到这里朋友们应该清楚如何定时备份了吧，下一篇SEO禅要分享如何定时删除冗余的数据库，还有**Shell指令脚本化**，今天我们从最开始的创建目录到最后都是手动输入的命令，如果手头上就一个服务器在管理可能不要紧，如果很多服务器那需要使用**shell脚本**去批量执行才行，有什么不懂得可以留言评论。
+这里我加入时间字段来显示备份时间`date +%Y-%m-%d`，比如**2021-07-30**这种格式，方便区分，到这里朋友们应该清楚如何定时备份了吧，下一篇我要分享如何定时删除冗余的数据库，还有**Shell指令脚本化**，今天我们从最开始的创建目录到最后都是手动输入的命令，如果手头上就一个服务器在管理可能不要紧，如果很多服务器那需要使用**shell脚本**去批量执行才行，有什么不懂得可以留言评论。

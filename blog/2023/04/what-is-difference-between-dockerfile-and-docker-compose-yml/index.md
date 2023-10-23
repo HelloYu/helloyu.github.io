@@ -15,7 +15,7 @@ Dockerfile 是拿来构建自定义镜像的，并没有直接生成容器。只
 # 总结
 
 Dockerfile是用来构建镜像的，若是想使用这个镜像的话还需要使用docker run命令来运行这个镜像，从而生成运行一个容器  
-docker-compose.yml是用来编排项目（服务-SEO禅）的，里面包含使用各种镜像创建的容器服务，使用的镜像可以是网络上的，也可以是根据使用Dockerfile文件来生成的镜像，相当于是把上一步的这个工作给做了(在docker-compose.yml中的服务，可以引用编写好的Dockerfile文件作为Image镜像-SEO禅)
+docker-compose.yml是用来编排项目（服务-我）的，里面包含使用各种镜像创建的容器服务，使用的镜像可以是网络上的，也可以是根据使用Dockerfile文件来生成的镜像，相当于是把上一步的这个工作给做了(在docker-compose.yml中的服务，可以引用编写好的Dockerfile文件作为Image镜像-我)
 
 > docker-compose.yml使用的镜像可以是网络上的，具体是这样的，优先使用本地存在的镜像，本地没有的话才会从 Docker Hub网站上下载，若想直接使用私有仓库镜像，则需要事先从私有仓库镜像给拉取到本地才行
 

@@ -13,7 +13,7 @@ tags:
 coverImage: "cross-website-scripting-xss.jpg"
 ---
 
-前一段时间SEO禅介绍了WebPageTest这个网站测速[SEO工具](https://www.seozen.top/SEO工具-webpagetest-2021.html)，其中第一项分数就是安全测试，今天SEO禅就来分享一下关于如何防止网站被**跨站脚本XSS**攻击，首先还是老套路，做这件事之前我们要知道这东西是什么，XSS是Cross Site Scripting的英文缩写，不是应该是CSS吗？理论上是，但是CSS和我们HTML中的CSS样式一样缩写，后来我们都把XSS来表示跨站脚本攻击了。
+前一段时间我介绍了WebPageTest这个网站测速[SEO工具](https://www.helloyu.top/SEO工具-webpagetest-2021.html)，其中第一项分数就是安全测试，今天我就来分享一下关于如何防止网站被**跨站脚本XSS**攻击，首先还是老套路，做这件事之前我们要知道这东西是什么，XSS是Cross Site Scripting的英文缩写，不是应该是CSS吗？理论上是，但是CSS和我们HTML中的CSS样式一样缩写，后来我们都把XSS来表示跨站脚本攻击了。
 
 ## 什么是XSS？
 
@@ -21,7 +21,7 @@ coverImage: "cross-website-scripting-xss.jpg"
 
 ## XSS实现原理
 
-上面已经介绍，XSS其实就是黑客利用网站漏洞，编写恶意JS代码进行破坏的操作，那这个是具体怎么实现的呢？SEO禅在这里简单介绍下，首先来看张图：
+上面已经介绍，XSS其实就是黑客利用网站漏洞，编写恶意JS代码进行破坏的操作，那这个是具体怎么实现的呢？我在这里简单介绍下，首先来看张图：
 
 ![Cross-Site-Scripting-XSS-SEO](images/Cross-Site-ScriptingXSS-1024x629.png)
 
@@ -31,13 +31,13 @@ coverImage: "cross-website-scripting-xss.jpg"
 
 ## 如何防范XSS攻击
 
-跨站脚本攻击XSS是最普遍的网站安全问题，SEO禅记得在2000年左右，那时候的脚本攻击非常鼎盛，打开浏览器访问网站，就可能遇到到处弹框的垃圾信息，其实就是很多网站被XSS了，虽然到了20年后的今天，大多数站长的安全防范意识还是不高，这种低级漏洞还是时有发生，那如何防范**跨站XSS**呢？
+跨站脚本攻击XSS是最普遍的网站安全问题，我记得在2000年左右，那时候的脚本攻击非常鼎盛，打开浏览器访问网站，就可能遇到到处弹框的垃圾信息，其实就是很多网站被XSS了，虽然到了20年后的今天，大多数站长的安全防范意识还是不高，这种低级漏洞还是时有发生，那如何防范**跨站XSS**呢？
 
 最简单的办法就是断绝危险源头，首先网站所有能写入数据库的操作，都要经过一次安全过滤，把含有JS脚本代码的文本全部进行**escape化**，转义成无害的文本内容，在杜绝源头上做好还是不够，我们还要做的更好，通过使用WebpageTest测试工具我们可以看到安全得分中有一项**Content-Security-Policy**:
 
 ![WebPageTest-security-score](images/WebPageTest-security-score-1024x640.png)
 
-SEO禅WebPageTest安全得分项
+我WebPageTest安全得分项
 
 CSP翻译成中文叫内容安全策略，可以通过使用规则来告诉浏览器，什么来源的脚本可以执行，什么样的不可以执行，上面说的都还只是XSS中的一个方面，还要通过外部JS代码来进行跨站攻击的，而这种方式才是真正意义上的跨站脚本XSS攻击，在防止插入恶意脚本的基础上，我们还要防止网站引用外部脚本所带来的风险，这里就要设置相应规则，让浏览器不能运行不在白名单中的**外部JS脚本**，实现方式有两种：
 
@@ -51,6 +51,6 @@ CSP翻译成中文叫内容安全策略，可以通过使用规则来告诉浏�
 
 ![seozen-cotent-secruity-policy](images/seozen-cotent-secruity-policy-1024x331.png)
 
-SEO禅内容安全策略头部信息
+我内容安全策略头部信息
 
-这是写死在Apache配置文件中的代码，具体的语法可以参考MDN关于[Content-Security-Policy](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)的语法说明，篇幅有限SEO禅就不详细介绍，配置了这个策略有一个麻烦的地方就是，如果网页代码修改了，要加入新的脚本，发布部署新代码之后，都要修改**内容安全策略白名单**，虽然是麻烦点，但是这种方式很安全，会省去很多日后的麻烦，也算是省事吧，自己见仁见智咯，这篇文章先分享到这，有什么不懂得可以给SEO禅评论留言，要是有什么错误可以指出讨论。
+这是写死在Apache配置文件中的代码，具体的语法可以参考MDN关于[Content-Security-Policy](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)的语法说明，篇幅有限我就不详细介绍，配置了这个策略有一个麻烦的地方就是，如果网页代码修改了，要加入新的脚本，发布部署新代码之后，都要修改**内容安全策略白名单**，虽然是麻烦点，但是这种方式很安全，会省去很多日后的麻烦，也算是省事吧，自己见仁见智咯，这篇文章先分享到这，有什么不懂得可以给我评论留言，要是有什么错误可以指出讨论。

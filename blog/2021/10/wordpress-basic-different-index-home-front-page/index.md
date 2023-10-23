@@ -9,7 +9,7 @@ tags:
 coverImage: "wordpress-home-front-page.jpg"
 ---
 
-在《[2021从零开始开发WordPress主题教程（一）：主题开发基础知识](https://www.seozen.top/wordpress-theme-development-basic.html)》中，SEO禅有提到WordPress的页面层次关系，今天就简单的来说说index.php，home.php，front-page.php的区别，再来看看这个层次结构树。
+在《[2021从零开始开发WordPress主题教程（一）：主题开发基础知识](https://www.helloyu.top/wordpress-theme-development-basic.html)》中，我有提到WordPress的页面层次关系，今天就简单的来说说index.php，home.php，front-page.php的区别，再来看看这个层次结构树。
 
 ![WordPress主题开发层次结构](images/hierachy-1024x531.jpg)
 

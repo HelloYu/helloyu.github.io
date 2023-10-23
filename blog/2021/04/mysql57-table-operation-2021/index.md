@@ -31,7 +31,7 @@ mysql> SELECT TIMESTAMPDIFF(MINUTE,'2003-02-01','2003-05-01 12:05:55');
 
 ## 模式匹配
 
-MySQL操作数据库表使用模式匹配和[Linux下grep](https://www.seozen.top/linux-grep-command.html)差不多，用`_`表示单个字符，`%`匹配0个或任意个字符，这时候我们在`where`条件语句里面就不能再使用`=`或`<>`这种语法，我们要使用`LIKE`或`NOT LIKE`，比如我们要找宠物名字为`b`开头的：
+MySQL操作数据库表使用模式匹配和[Linux下grep](https://www.helloyu.top/linux-grep-command.html)差不多，用`_`表示单个字符，`%`匹配0个或任意个字符，这时候我们在`where`条件语句里面就不能再使用`=`或`<>`这种语法，我们要使用`LIKE`或`NOT LIKE`，比如我们要找宠物名字为`b`开头的：
 ```
 mysql> SELECT \* FROM pet WHERE name LIKE 'b%';
 ```

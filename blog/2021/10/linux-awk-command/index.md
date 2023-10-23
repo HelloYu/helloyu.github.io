@@ -10,15 +10,15 @@ tags:
 coverImage: "linux-awk-command.jpeg"
 ---
 
-Linux中有著名的三剑客，他们是·`grep`，`awk`，`sed`，SEO禅已经介绍过Linux三剑客其中之一的grep：[Linux入门：grep命令基础使用-Linux三剑客](https://www.seozen.top/linux-grep-command.html)，今天来详细介绍awk命令，grep命令上次只是简单介绍了下，以后会详细写一篇文章来介绍，这篇文章就让你完全搞懂awk。
+Linux中有著名的三剑客，他们是·`grep`，`awk`，`sed`，我已经介绍过Linux三剑客其中之一的grep：[Linux入门：grep命令基础使用-Linux三剑客](https://www.helloyu.top/linux-grep-command.html)，今天来详细介绍awk命令，grep命令上次只是简单介绍了下，以后会详细写一篇文章来介绍，这篇文章就让你完全搞懂awk。
 
 ## 什么是Awk
 
-首先我们要搞清楚什么是Awk，SEO禅使用`man awk`得到如下描述信息：
+首先我们要搞清楚什么是Awk，我使用`man awk`得到如下描述信息：
 
 > awk - pattern-directed scanning and processing language
 
-可以清楚的看到，它是一个language(编程语言)，当然我们平常使用的**awk命令**，他是一个文本处理应用程序，就像我们Linux中使用的[crontab](https://www.seozen.top/linux-cron-jobs.html)，他是一个程序，也是任务表文件，虽然名字一样，但是他们在不同环境下的意思是不同的，这是在我们学习Linux过程中很容易搞混的地方。
+可以清楚的看到，它是一个language(编程语言)，当然我们平常使用的**awk命令**，他是一个文本处理应用程序，就像我们Linux中使用的[crontab](https://www.helloyu.top/linux-cron-jobs.html)，他是一个程序，也是任务表文件，虽然名字一样，但是他们在不同环境下的意思是不同的，这是在我们学习Linux过程中很容易搞混的地方。
 
 Awk作为一款强大的文本处理程序，被我们经常使用在数据排序，统计，格式化输出等方面，比如说统计TCP链接状态，我们就会使用下面的awk语句：
 
@@ -33,7 +33,7 @@ TIME_WAIT 	 7
 ESTABLISHED 	 70
 ```
 
-上面的语句是什么意思SEO禅后面会详细介绍，这里需要记住一个关键点：**awk是以『行』为基本处理单位**，就是每次输入的数据都是一行，**最小的处理单元是字段**（列），就像我们的进程是资源分配的最小单位，线程是系统最小的执行单元一个概念。
+上面的语句是什么意思我后面会详细介绍，这里需要记住一个关键点：**awk是以『行』为基本处理单位**，就是每次输入的数据都是一行，**最小的处理单元是字段**（列），就像我们的进程是资源分配的最小单位，线程是系统最小的执行单元一个概念。
 
 ## Awk基本语法
 
@@ -49,9 +49,9 @@ awk 'pattern{ action }' file ...
 awk '/^tcp/ {++state[$NF]} END {for(key in state) print key,"\t",state[key]}
 ```
 
-首先这里的pattern是正则表达式`/^tcp/`，每一行的输入进行匹配，如果是tcp开头，执行`++state[$NF]`动作，这个`pattern-action`的语法结构可以无限次数，所以你在后面能看到另一个pattern-action : END { action } ，到这里估计会有点懵，这个$NF和END是什么鬼？不用着急，听SEO禅继续讲解。
+首先这里的pattern是正则表达式`/^tcp/`，每一行的输入进行匹配，如果是tcp开头，执行`++state[$NF]`动作，这个`pattern-action`的语法结构可以无限次数，所以你在后面能看到另一个pattern-action : END { action } ，到这里估计会有点懵，这个$NF和END是什么鬼？不用着急，听我继续讲解。
 
-既然是一门编程语言，那他一定有系统内置的变量，常量和函数等，上面看到的$NF和END就是awk内置的常量和关键词，先不急搞清楚上面语句什么意思，跟着SEO禅先来了解下awk的处理流程。
+既然是一门编程语言，那他一定有系统内置的变量，常量和函数等，上面看到的$NF和END就是awk内置的常量和关键词，先不急搞清楚上面语句什么意思，跟着我先来了解下awk的处理流程。
 
 ## Awk工作流程
 
@@ -76,17 +76,17 @@ awk -f awk程序文件.awk 需要处理的文件.txt
 awk中有两个基本的输出函数，`print`和`printf`，这两个函数和C基本一样，语法可以参考，print是输出一行，printf是格式化输出，如：
 
 ```
-awk -v name=SEO禅 'BEGIN{printf "SEO优化专家 -> %s\n", name}'
+awk -v name=我 'BEGIN{printf "SEO优化专家 -> %s\n", name}'
 
-SEO优化专家 -> SEO禅
+SEO优化专家 -> 我
 ```
 
 可以看到上面我们使用了printf函数，这里使用`,`号来分割printf的name变量和String字符串，那如果我有多个输出语句怎么办？awk规定语句的分割使用`;`，新行，`}`这三种方式，比如说：
 
 ```
-awk -v name=SEO禅 -v skill=SEO技术 'BEGIN{printf "SEO优化专家 -> %s", name;printf "分享%s",skill}'
+awk -v name=我 -v skill=SEO技术 'BEGIN{printf "SEO优化专家 -> %s", name;printf "分享%s",skill}'
 
-SEO优化专家 -> SEO禅分享SEO技术
+SEO优化专家 -> 我分享SEO技术
 ```
 
 这里的`-v`是命令行设置变量的用法。
@@ -126,4 +126,4 @@ END{
 }
 ```
 
-这里的split，length都是内置函数，还使用了if条件控制语句和for循环语句，是不是和C很像呢，后面输出的内容就不贴出来了，既然是一门编程语言，你的思想有多远，他就有多强大，这篇文章就先分享到这里，再复杂的编程SEO禅会放到后面的文章去说，举一反三，开阔自己的思路，有什么不懂得或者觉得有说错的地方，欢迎评论留言。
+这里的split，length都是内置函数，还使用了if条件控制语句和for循环语句，是不是和C很像呢，后面输出的内容就不贴出来了，既然是一门编程语言，你的思想有多远，他就有多强大，这篇文章就先分享到这里，再复杂的编程我会放到后面的文章去说，举一反三，开阔自己的思路，有什么不懂得或者觉得有说错的地方，欢迎评论留言。

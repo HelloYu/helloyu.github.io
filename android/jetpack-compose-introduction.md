@@ -93,4 +93,4 @@ class MainActivity : ComponentActivity() {
 为了更好地了解 Jetpack Compose 的功能和使用方法，可以查看官方文档和示例代码。祝你在使用 Jetpack Compose 开发应用程序时获得成功！
 
 参考资料：
-[](https://developer.android.com/jetpack/compose/setup)
+[https://developer.android.com/jetpack/compose/setup](https://developer.android.com/jetpack/compose/setup)

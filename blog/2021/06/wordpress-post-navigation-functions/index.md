@@ -9,7 +9,7 @@ tags:
 coverImage: "Wordpress-theme-Development-1.png"
 ---
 
-在学习WordPress开发的时候，文章上一篇，下一篇的功能是最基本的**SEO需求**，但是就是这么简单的功能网上一查一大把WordPress函数，比如：`get_next_post`，`get_previous_post`，`previous_post_link`，`the_post_navigation`，有时候真的是分不清楚哪个是哪个，这边分享个表格，介绍下SEO禅知道的文章上下篇功能所用到的一些函数。
+在学习WordPress开发的时候，文章上一篇，下一篇的功能是最基本的**SEO需求**，但是就是这么简单的功能网上一查一大把WordPress函数，比如：`get_next_post`，`get_previous_post`，`previous_post_link`，`the_post_navigation`，有时候真的是分不清楚哪个是哪个，这边分享个表格，介绍下我知道的文章上下篇功能所用到的一些函数。
 
 ## WordPress文章导航分页函数
 

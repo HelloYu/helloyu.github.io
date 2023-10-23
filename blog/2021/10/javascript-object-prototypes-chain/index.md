@@ -9,7 +9,7 @@ tags:
 coverImage: "proto__vs_prototpye_js.png"
 ---
 
-相信学习过前端的同学，一定有一段时间会对**原型**，**原型对象**，**原型链**这些名词熟悉又陌生，其中最难理解的应该就是\_\_proto\_\_和prototype，它们的区别经常会被搞混，SEO禅也一样，有段时间也是傻傻分不清，经过社会的毒打之后，才慢慢开窍，网上有很多文章都在谈，但是并没有看到说的比较明白的，这里SEO禅把自己的理解分享给各位。
+相信学习过前端的同学，一定有一段时间会对**原型**，**原型对象**，**原型链**这些名词熟悉又陌生，其中最难理解的应该就是\_\_proto\_\_和prototype，它们的区别经常会被搞混，我也一样，有段时间也是傻傻分不清，经过社会的毒打之后，才慢慢开窍，网上有很多文章都在谈，但是并没有看到说的比较明白的，这里我把自己的理解分享给各位。
 
 ## 什么是对象？
 
@@ -51,11 +51,11 @@ foo.__proto__  === foo[[Prototype]] // true
 
 ```
 function SEOZEN(){
-  this.seozen = 'SEO禅'
+  this.seozen = '我'
 }
 SEOZEN.prototype.seoniubility = ' SEO优化'
 let seoObject = new SEOZEN()
-console.info(seoObject.seozen + seoObject.seoniubility ) // SEO禅 SEO优化
+console.info(seoObject.seozen + seoObject.seoniubility ) // 我 SEO优化
 ```
 
 这里我们申明了一个SEOZEN函数，之后在这个函数的原型对象上挂载了一个seoniubility的属性，再使用这个函数作为构造函数，实例化了一个seoObject对象，注意这里还是没有提高原型，其实原型只是JS的一种语言机制，如果要把它固化成某个东西的话，那可以认为是原型对象。
@@ -66,4 +66,4 @@ console.info(seoObject.seozen + seoObject.seoniubility ) // SEO禅 SEO优化
 - 原型对象 - 构造函数的prototype属性所指的对象
 - 原型链 - 对象的\_\_proto\_\_访问器属性，或者\[\[Prototype\]\]内部属性指向的逐级向上最终为null的链式路径，有点绕口，大概的意思就是object.\_\_proto\_\_(父级).\_\_proto\_\_(祖父级).null(最后的\_\_proto\_\_)
 
-以上是SEO禅对JavaScript原型(对象原型)，原型对象，原型链的理解，如果有什么说错的地方，各位可以留言评论指出。
+以上是我对JavaScript原型(对象原型)，原型对象，原型链的理解，如果有什么说错的地方，各位可以留言评论指出。
