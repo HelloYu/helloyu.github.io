@@ -15,6 +15,6 @@ export default defineConfig({
 	cleanUrls: true,
 	lastUpdated: true,
 	sitemap: {
-		hostname: 'https://helloyu.github.io',
+		hostname: 'https://helloyu.top',
 	},
 })
