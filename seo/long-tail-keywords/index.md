@@ -37,7 +37,7 @@ coverImage: "Long-Tail-Keywords.jpg"
 
 \[caption id="attachment\_1070" align="alignnone" width="1592"\]![google-search-drop-down-keywords](images/google-search-drop-down-keywords.png) 谷歌搜索下拉框长尾关键词\[/caption\]
 
-通常我们在搜索引擎输入框，输入关键词都会跳出下拉框，这里显示的关键词都是和你现在输入的关键词有关联的，而且是有搜索量的，比如说这个[SEO优化](https://www.helloyu.top/seo/seo-course-first-step.html)关键词，下拉框中**SEO优化入门**就是长尾词，如果想把SEO优化这个词做上去，我们可以先把SEO优化入门，SEO优化教程这几个词先做到首页排名，这样SEO优化这个词的排名就会比较好做。
+通常我们在搜索引擎输入框，输入关键词都会跳出下拉框，这里显示的关键词都是和你现在输入的关键词有关联的，而且是有搜索量的，比如说这个[SEO优化](https://www.helloyu.top/seo/seo-course-first-step/)关键词，下拉框中**SEO优化入门**就是长尾词，如果想把SEO优化这个词做上去，我们可以先把SEO优化入门，SEO优化教程这几个词先做到首页排名，这样SEO优化这个词的排名就会比较好做。
 
 看完这篇文章，应该会明白长尾关键词是什么了吧，当然挖掘长尾关键词的方法还有很多，长尾关键词相对“短词”关键词来说，能带来更精准的客户流量，所以要做好SEO，长尾关键词是非常重要的一个环节。
 

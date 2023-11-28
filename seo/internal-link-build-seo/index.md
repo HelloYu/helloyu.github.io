@@ -10,11 +10,11 @@ tags:
 coverImage: "Inbound_outbound_links.png"
 ---
 
-在SEO优化领域，有内链和[外链](https://www.helloyu.top/seo/website-external-links.html)的区分，外链就是外部链接到我们网站的链接，那内链也很好理解，就是我们网站链接自己网站的链接，他们共同点都是使用锚文本，只有锚文本才能体现链接所关联的内容是什么含义，比如：
+在SEO优化领域，有内链和[外链](https://www.helloyu.top/seo/website-external-links/)的区分，外链就是外部链接到我们网站的链接，那内链也很好理解，就是我们网站链接自己网站的链接，他们共同点都是使用锚文本，只有锚文本才能体现链接所关联的内容是什么含义，比如：
 
 <a href="https://www.helloyu.top/seo/" title="我">SEO优化</a>
 
-可以看到，上面在Html语言中是一个[a标签](https://www.helloyu.top/seo/anchor-tag-title-seo.html)，也叫锚文本，这个a标签在网页上显示的是[SEO优化](https://www.helloyu.top/seo)这个链接文字，点击之后就会跳转到我的主页，其中还有一个`title`属性，里面是说明文字，主要是为了在给非可视化设备的时候使用，这个锚文本[搜索引擎索引](https://www.helloyu.top/seo/seo-tutorial-moz-serial-2021-search-engine-first.html)之后，就会认为`www.helloyu.top/seo`这个网址和**SEO优化**这个关键词有关联，如果内部和外部的锚文本都有类似的指向和使用类似的关键词，那搜索引擎就会认为这个网站和那些关键词关联度比较高，所以在用户搜索的时候，会给予较高的权重分数，当然这也不是绝对，搜索引擎排名的因素太多，在不作弊的情况下，这个是一个很有价值的参考，所以我们在做[站内SEO优化](https://www.helloyu.top/seo/seo-tutorial-moz-serial-2021-on-page.html)的时候，要关注下怎么做好内链优化，以及如何做内链优化，我接下去会介绍。
+可以看到，上面在Html语言中是一个[a标签](https://www.helloyu.top/seo/anchor-tag-title-seo/)，也叫锚文本，这个a标签在网页上显示的是[SEO优化](https://www.helloyu.top/seo)这个链接文字，点击之后就会跳转到我的主页，其中还有一个`title`属性，里面是说明文字，主要是为了在给非可视化设备的时候使用，这个锚文本[搜索引擎索引](https://www.helloyu.top/seo/seo-tutorial-moz-serial-2021-search-engine-first/)之后，就会认为`www.helloyu.top/seo`这个网址和**SEO优化**这个关键词有关联，如果内部和外部的锚文本都有类似的指向和使用类似的关键词，那搜索引擎就会认为这个网站和那些关键词关联度比较高，所以在用户搜索的时候，会给予较高的权重分数，当然这也不是绝对，搜索引擎排名的因素太多，在不作弊的情况下，这个是一个很有价值的参考，所以我们在做[站内SEO优化](https://www.helloyu.top/seo/seo-tutorial-moz-serial-2021-on-page/)的时候，要关注下怎么做好内链优化，以及如何做内链优化，我接下去会介绍。
 
 ## 内链的意义
 
@@ -28,7 +28,7 @@ coverImage: "Inbound_outbound_links.png"
 
 ## 如何做网站内链
 
-既然明白了网站内链的重要性，那我们就要学习下如何做网站内链，首先我们要明白，搜索引擎爬虫在抓取一个网站的时候，就是顺着一个锚文本或者一个链接爬的，如果一个网页没有任何的链接或者锚文本能链接到，那这个页面就是孤立的，也不会被[搜索引擎蜘蛛](https://www.helloyu.top/seo/search-engine.html)爬取到，我们在做网站优化的时候要注意下有没有这样的网页，如果是重要的页面，一定需要建立一个链接指向。
+既然明白了网站内链的重要性，那我们就要学习下如何做网站内链，首先我们要明白，搜索引擎爬虫在抓取一个网站的时候，就是顺着一个锚文本或者一个链接爬的，如果一个网页没有任何的链接或者锚文本能链接到，那这个页面就是孤立的，也不会被[搜索引擎蜘蛛](https://www.helloyu.top/seo/search-engine/)爬取到，我们在做网站优化的时候要注意下有没有这样的网页，如果是重要的页面，一定需要建立一个链接指向。
 
 其实要做好网站内链，最关键的一点就是关注上面的三个作用，其中第一个作用是最重要的，就是**链接相关信息的网页**，通过锚文本的形式，就比如这篇文章，我也做了一些内链锚文本：
 

@@ -22,9 +22,9 @@ order: 1
 
 搜索引擎是根据用户输入的搜索词来展现用户想要知道的内容，这个搜索词有可能是几个字，也有可能是一段文字，在SEO中，我们把这些叫做**关键词**，这些关键词就像“女神”，SEO所做的一切都是围绕着她展开的，下面是我所知道的一些常用方法：
 
-**关键词剖析、[关键词挖掘](https://www.helloyu.top/seo/seo-tutorial-moz-serial-2021-keyword-research.html)、关键词密度剖析、[关键词在页面中的布局](https://www.helloyu.top/seo/seo-keywords-position.html)、长尾关键词排名、关键词指数等。**
+**关键词剖析、[关键词挖掘](https://www.helloyu.top/seo/seo-tutorial-moz-serial-2021-keyword-research/)、关键词密度剖析、[关键词在页面中的布局](https://www.helloyu.top/seo/seo-keywords-position/)、长尾关键词排名、关键词指数等。**
 
-**网站内部优化**：网站URL优化、网页伪静态操作、死链（404链接）查询与处理、内链网状优化、[网站地图Sitemap](https://www.helloyu.top/seo/what-sitemap-is.html)、301重定向设置、[robots.txt文件](https://www.helloyu.top/seo/robots-seo.html)编写、404错误页面设置、[图片优化](https://www.helloyu.top/seo/seo-image-alt.html)技巧、[网站原创输出](https://www.helloyu.top/seo/writing-seo-article.html)等。
+**网站内部优化**：网站URL优化、网页伪静态操作、死链（404链接）查询与处理、内链网状优化、[网站地图Sitemap](https://www.helloyu.top/seo/what-sitemap-is/)、301重定向设置、[robots.txt文件](https://www.helloyu.top/seo/robots-seo/)编写、404错误页面设置、[图片优化](https://www.helloyu.top/seo/seo-image-alt/)技巧、[网站原创输出](https://www.helloyu.top/seo/writing-seo-article/)等。
 
 **网站外部优化**：合理外链、友情链接交换、站长平台提交入口、站外软文推广等。
 
@@ -38,7 +38,7 @@ order: 1
 
 当确定了网站的定位，就可以进行关键词剖析和挖掘，我做的一般是行业网站的SEO，行业网站都是有些特定的关键词，你可以搜索一些关键词，看看同行业网站都是用的什么关键词，然后再通过站长工具，去查看这些关键词的指数，还有相关关键词，长尾关键词，再分析做这些词的难易程度，根据自身情况来决定首先选择哪几个关键词作为主要关键词，主要关键词最好控制在3-5个范围内，随着网站排名（权重）的提升，再进行调整。
 
-长尾关键词可以放在内页去做，这里也许你还不懂什么叫[**长尾关键词**](https://www.helloyu.top/seo/long-tail-keywords.html)，我简单举个例子，比如说：“广州租车”这个关键词，那“广州哪家公司租车”、“广州租车哪家公司好”之类就算“广州租车”这个关键词的长尾关键词。
+长尾关键词可以放在内页去做，这里也许你还不懂什么叫[**长尾关键词**](https://www.helloyu.top/seo/long-tail-keywords/)，我简单举个例子，比如说：“广州租车”这个关键词，那“广州哪家公司租车”、“广州租车哪家公司好”之类就算“广州租车”这个关键词的长尾关键词。
 
 具体如何去剖析和挖掘关键词，长尾关键词，我会单独写文章去说。看到这里你大概就已经算入门SEO了，其实很简单，不要觉得SEO是什么高大上遥不可及的东西，首先要有两个意识：
 
@@ -49,14 +49,14 @@ order: 1
 
 这是我第一篇文章，思路并不是非常的清晰，想要了解和学习更多**SEO优化**相关的内容，可以看看相关阅读中的**SEO系列教程**文章，下面几篇文章是我最近写的，也可以看看：
 
-- [SEO优化：网站优化思路分享2021](https://www.helloyu.top/seo/seo-website-tips.html)
+- [SEO优化：网站优化思路分享2021](https://www.helloyu.top/seo/seo-website-tips/)
 
-- [SEO优化：如何挖掘关键词谷歌篇](https://www.helloyu.top/seo/seo-search-keywords-google-2021.html)
+- [SEO优化：如何挖掘关键词谷歌篇](https://www.helloyu.top/seo/seo-search-keywords-google-2021/)
 
-- [SEO优化：6个方法提升网站排名](https://www.helloyu.top/seo/seo-6-way-improve-website-ranking.html)
+- [SEO优化：6个方法提升网站排名](https://www.helloyu.top/seo/seo-6-way-improve-website-ranking/)
 
-- [我分享网站排名SEO优化参考方案](https://www.helloyu.top/seo/seo-website-ranking-checklist.html)
+- [我分享网站排名SEO优化参考方案](https://www.helloyu.top/seo/seo-website-ranking-checklist/)
 
-- [SEO优化：开启网站加速KeepAlive模式](https://www.helloyu.top/seo/seo-keep-alive-http.html)
+- [SEO优化：开启网站加速KeepAlive模式](https://www.helloyu.top/seo/seo-keep-alive-http/)
 
 希望我的文章对你有所帮助，有什么不懂得或者觉得我说的有问题的，可以留言评论。

@@ -53,7 +53,7 @@ Disallow: /seo/\*
 
 比如：
 ```
-Disallow: /（禁止蜘蛛爬取网站的所有目录 “/” 表示根目录下） Disallow: /SEO/（禁止蜘蛛爬取SEO目录） Disallow: /test.html （禁止蜘蛛爬取test.html页面）
+Disallow: /（禁止蜘蛛爬取网站的所有目录 “/” 表示根目录下） Disallow: /SEO/（禁止蜘蛛爬取SEO目录） Disallow: /test/ （禁止蜘蛛爬取test/页面）
 ```
 ### Allow
 
@@ -61,7 +61,7 @@ Disallow: /（禁止蜘蛛爬取网站的所有目录 “/” 表示根目录下
 
 比如：
 ```
-Allow: /SEO/test/（允许蜘蛛爬取SEO下的test目录） Allow: /SEO/test.html（允许蜘蛛爬取SEO目录中的test.html页面）
+Allow: /SEO/test/（允许蜘蛛爬取SEO下的test目录） Allow: /SEO/test/（允许蜘蛛爬取SEO目录中的test/页面）
 ```
 ### 两个通配符
 

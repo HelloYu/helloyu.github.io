@@ -11,7 +11,7 @@ tags:
 coverImage: "seo-ttfb.jpg"
 ---
 
-如果还不知道什么是**Dev Tools**的朋友，可以看看我之前写的文章《[Developer Tools在SEO中的运用: Network介绍篇](https://www.helloyu.top/seo/developer-tools-network-seo.html)》，这篇文章是Dev Tools 在SEO优化中的实际应用，当然Developer Tools是非常强大的工具，在**网站优化**的使用肯定无法用一两篇文章来说明，我会尽可能多写几篇文章去举例。
+如果还不知道什么是**Dev Tools**的朋友，可以看看我之前写的文章《[Developer Tools在SEO中的运用: Network介绍篇](https://www.helloyu.top/seo/developer-tools-network-seo/)》，这篇文章是Dev Tools 在SEO优化中的实际应用，当然Developer Tools是非常强大的工具，在**网站优化**的使用肯定无法用一两篇文章来说明，我会尽可能多写几篇文章去举例。
 
 ## 缩短TTFB的意义
 

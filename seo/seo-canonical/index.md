@@ -29,7 +29,7 @@ http://example.com
 http://example.com/index.php
 http://example.com/index.php?r...
 
-他们其实都是同一个网页，内容肯定也是大部份是重复和相似的，这就是为什么一般写[robots.txt文件规则](https://www.helloyu.top/seo/robots-mislead-seo.html)要把一些搜索参数排除，让搜索引擎不要重复收录，但是比如说像带www的地址和不带www的地址，可以使用服务器的301跳转，也可以使用canonical告诉搜索引擎跳转，使用canonical作301跳转，用户还是会在原来的URL地址，而搜索引擎会转向新的URL。
+他们其实都是同一个网页，内容肯定也是大部份是重复和相似的，这就是为什么一般写[robots.txt文件规则](https://www.helloyu.top/seo/robots-mislead-seo/)要把一些搜索参数排除，让搜索引擎不要重复收录，但是比如说像带www的地址和不带www的地址，可以使用服务器的301跳转，也可以使用canonical告诉搜索引擎跳转，使用canonical作301跳转，用户还是会在原来的URL地址，而搜索引擎会转向新的URL。
 
 ## canonical标签相关
 

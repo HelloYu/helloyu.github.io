@@ -32,4 +32,4 @@ SEO的思想就是：理解用户搜索行为，满足用户的搜索需要。�
 
 这对于用户来说是非常方便的，但是对于SEO来说，就是雪上加霜的事，所以这几年做SEO的人越来越少，入这一行的人越来越少，不是说这个行业不行了，而是现在的门槛要高的多，SEO方式也在不断的变化，不再是单一的网站优化，学习好SEO知识，对于从事网络营销相关行业是非常有帮助的。
 
-这篇文章已经讲了SEO的基础，大家看到这里应该有一些基本的概念，可以接下去看看《[SEO新手入门系列（三）：搜索引擎工作原理](https://www.helloyu.top/seo/seo-tutorial-moz-serial-2021-search-engine-first.html)》。
+这篇文章已经讲了SEO的基础，大家看到这里应该有一些基本的概念，可以接下去看看《[SEO新手入门系列（三）：搜索引擎工作原理](https://www.helloyu.top/seo/seo-tutorial-moz-serial-2021-search-engine-first/)》。

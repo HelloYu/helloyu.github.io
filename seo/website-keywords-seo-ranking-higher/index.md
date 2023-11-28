@@ -10,14 +10,14 @@ tags:
 coverImage: "seo-keywords-ranking-higher.jpg"
 ---
 
-关于**提升网站排名**的文章我已经写了几篇，那些文章介绍的方法都是比较理论的，就像[网站排名优化方案](https://www.helloyu.top/seo/seo-website-ranking-checklist.html)这篇文章中，把排名优化分为内部优化和外部优化，这篇文章我打算单独说一说，**网站关键词排名优化**的方法，但是内容会比较具体，就拿我举例，现在每日的访客数从一个月前的30-50左右，上升到80-100左右，长尾关键词的复利效应已经慢慢发挥作用了，文章已经有朋友留言评论了，但是以前留言评论的朋友很抱歉，没办法邮件通知回复，这两天把评论邮件通知功能给加上去了。
+关于**提升网站排名**的文章我已经写了几篇，那些文章介绍的方法都是比较理论的，就像[网站排名优化方案](https://www.helloyu.top/seo/seo-website-ranking-checklist/)这篇文章中，把排名优化分为内部优化和外部优化，这篇文章我打算单独说一说，**网站关键词排名优化**的方法，但是内容会比较具体，就拿我举例，现在每日的访客数从一个月前的30-50左右，上升到80-100左右，长尾关键词的复利效应已经慢慢发挥作用了，文章已经有朋友留言评论了，但是以前留言评论的朋友很抱歉，没办法邮件通知回复，这两天把评论邮件通知功能给加上去了。
 
 ## 内容为王
 
 内容为王是SEO领域中无可争辩的话题，如果内容质量不行，再多的**SEO技巧**和优化手段都是画蛇添足，这篇文章分享的**提升网站关键词排名技巧**都是建立在有实质性的内容之上，如果各位的内容不过关，可以先看看我下面两篇文章，提升下内容质量：
 
-- [SEO新手入门系列（六）：站内SEO内容篇](https://www.helloyu.top/seo/seo-tutorial-moz-serial-2021-on-page-content.html)
-- [SEO优化：输出优质原创文章](https://www.helloyu.top/seo/writing-seo-article.html)
+- [SEO新手入门系列（六）：站内SEO内容篇](https://www.helloyu.top/seo/seo-tutorial-moz-serial-2021-on-page-content/)
+- [SEO优化：输出优质原创文章](https://www.helloyu.top/seo/writing-seo-article/)
 
 ![content-king-of-SEO](images/content-king-of-SEO.jpg)
 
@@ -35,8 +35,8 @@ SEO内容为王
 
 新手SEO朋友一开始不知道怎么把单个关键词排名优化提升上去，要提升特定关键词排名，不单单是发对应关键词的文章这么简单，我们需要配合外链和内链，不会内链和外链优化的朋友可以先看看下面两篇文章：
 
-- [什么是SEO内链及怎么做内链？](https://www.helloyu.top/seo/internal-link-build-seo.html)
-- [如何做网站推广-外链为皇](https://www.helloyu.top/seo/website-external-links.html)
+- [什么是SEO内链及怎么做内链？](https://www.helloyu.top/seo/internal-link-build-seo/)
+- [如何做网站推广-外链为皇](https://www.helloyu.top/seo/website-external-links/)
 
 ![anchor-seo](images/anchor-seo-1024x539.png)
 
@@ -48,7 +48,7 @@ SEO内容为王
 - 锚文本关键词和被链接页面的相关性。
 - 锚文本关键词的一致性
 
-其中最关键的一点就是锚文本上下文环境，什么是锚文本上下文环境呢？比如说一篇卖化妆品的文章，介绍的是化妆品相关的内容，就不能使用『LV时尚女包』这个关键词链接到一个卖包的网站，因为上下文中谈论的基本是化妆品的内容，这就是**锚文本上下文环境要匹配**，我观察谷歌对这一块还是比较敏感的，伪原创的内容和采集的内容为什么排名不好，很大一部分原因就是内容上下文环境不匹配，中文类SEO博客很多，做[SEO优化](https://www.helloyu.top/seo/seo-course-first-step.html)这个关键词的站肯定也不少，为什么我这种新站，域名又不是很好，能够在一个月的时间把这个关键词做到首页，这都是SEO优化的细节，可以看看[我站点谷歌SEO优化排名情况分析](https://www.helloyu.top/seo/seozen-google-ranking-july.html)这篇文章最底部有SEO优化这个词的**排名优化记录**，里面记录的所有长尾词，排名都很稳定，不会像使用黑帽或者灰帽SEO手段的网站，上上下下排名不稳定。
+其中最关键的一点就是锚文本上下文环境，什么是锚文本上下文环境呢？比如说一篇卖化妆品的文章，介绍的是化妆品相关的内容，就不能使用『LV时尚女包』这个关键词链接到一个卖包的网站，因为上下文中谈论的基本是化妆品的内容，这就是**锚文本上下文环境要匹配**，我观察谷歌对这一块还是比较敏感的，伪原创的内容和采集的内容为什么排名不好，很大一部分原因就是内容上下文环境不匹配，中文类SEO博客很多，做[SEO优化](https://www.helloyu.top/seo/seo-course-first-step/)这个关键词的站肯定也不少，为什么我这种新站，域名又不是很好，能够在一个月的时间把这个关键词做到首页，这都是SEO优化的细节，可以看看[我站点谷歌SEO优化排名情况分析](https://www.helloyu.top/seo/seozen-google-ranking-july/)这篇文章最底部有SEO优化这个词的**排名优化记录**，里面记录的所有长尾词，排名都很稳定，不会像使用黑帽或者灰帽SEO手段的网站，上上下下排名不稳定。
 
 ## 提升网站停留时间
 

@@ -17,7 +17,7 @@ order: 13
 
 打开Keep-alive对比
 
-HTTP中的**keep-alive**模式就是为了解决前面说到的问题，一个资源请求后连接就断开，要下载另一个资源就要重新建立连接，服务器设置Keep-Alive支持后，能提高网页的访问速度，可以打开[谷歌浏览器开发者工具](https://www.helloyu.top/seo/developer-tools-network-seo.html)，看看当前服务器是否支持Keep-Alive模式，如果支持，返回头中应该要有如下信息：
+HTTP中的**keep-alive**模式就是为了解决前面说到的问题，一个资源请求后连接就断开，要下载另一个资源就要重新建立连接，服务器设置Keep-Alive支持后，能提高网页的访问速度，可以打开[谷歌浏览器开发者工具](https://www.helloyu.top/seo/developer-tools-network-seo/)，看看当前服务器是否支持Keep-Alive模式，如果支持，返回头中应该要有如下信息：
 
 ![Chrome-dev-tool-keep-alive](images/Chrome-dev-tool-keep-alive-1024x491.png)
 

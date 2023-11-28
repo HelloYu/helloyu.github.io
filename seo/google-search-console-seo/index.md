@@ -27,7 +27,7 @@ coverImage: "google-1-1.jpeg"
 
 ![谷歌 Crawl stats 数据](images/谷歌-Crawl-stats-数据.png)
 
-往下可以看到各`HOST`的请求次数，因为我做了全站301跳转到`www.helloyu.top/seo`域名下，所以这个数据也是符合预期的，如果做了301跳转和这里的结果不一样的，要好好看看是不是[全站301重定向规则](https://www.helloyu.top/seo/301-https-seo.html)写错了。
+往下可以看到各`HOST`的请求次数，因为我做了全站301跳转到`www.helloyu.top/seo`域名下，所以这个数据也是符合预期的，如果做了301跳转和这里的结果不一样的，要好好看看是不是[全站301重定向规则](https://www.helloyu.top/seo/301-https-seo/)写错了。
 
 ## SEO优化应用
 

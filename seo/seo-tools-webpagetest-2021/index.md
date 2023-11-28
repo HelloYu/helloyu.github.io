@@ -11,7 +11,7 @@ tags:
 coverImage: "webpagetest.jpg"
 ---
 
-我最开始的时候是做前端开发，所以收藏了比较多的[网站优化测速工具](https://www.helloyu.top/seo/google-lighthouse-seo-tool.html)，今天再跟大家分享一款前端网站测试工具在SEO优化中的应用，今天要介绍的是[WebPageTest](https://www.webpagetest.org)，这款工具是免费的，主要功能有测试网站打开速度，还有安全性等，也有提供收费的API接口，一般我们使用免费的就可以，下面是我的**WebPageTest**的得分：
+我最开始的时候是做前端开发，所以收藏了比较多的[网站优化测速工具](https://www.helloyu.top/seo/google-lighthouse-seo-tool/)，今天再跟大家分享一款前端网站测试工具在SEO优化中的应用，今天要介绍的是[WebPageTest](https://www.webpagetest.org)，这款工具是免费的，主要功能有测试网站打开速度，还有安全性等，也有提供收费的API接口，一般我们使用免费的就可以，下面是我的**WebPageTest**的得分：
 
 ![webpagetest-seozen-result](images/webpagetest-seozen-result-1024x640.png)
 
@@ -37,7 +37,7 @@ WebPageSpeed主界面样式
 
 我谷歌关键词排名情况
 
-可以看到像[WordPress安装教程](https://www.helloyu.top/seo/wordpress-apache-setup-2021.html)这种比较热门的关键词，谷歌对于我这种新站既然能给到6.9的排名位置：
+可以看到像[WordPress安装教程](https://www.helloyu.top/seo/wordpress-apache-setup-2021/)这种比较热门的关键词，谷歌对于我这种新站既然能给到6.9的排名位置：
 
 ![seozen-wordpress-install-keywords-ranking](images/seozen-wordpress-install-keywords-ranking-645x1024.png)
 
@@ -45,7 +45,7 @@ WebPageSpeed主界面样式
 
 可以看到第一个位置是**WordPress官网**，第二个是**[奶爸建站](https://blog.naibabiji.com)**的网站，他的**网站SEO**确实做的很不错，但是我这算是新站，能和他们排在首页已经感觉很满意，我认为其中很重要的一个原因，就是**网站加载速度**，写WordPress安装教程的网站肯定不少，但是会给新站排名靠前的就没有多少了，而且我更新文章的频率不是很高，现在也只是保持2天更新一篇，因为有自己的事情要做，到现在我也只是把基础的[SEO知识](https://www.helloyu.top/seo)使用上，还有很多**SEO技巧**没有时间去实施，在这里分享的都是一些比较简单和使用的东西，说了那么多言归正传。
 
-因为WebPageTest的一部分功能和Lighthouse有类似重复，我在之前[使用Lighthouse优化网站速度](https://www.helloyu.top/seo/google-lighthouse-seo-tool.html)中有简单的介绍到，这里只介绍Lighthouse没有的功能，WebPageTest第一项是安全得分，这个在**网站SEO排名**中也是很关键的一个步骤，首先要保证[网站安全](https://www.helloyu.top/seo/apache-php-version-hidden.html)，才能谈网站优化，我们点击第一项安全得分，看看里面有什么内容：
+因为WebPageTest的一部分功能和Lighthouse有类似重复，我在之前[使用Lighthouse优化网站速度](https://www.helloyu.top/seo/google-lighthouse-seo-tool/)中有简单的介绍到，这里只介绍Lighthouse没有的功能，WebPageTest第一项是安全得分，这个在**网站SEO排名**中也是很关键的一个步骤，首先要保证[网站安全](https://www.helloyu.top/seo/apache-php-version-hidden/)，才能谈网站优化，我们点击第一项安全得分，看看里面有什么内容：
 
 ![WebPageTest-security-score](images/WebPageTest-security-score-1024x640.png)
 

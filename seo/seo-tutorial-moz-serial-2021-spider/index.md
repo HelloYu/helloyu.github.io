@@ -23,11 +23,11 @@ order: 5
 - 不是所有搜索引擎爬虫都会遵守这个“君子协定的”
 - 二级域名如subdomain.example.com都需要放置自己独立的robots.txt文件
 
-使用robots.txt文件对于SEO来说是最基础的一步，也是最重要的一步，怎么重要？要是设置不好真的会让搜索引擎不收录你的网站的，不信的可以看看我前一段时间写的《[错误的robots文件设置对SEO的影响](https://www.helloyu.top/seo/robots-mislead-seo.html)》，就是因为错误设置了robots规则，导致搜索引擎收录下降，还好只是设置错了一个规则，如果搜索引擎读取了错误的robots.txt文件，那很有可能整个网站就不收录了，可以看看《[robots.txt文件介绍](https://www.helloyu.top/seo/robots-seo.html)》学习下robots文件的书写规则。
+使用robots.txt文件对于SEO来说是最基础的一步，也是最重要的一步，怎么重要？要是设置不好真的会让搜索引擎不收录你的网站的，不信的可以看看我前一段时间写的《[错误的robots文件设置对SEO的影响](https://www.helloyu.top/seo/robots-mislead-seo/)》，就是因为错误设置了robots规则，导致搜索引擎收录下降，还好只是设置错了一个规则，如果搜索引擎读取了错误的robots.txt文件，那很有可能整个网站就不收录了，可以看看《[robots.txt文件介绍](https://www.helloyu.top/seo/robots-seo/)》学习下robots文件的书写规则。
 
 ## sitemap文件
 
-sitemap.xml和robots.txt是直接和搜索引擎蜘蛛打交道的两个文件，sitemap主要告诉搜索引擎网站有哪些页面，robots主要告诉搜索引擎哪些网页不能访问，可以看看《[Sitemap的作用是什么-SEO基础](https://www.helloyu.top/seo/what-sitemap-is.html)》学习下怎么写sitemap文件，我比较懒，使用的是wordpress插件生成的，再配合搜索引擎自动提交代码。
+sitemap.xml和robots.txt是直接和搜索引擎蜘蛛打交道的两个文件，sitemap主要告诉搜索引擎网站有哪些页面，robots主要告诉搜索引擎哪些网页不能访问，可以看看《[Sitemap的作用是什么-SEO基础](https://www.helloyu.top/seo/what-sitemap-is/)》学习下怎么写sitemap文件，我比较懒，使用的是wordpress插件生成的，再配合搜索引擎自动提交代码。
 
 ![百度sitemap收录](images/WX20210409-152820@2x.png)
 
