@@ -7,9 +7,10 @@ tags:
   - "NestJS入门"
   - "NestJS学习"
 coverImage: "clean-architecture.png"
+order: 2
 ---
 
-在前一篇文章《[\[ChatGPT\]Clean Architecture架构在NestJS中的实现](https://www.helloyu.top/clean-architecture-in-nestjs-by-chatgpt.html)》，我用ChatGPT生成了一些关于**clean architecture**的介绍，但是感觉不够通顺，也不够严谨，在这篇文章我会进行示例介绍，从零开始搭建一个Clean Architecture(简称CA)的NestJS项目，CA中关键的四个点：Entities(不是指代数据库的entity)、Use Cases 业务用例、Interface Adapaters 接口适配器（Controller/Presenter等）、Frameworks & Drivers 框架和驱动，现在不理解没关系，接着往下看，我用实例来讲解。
+在前一篇文章《[\[ChatGPT\]Clean Architecture架构在NestJS中的实现](../clean-architecture-in-nestjs-by-chatgpt/)》，我用ChatGPT生成了一些关于**clean architecture**的介绍，但是感觉不够通顺，也不够严谨，在这篇文章我会进行示例介绍，从零开始搭建一个Clean Architecture(简称CA)的NestJS项目，CA中关键的四个点：Entities(不是指代数据库的entity)、Use Cases 业务用例、Interface Adapaters 接口适配器（Controller/Presenter等）、Frameworks & Drivers 框架和驱动，现在不理解没关系，接着往下看，我用实例来讲解。
 
 ## 初始化项目
 

@@ -7,6 +7,7 @@ tags:
   - "NestJS入门"
   - "NestJS学习"
 coverImage: "nestjs-for-beginners.png"
+order: 1
 ---
 
 ## NestJS基础知识
@@ -57,12 +58,12 @@ NestJS 是一个基于 TypeScript 构建的现代化 Web 应用程序开发框�
 
 注：图片来源网络
 
-想要了解更详细点内容，可参看《[NestJS中middleware、interceptor、guards、pipe等的执行顺序？NestJS请求周期？](https://www.helloyu.top/nestjs-request-lifecycle-middlerware-interceptors-pipes-guards.html)》
+想要了解更详细点内容，可参看《[NestJS中middleware、interceptor、guards、pipe等的执行顺序？NestJS请求周期？](https://www.helloyu.top/nestjs/nestjs-request-lifecycle-middlerware-interceptors-pipes-guards/)》
 
 ## NestJS基础知识
 
 我花了点时间，整理了一份比较详细的NestJS学习入门基础知，分享给各位：
 
-![](https://www.helloyu.top/wp-content/uploads/2023/04/NestJS-1.png?v=1681049087)
+![](images/nestjs-basic-knowledgement-mindmap.png)
 
 注：图片太大，如果模糊可以右键新窗口打开，或者下载查看。或者在MindMaster搜索NestJS基础知识。

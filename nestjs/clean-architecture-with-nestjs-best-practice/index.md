@@ -9,32 +9,33 @@ tags:
   - "NestJS学习"
   - "软件架构设计"
 coverImage: "clean-architecture-core.png"
+order: 4
 ---
 
-上一篇文章《[Clean Architecture在NestJS中的实践（二）：连接MongoDB数据库(Dockerization)](https://www.helloyu.top/clean-architecture-with-nestjs-best-practice-mongodb-dockerization.html)》我已经介绍了如何使用Docker配置一个MongoDB服务，并使用Mongoose连接和使用数据库，上一篇文章的代码在`CatModule`中调用Mongoose包来使用MongoDB数据库，这样的耦合性太高了一点，不利于后期更换数据库，而且会在service中编写大量业务代码，Clean Architecture架构就是将业务代码抽象为`usecase`，并且在调用framework的时候以接口的形式作进一步抽象，下面我首先介绍CA架构的核心内容。
+上一篇文章《[Clean Architecture在NestJS中的实践（二）：连接MongoDB数据库(Dockerization)](../clean-architecture-with-nestjs-best-practice-mongodb-dockerization/)》我已经介绍了如何使用Docker配置一个MongoDB服务，并使用Mongoose连接和使用数据库，上一篇文章的代码在`CatModule`中调用Mongoose包来使用MongoDB数据库，这样的耦合性太高了一点，不利于后期更换数据库，而且会在service中编写大量业务代码，Clean Architecture架构就是将业务代码抽象为`usecase`，并且在调用framework的时候以接口的形式作进一步抽象，下面我首先介绍CA架构的核心内容。
 
 ## UsecaseProxy
 
 学过软件工程的同学应该都很熟悉一句话：“高内聚，低耦合”，我们CA的核心也是这个思想，内层的实体不会依赖外层，在NestJS中，我们用DynamicModule的方式来实现动态实例化模块，我们可以根据条件来改变模块注入的内容，这样我们就能很方便的进行测试或者是更换第三方插件，只要实现同一个接口，就像一个中继器一样，做数据整合分发，下面看一个UsecaseProxy的代码示例：
 ```ts
 @Module({
-  imports: \[MongooseRepositoriesModule\],
+  imports: [MongooseRepositoriesModule],
 })
 export class UserUsecasesProxyModule {
-  static GET\_USERS\_USECASE\_PROXY = 'GetUsersUsecaseProxy';
+  static GET_USERS_USECASE_PROXY = 'GetUsersUsecaseProxy';
 
   static register(): DynamicModule {
     return {
       module: UserUsecasesProxyModule,
-      providers: \[
+      providers: [
         {
-          inject: \[UserRepository\],
-          provide: UserUsecasesProxyModule.GET\_USERS\_USECASE\_PROXY,
+          inject: [UserRepository],
+          provide: UserUsecasesProxyModule.GET_USERS_USECASE_PROXY,
           useFactory: (userRepository: UserRepository) =>
             new UsecaseProxy(new GetUsersUsecase(userRepository)),
         },
-      \],
-      exports: \[UserUsecasesProxyModule.GET\_USERS\_USECASE\_PROXY\],
+      ],
+      exports: [UserUsecasesProxyModule.GET_USERS_USECASE_PROXY],
     };
   }
 }
@@ -51,12 +52,12 @@ export class UsecaseProxy<T> {
 这里的`UserRepository`是在MongooseRepositoriesModule里导出的：
 ```ts
 @Module({
-  imports: \[
+  imports: [
     MongoDBConfigModule,
-    MongooseModule.forFeature(\[{ name: User.name, schema: UserSchema }\]),
-  \],
-  providers: \[UserRepository\],
-  exports: \[UserRepository\],
+    MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
+  ],
+  providers: [UserRepository],
+  exports: [UserRepository],
 })
 export class MongooseRepositoriesModule {}
 ```
@@ -81,7 +82,7 @@ export class UserRepository implements IUserRepository {
 
     return userModel;
   }
-  async findAll(): Promise<UserModel\[\]> {
+  async findAll(): Promise<UserModel[]> {
     const users = await this.userEntity.find();
 
     return;
@@ -100,9 +101,9 @@ export class UserRepository implements IUserRepository {
 @Controller('users')
 export class UserController {
   constructor(
-    @Inject(UserUsecasesProxyModule.GET\_USERS\_USECASE\_PROXY)
+    @Inject(UserUsecasesProxyModule.GET_USERS_USECASE_PROXY)
     private readonly getUsersUsecaseProxy: UsecaseProxy<GetUsersUsecase>,
-    @Inject(UserUsecasesProxyModule.CREATE\_USER\_USECASE\_PROXY)
+    @Inject(UserUsecasesProxyModule.CREATE_USER_USECASE_PROXY)
     private readonly createUserUsecaseProxy: UsecaseProxy<CreateUsersUsecase>,
     @Inject(UserMapper)
     private readonly mapper: UserMapper,
@@ -120,7 +121,7 @@ export class UserController {
   }
 
   @Get()
-  async getUsers(): Promise<UserPresenter\[\]> {
+  async getUsers(): Promise<UserPresenter[]> {
     const users = await this.getUsersUsecaseProxy.getInstance().execute();
 
     return users.map((item) => this.mapper.fromModelToPresenter(item));
@@ -169,8 +170,8 @@ export class CreateUsersUsecase {
 ```
 可以看到我们插入一条用户信息，这里是看不到有任何第三方框架的东西，依赖也都是domain层的内容，到这里应该会比较清楚要如何在NestJS中实现Clean Architecture架构了吧，接下去的任何扩展，都是以这个为基础去做，把地基建好，接来下就是一些非常机械化的复制粘贴操作了，我就不做过多讲解了，文章末尾会贴出源码地址，最好能把前两篇文章都看看：
 
-《[Clean Architecture在NestJS中的实践（一）：项目初始化](http://clean-architecture-with-nestjs-best-practice-init)》
+《[Clean Architecture在NestJS中的实践（一）：项目初始化](../clean-architecture-with-nestjs-best-practice-init/)》
 
-《[Clean Architecture在NestJS中的实践（二）：连接MongoDB数据库(Dockerization)](https://www.helloyu.top/clean-architecture-with-nestjs-best-practice-mongodb-dockerization.html)》
+《[Clean Architecture在NestJS中的实践（二）：连接MongoDB数据库(Dockerization)](../clean-architecture-with-nestjs-best-practice-mongodb-dockerization/)》
 
 Github: [clean-architecture-with-nestjs](https://github.com/HelloYu/clean-architecture-with-nestjs) (不要忘记star下哦！)

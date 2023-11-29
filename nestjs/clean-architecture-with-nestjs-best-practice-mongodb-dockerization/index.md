@@ -10,13 +10,14 @@ tags:
   - "软件架构师"
   - "软件架构设计"
 coverImage: "mongodb-with-docker.png"
+order: 3
 ---
 
-这是CA架构在NestJS中实践的第二篇文章，上一篇文章《[Clean Architecture在NestJS中的实践（一）：项目初始化](http://clean-architecture-with-nestjs-best-practice-init)》已经完成了项目的初始化，和载入配置参数的功能，这篇文章我们来通过Docker搭建MongoDB数据库，再通过Mongoose来连接数据库。
+这是CA架构在NestJS中实践的第二篇文章，上一篇文章《[Clean Architecture在NestJS中的实践（一）：项目初始化](../clean-architecture-with-nestjs-best-practice-init/)》已经完成了项目的初始化，和载入配置参数的功能，这篇文章我们来通过Docker搭建MongoDB数据库，再通过Mongoose来连接数据库。
 
 ## Docker化MongoDB
 
-要是不知道什么是Docker的朋友，可以先看看这篇文章《[Docker是什么？一篇Docker入门的好文章](https://www.helloyu.top/docker-introduction.html)》，我为什么要使用Docker呢，第一方便，第二干净，第三可移植性好，我们可以很方便的通过`docker-compose up/down`这些命令来启动容器和服务，不想用的时候就down掉，也不用记各种不同东西的启动关闭命令，下面我们需要在项目下面新建一个`docker-compose.local.yml`文件，来配置MongoDB数据库。
+要是不知道什么是Docker的朋友，可以先看看这篇文章《[Docker是什么？一篇Docker入门的好文章](../../docker/docker-introduction/)》，我为什么要使用Docker呢，第一方便，第二干净，第三可移植性好，我们可以很方便的通过`docker-compose up/down`这些命令来启动容器和服务，不想用的时候就down掉，也不用记各种不同东西的启动关闭命令，下面我们需要在项目下面新建一个`docker-compose.local.yml`文件，来配置MongoDB数据库。
 
 ![](images/image-29.png)
 

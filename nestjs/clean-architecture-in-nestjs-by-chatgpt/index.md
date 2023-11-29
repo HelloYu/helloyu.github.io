@@ -27,7 +27,7 @@ CA的基本结构通常由以下几个部分组成：
 
 CA的一个重要特点是，每个部分都只依赖于比自己低一层的部分，避免了高层部分直接依赖于低层部分的情况。这种结构使得系统的各个部分都能独立演化，不会产生副作用，也能避免由于依赖关系的变化而导致的系统崩溃。
 
-CA的思想并不是最近才出现的，它最早是由Robert C. Martin在他的文章《[The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)》中提出的。它已经被广泛应用于许多大型项目和企业，如Android应用程序、Java EE应用程序、Node.js应用程序等。在现代Web应用程序开发中，使用CA进行开发已经成为了一种趋势。
+CA的思想并不是最近才出现的，它最早是由Robert C. Martin在他的文章《[The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture/)》中提出的。它已经被广泛应用于许多大型项目和企业，如Android应用程序、Java EE应用程序、Node.js应用程序等。在现代Web应用程序开发中，使用CA进行开发已经成为了一种趋势。
 
 ## Entity业务实体层
 

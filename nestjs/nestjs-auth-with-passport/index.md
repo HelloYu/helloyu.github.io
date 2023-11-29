@@ -45,7 +45,7 @@ coverImage: "nestjs-authentication.jpg"
 
 7. 下次用户请求带上授权信息
 
-这里我将基于《[Clean Architecture在NestJS中的实践](https://www.helloyu.top/clean-architecture-with-nestjs-best-practice-init.html)》这篇文章中的代码，来实现登录验证，并在下次请求的时候，在请求头中带上JWT信息。
+这里我将基于《[Clean Architecture在NestJS中的实践](https://www.helloyu.top/clean-architecture-with-nestjs-best-practice-init/)》这篇文章中的代码，来实现登录验证，并在下次请求的时候，在请求头中带上JWT信息。
 
 ## 验证用户身份
 
