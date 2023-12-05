@@ -17,7 +17,7 @@ order: 3
 
 ## Docker化MongoDB
 
-要是不知道什么是Docker的朋友，可以先看看这篇文章《[Docker是什么？一篇Docker入门的好文章](../../docker/docker-introduction/)》，我为什么要使用Docker呢，第一方便，第二干净，第三可移植性好，我们可以很方便的通过`docker-compose up/down`这些命令来启动容器和服务，不想用的时候就down掉，也不用记各种不同东西的启动关闭命令，下面我们需要在项目下面新建一个`docker-compose.local.yml`文件，来配置MongoDB数据库。
+要是不知道什么是Docker的朋友，可以先看看这篇文章《[Docker是什么？一篇Docker入门的好文章](/docker/docker-introduction/)》，我为什么要使用Docker呢，第一方便，第二干净，第三可移植性好，我们可以很方便的通过`docker-compose up/down`这些命令来启动容器和服务，不想用的时候就down掉，也不用记各种不同东西的启动关闭命令，下面我们需要在项目下面新建一个`docker-compose.local.yml`文件，来配置MongoDB数据库。
 
 ![](images/image-29.png)
 

@@ -5,6 +5,7 @@ export const POST_FILES = [
 	'android/**/*.md',
 	'seo/**/*.md',
 	'nestjs/**/*.md',
+	'docker/**/*.md',
 ]
 export const EXCERPT_MARK = '<!--more-->'
 export const EXCERPT_LENGTH = 280
