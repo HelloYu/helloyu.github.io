@@ -6,7 +6,9 @@ import matter from 'gray-matter'
 import { androidComposeSidebar } from './sidebar/android-compose.sidebar'
 import { androidFaqSidebar } from './sidebar/android-faq.sidebar'
 import { seoSidebar } from './sidebar/seo.sidebar'
-import { nestJsSidebar } from './sidebar/nestjs.sidebar'
+import { nestJsFaqSidebar } from './sidebar/nestjs-faq.sidebar'
+import { nestJsBeginnerSidebar } from './sidebar/nestjs-beginner.sidebar'
+import { nestJsMasterSidebar } from './sidebar/nestjs-master.sidebar'
 
 export const themeConfig: DefaultTheme.Config = {
 	logo: '/logo.png',
@@ -32,7 +34,23 @@ export const themeConfig: DefaultTheme.Config = {
 		{
 			text: 'NestJS',
 			activeMatch: '/nestjs/*',
-			link: '/nestjs/nestjs-learning-for-beginners-basic-knowledge/',
+			items: [
+				{
+					text: 'NestJS基础',
+					link: '/nestjs/beginner/nestjs-learning-for-beginners-basic-knowledge/',
+					activeMatch: '/nestjs/beginner/*',
+				},
+				{
+					text: 'NestJS进阶',
+					link: '/nestjs/master/clean-architecture-with-nestjs-best-practice-init/',
+					activeMatch: '/nestjs/master/*',
+				},
+				// {
+				// 	text: 'NestJS开发FAQ',
+				// 	link: '/nestjs/faq/nestjs-providers-imports-exports/',
+				// 	activeMatch: '/nestjs/faq/*',
+				// },
+			],
 		},
 		{
 			text: 'Android',
@@ -40,11 +58,11 @@ export const themeConfig: DefaultTheme.Config = {
 			items: [
 				{
 					text: 'Jetcpack Compose',
-					link: '/android/jetpack-compose-introduction',
-					activeMatch: '/android/jetpack-compose-*',
+					link: '/android/jetpack-compose/jetpack-compose-introduction',
+					activeMatch: '/android/jetpack-compose/*',
 				},
 				{
-					text: '常见开发问题FAQ',
+					text: 'Android开发FAQ',
 					link: '/android/faq/android-faq-aar-not-work/',
 					activeMatch: '/android/faq/*',
 				},
@@ -70,7 +88,9 @@ export const themeConfig: DefaultTheme.Config = {
 		'/android/': androidComposeSidebar(),
 		'/android/faq/': androidFaqSidebar(),
 		'/seo/': seoSidebar(),
-		'/nestjs/': nestJsSidebar(),
+		// '/nestjs/faq': nestJsFaqSidebar(),
+		'/nestjs/beginner': nestJsBeginnerSidebar(),
+		'/nestjs/master': nestJsMasterSidebar(),
 	},
 	search: {
 		// 搜索配置（二选一）
