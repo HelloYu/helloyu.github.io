@@ -11,17 +11,17 @@ coverImage: "CameraX-1.jpg"
 
 前面两篇文章已经分别介绍了如何使用Accompanist在Jetpack Compose中获取设备权限，还有如何使用CameraX进行照相预览，此篇文章为这个系列的第三篇：
 
-- 《[在Jetpack Compose中使用Accompanist获取设备权限](https://www.seozen.top/building-photo-app-with-jetpack-compose-camerax-and-coroutines-part-one-device-permissions.html)》
+- 《[在Jetpack Compose中使用Accompanist获取设备权限](../jetpack-compose-building-photo-app-with-camerax-and-coroutines-part-one-device-permissions/)》
 
-- 《[在Jetpack Compose中使用CameraX进行照相预览](https://www.seozen.top/building-photo-app-with-jetpack-compose-camerax-and-coroutines-part-two-preview.html(opens in a new tab))》
+- 《[在Jetpack Compose中使用CameraX进行照相预览](../jetpack-compose-building-photo-app-with-camerax-and-coroutines-part-two-preview/)》
 
 - 《在Jetpack Compose中使用CameraX对相机截图操作》(本文)
 
-- 《在Jetpack Compose中从图库选择照片》
+- [《在Jetpack Compose中从图库选择照片》](../jetpack-compose-building-photo-app-with-camerax-and-coroutines-part-four-select-photo/)
 
 我们需要在相机预览界面添加一个按钮，用来截图操作：
 
-![](https://www.seozen.top/wp-content/uploads/2023/06/29a7b45364057a11398a32aaf806efc-356x768.jpg?v=1686224505)
+![](images/29a7b45364057a11398a32aaf806efc-scaled.jpg))
 
 首先创建一个按钮的Compose函数：
 ```kotlin
@@ -249,6 +249,6 @@ class MainActivity : ComponentActivity() {
 
 运行项目，你就可以进行截图操作，效果如下：
 
-![](https://www.seozen.top/wp-content/uploads/2023/06/cd1363419ff21aa90cdaab39d6fc416-356x768.jpg?v=1686226172)
+![](images/cd1363419ff21aa90cdaab39d6fc416-scaled.jpg)
 
 想要完整代码，请前往第二篇文章，到文章最底部的链接获取。

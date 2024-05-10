@@ -58,7 +58,7 @@ NestJS 是一个基于 TypeScript 构建的现代化 Web 应用程序开发框�
 
 注：图片来源网络
 
-想要了解更详细点内容，可参看《[NestJS中middleware、interceptor、guards、pipe等的执行顺序？NestJS请求周期？](https://www.helloyu.top/nestjs/nestjs-request-lifecycle-middlerware-interceptors-pipes-guards/)》
+想要了解更详细点内容，可参看《[NestJS中middleware、interceptor、guards、pipe等的执行顺序？NestJS请求周期？](/nestjs/nestjs-request-lifecycle-middlerware-interceptors-pipes-guards/)》
 
 ## NestJS基础知识
 

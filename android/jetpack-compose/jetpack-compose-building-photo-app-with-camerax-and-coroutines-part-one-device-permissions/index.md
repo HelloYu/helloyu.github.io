@@ -12,12 +12,9 @@ coverImage: "android-cameraX.png"
 SEO禅最近在看CameraX的资料，看到一个系列文章，讲解的挺好，打算翻译成中文，顺便学习下，这个系列会分解成4篇小文章，每个文章都有自己的主题，分别是：
 
 - 《在Jetpack Compose中使用Accompanist获取设备权限》(本文)
-
-- 《在Jetpack Compose中使用CameraX进行照相预览》
-
-- 《在Jetpack Compose中使用CameraX对相机截图操作》
-
-- 《在Jetpack Compose中从图库选择照片》
+- [《在Jetpack Compose中使用CameraX进行照相预览》](../jetpack-compose-building-photo-app-with-camerax-and-coroutines-part-two-preview/)
+- [《在Jetpack Compose中使用CameraX对相机截图操作》](../jetpack-compose-building-photo-app-with-camerax-and-coroutines-part-three-capture-picture/)
+- [《在Jetpack Compose中从图库选择照片》](../jetpack-compose-building-photo-app-with-camerax-and-coroutines-part-four-select-photo/)
 
 ## Manifest添加权限配置
 
@@ -37,7 +34,7 @@ Android在使用设备功能的时候，都要进行权限的申请，我们可�
 ![](images/image.png)
 
 之后创建一个Permission的方法，方便获取权限：
-```
+```kotlin
 @Composable
 private fun Rationale(
     text: String,
@@ -81,8 +78,8 @@ fun Permission(
     )
 }
 ```
-Rationale的方法这里面就是一个Dialog的提示，主要是Permission中的`rememberPermissionState`和`[PermissionRequired](https://github.com/google/accompanist/commit/478398e4b4a0cabe8081fd8d4218f2a1e59da8aa)`两个方法，这两个方法是`Accompanist`提供的，可以自己看看[API文档](https://google.github.io/accompanist/api/permissions/com.google.accompanist.permissions/index.html),之后我们在项目中调用我们的Permission方法请求权限就行：
-```
+Rationale的方法这里面就是一个Dialog的提示，主要是Permission中的`rememberPermissionState`和[PermissionRequired](https://github.com/google/accompanist/commit/478398e4b4a0cabe8081fd8d4218f2a1e59da8aa)两个方法，这两个方法是`Accompanist`提供的，可以自己看看[API文档](https://google.github.io/accompanist/api/permissions/com.google.accompanist.permissions/index.html),之后我们在项目中调用我们的Permission方法请求权限就行：
+```kotlin
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -119,10 +116,10 @@ class MainActivity : ComponentActivity() {
 ```
 运行之后会有如下图示结果：
 
-![](https://www.seozen.top/wp-content/uploads/2023/06/669149a46cdcbb680d17572c6864435-890x1920.jpg?v=1686147589)
+![](images/669149a46cdcbb680d17572c6864435-scaled.jpg)
 
-![accompanist-get-camera-permission-failure](https://www.seozen.top/wp-content/uploads/2023/06/a5afb3da27ee83e9cf7fafc14eec58f-scaled-e1686147814502-768x298.jpg?v=1686147609)
+![accompanist-get-camera-permission-failure](images/a5afb3da27ee83e9cf7fafc14eec58f-scaled-e1686147814502.jpg)
 
-![accompanist-get-camera-permission-success](https://www.seozen.top/wp-content/uploads/2023/06/14b9d02bce52d5093113896545a2345-scaled-e1686147737242-768x182.jpg?v=1686147677)
+![accompanist-get-camera-permission-success](images/14b9d02bce52d5093113896545a2345-scaled-e1686147737242.jpg)
 
 一开始会提示请求权限，如果不成功会提示打开设置菜单，进行手动开启权限，如果成功会显示成功提示。到这里我们就算使用Accompanist成功请求到照相机的权限，下一篇文章我们尝试在Compose中预览相机实时取景的功能。

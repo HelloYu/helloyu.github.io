@@ -9,7 +9,7 @@ tags:
 coverImage: "CameraX.jpg"
 ---
 
-这篇文章将建立在上一篇的基础上《[从零开始创建一个PhotoApp使用CameraX和Compose：在Jetpack Compose中使用Accompanist获取设备权限](https://www.seozen.top/building-photo-app-with-jetpack-compose-camerax-and-coroutines-part-one-device-permissions.html)》进行讲解，我们将会使用CameraX来使用相机的功能。
+这篇文章将建立在上一篇的基础上《[从零开始创建一个PhotoApp使用CameraX和Compose：在Jetpack Compose中使用Accompanist获取设备权限](../jetpack-compose-building-photo-app-with-camerax-and-coroutines-part-one-device-permissions/)》进行讲解，我们将会使用CameraX来使用相机的功能。
 
 ## CameraX
 
@@ -118,7 +118,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 ```
-![](https://www.seozen.top/wp-content/uploads/2023/06/b4f475d3f80f6506c5b64a76a277a8b-356x768.jpg?v=1686208424)
+![](images/b4f475d3f80f6506c5b64a76a277a8b-scaled.jpg)
 
 完整的代码可以访问：[AndroidCameraXWithJetpackCompose](https://github.com/HelloYu/AndroidCameraXWithJetpackCompose)
 
