@@ -2,6 +2,7 @@ import { PageData, TransformPageContext } from 'vitepress'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { markdownToTxt } from 'markdown-to-txt'
+import path from 'path'
 
 /**
  * 生成文章描述信息
@@ -47,6 +48,33 @@ export function getSubdirNames(dirPath: string): string[] {
 		.readdirSync(dirPath, { withFileTypes: true })
 		.filter((dirent) => dirent.isDirectory())
 		.map((dirent) => dirent.name)
+}
+
+export function getSidebar(sidebarDir: string) {
+	const seoDir = path.join(__dirname, `../../${sidebarDir}/`)
+	const subDirs = getSubdirNames(seoDir)
+	const sidebar: any[] = []
+	subDirs.forEach((subdirectory) => {
+		const subdirectoryPath = path.join(seoDir, subdirectory)
+		const indexPath = path.join(subdirectoryPath, 'index.md')
+		const indexMdContent = readFile(indexPath)
+		if (!indexMdContent) return
+		const page: any = matter(indexMdContent)
+
+		if (page) {
+			sidebar.push({
+				text: page.data?.title,
+				link: `/${sidebarDir}/${subdirectory}/`,
+				order: page.data?.order ?? 9999,
+			})
+		} else {
+			console.log(`${sidebarDir} Subdirectory: ${subdirectory}`)
+			console.log(`Index.md not found in this ${sidebarDir} subdirectory.`)
+			console.log('-----------------------')
+		}
+	})
+
+	return sidebar.sort((a, b) => a.order - b.order)
 }
 
 export function readFile(filepath: string): string | null {

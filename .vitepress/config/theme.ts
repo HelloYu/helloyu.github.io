@@ -1,11 +1,10 @@
 import type { DefaultTheme, PageData, TransformPageContext } from 'vitepress'
 import { localSearchOptions } from './search/local-search'
-import { getSubdirNames, readFile } from '.vitepress/theme/utils'
+import { getSidebar, getSubdirNames, readFile } from '.vitepress/theme/utils'
 import path from 'path'
 import matter from 'gray-matter'
 import { androidComposeSidebar } from './sidebar/android-compose.sidebar'
 import { androidFaqSidebar } from './sidebar/android-faq.sidebar'
-import { seoSidebar } from './sidebar/seo.sidebar'
 import { nestJsFaqSidebar } from './sidebar/nestjs-faq.sidebar'
 import { nestJsBeginnerSidebar } from './sidebar/nestjs-beginner.sidebar'
 import { nestJsMasterSidebar } from './sidebar/nestjs-master.sidebar'
@@ -31,6 +30,11 @@ export const themeConfig: DefaultTheme.Config = {
 		text: '如有不妥，请提PR修正，感谢！',
 	},
 	nav: [
+		{
+			text: 'Linux',
+			activeMatch: '/linux/',
+			link: '/linux/linux-newbie-ps-command/',
+		},
 		{
 			text: 'NestJS',
 			activeMatch: '/nestjs/*',
@@ -87,7 +91,8 @@ export const themeConfig: DefaultTheme.Config = {
 	sidebar: {
 		'/android/': androidComposeSidebar(),
 		'/android/faq/': androidFaqSidebar(),
-		'/seo/': seoSidebar(),
+		'/seo/': getSidebar('seo'),
+		'/linux/': getSidebar('linux'),
 		// '/nestjs/faq': nestJsFaqSidebar(),
 		'/nestjs/beginner': nestJsBeginnerSidebar(),
 		'/nestjs/master': nestJsMasterSidebar(),
