@@ -73,6 +73,11 @@ export const themeConfig: DefaultTheme.Config = {
 			],
 		},
 		{
+			text: '树莓派',
+			activeMatch: '/raspberrypi/',
+			link: '/raspberrypi/install-os/',
+		},
+		{
 			text: 'SEO优化',
 			activeMatch: '/seo/',
 			link: '/seo/seo-course-first-step/',
@@ -93,6 +98,7 @@ export const themeConfig: DefaultTheme.Config = {
 		'/android/faq/': androidFaqSidebar(),
 		'/seo/': getSidebar('seo'),
 		'/linux/': getSidebar('linux'),
+		'/raspberrypi/': getSidebar('raspberrypi'),
 		// '/nestjs/faq': nestJsFaqSidebar(),
 		'/nestjs/beginner': nestJsBeginnerSidebar(),
 		'/nestjs/master': nestJsMasterSidebar(),
