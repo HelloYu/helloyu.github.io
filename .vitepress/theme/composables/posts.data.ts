@@ -35,13 +35,29 @@ export default createContentLoader(POST_FILES, {
 					categories: frontmatter?.categories ?? [],
 					tags: frontmatter.tags ?? [],
 					url: url,
-					excerpt,
+					excerpt: updateImageSrc(excerpt, url),
 					date: formatDate(frontmatter.date),
 				}
 			})
 			.sort((a, b) => b.date.time - a.date.time)
 	},
 })
+
+/**
+ * 更新 excerpt 中 <img> 标签的 src 属性
+ * @param {string} excerpt - 原始的 excerpt 字符串
+ * @param {string} urlPrefix - 要拼接的 URL 前缀
+ * @returns {string} 更新后的 excerpt 字符串
+ */
+function updateImageSrc(excerpt: string | undefined, urlPrefix: string) {
+	if (excerpt == undefined) return
+	return excerpt.replace(
+		/<img\s+([^>]*?)src=["']\.\/([^"']*?)["']([^>]*?)>/gi,
+		(match, p1, p2, p3) => {
+			return `<img ${p1}src="${urlPrefix}${p2}"${p3}>`
+		}
+	)
+}
 
 function generateTitle(
 	frontmatter: Record<string, any>,
