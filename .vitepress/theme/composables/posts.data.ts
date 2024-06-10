@@ -1,5 +1,9 @@
 import { createContentLoader } from 'vitepress'
 import { EXCERPT_LENGTH, EXCERPT_MARK, POST_FILES } from '../../constants'
+import { fileURLToPath } from 'url'
+import { createHash } from 'crypto'
+import { readFileSync } from 'fs'
+import { parse } from 'path'
 
 export interface Post {
 	title: string
@@ -51,12 +55,25 @@ export default createContentLoader(POST_FILES, {
  */
 function updateImageSrc(excerpt: string | undefined, urlPrefix: string) {
 	if (excerpt == undefined) return
+
 	return excerpt.replace(
 		/<img\s+([^>]*?)src=["']\.\/([^"']*?)["']([^>]*?)>/gi,
 		(match, p1, p2, p3) => {
-			return `<img ${p1}src="${urlPrefix}${p2}"${p3}>`
+			const imageUrl = fileToUrl(urlPrefix + p2)
+			return `<img ${p1}src="${imageUrl}"${p3}>`
 		}
 	)
+}
+
+function fileToUrl(file: string) {
+	if (process.env.NODE_ENV !== 'production') return file
+	const path = fileURLToPath(new URL('../../../' + file, import.meta.url))
+	const parsed = parse(path)
+	const hash = createHash('sha256')
+		.update(readFileSync(path))
+		.digest('hex')
+		.slice(0, 8)
+	return `/assets/${parsed.name}.${hash}${parsed.ext}`
 }
 
 function generateTitle(
