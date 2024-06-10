@@ -4,7 +4,9 @@ export const POST_FILES = [
 	'blog/**/*.md',
 	'android/**/*.md',
 	'seo/**/*.md',
+	'raspberrypi/**/*.md',
 	'nestjs/**/*.md',
+	'linux/**/*.md',
 	'docker/**/*.md',
 ]
 export const EXCERPT_MARK = '<!--more-->'
