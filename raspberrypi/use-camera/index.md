@@ -1,5 +1,5 @@
 ---
-title: "树莓派通过VNC连接使用摄像头"
+title: "通过VNC连接使用摄像头"
 date: "2024-06-11"
 categories: 
   - "树莓派"

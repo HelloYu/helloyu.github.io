@@ -1,5 +1,5 @@
 ---
-title: "树莓派使用Picamera2和opencv进行人脸检测"
+title: "使用Picamera2和opencv进行人脸检测"
 date: "2024-06-11"
 categories: 
   - "树莓派"
@@ -41,7 +41,7 @@ while True:
     cv2.imshow("Camera", im)
     cv2.waitKey(1)
 ```
-如果不出错的画就能看到视频画面，面部会被绿框标记：
+如果不出错的话就能看到视频画面，面部会被绿框标记：
 ![picamera2-opencv-face-detection](picamera2-opencv-face-detection.png)
 
 ## 参考资料

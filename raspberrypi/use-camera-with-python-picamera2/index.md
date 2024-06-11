@@ -1,5 +1,5 @@
 ---
-title: "树莓派使用Picamera2库调用摄像头"
+title: "使用Picamera2库调用摄像头"
 date: "2024-06-11"
 categories: 
   - "树莓派"
