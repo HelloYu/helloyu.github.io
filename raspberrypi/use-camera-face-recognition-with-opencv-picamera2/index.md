@@ -54,20 +54,20 @@ source myenv/bin/activate
 
 # 安装相关依赖包 
 sudo apt -y update && sudo apt -y full-upgrade
-sudo apt install cmake build-essential pkg-config git
+sudo apt -y install cmake build-essential pkg-config git
 
-sudo apt install libjpeg-dev libjxl-dev libtiff-dev libpng-dev libwebp-dev libopenexr-dev
-sudo apt install libavdevice-dev libavfilter-dev libavformat-dev libopenblas-dev
+sudo apt -y install libjpeg-dev libjxl-dev libtiff-dev libpng-dev libwebp-dev libopenexr-dev
+sudo apt -y install libavdevice-dev libavfilter-dev libavformat-dev libopenblas-dev
 
-sudo apt install libavcodec-dev libavformat-dev  libswresample-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libdc1394-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev libavutil-dev
+sudo apt -y install libavcodec-dev libavformat-dev  libswresample-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libdc1394-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev libavutil-dev
 
-sudo apt install libgtk-3-dev  python3-pyqt5
-sudo apt install libqt5gui5 libqt5webkit5 libqt5test5
-sudo apt install libatlas-base-dev liblapacke-dev gfortran
+sudo apt -y install libgtk-3-dev  python3-pyqt5
+sudo apt -y install libqt5gui5 libqt5webkit5 libqt5test5
+sudo apt -y install libatlas-base-dev liblapacke-dev gfortran
 
-sudo apt install libhdf5-dev libhdf5-103
-sudo apt install python3-dev python3-pip python3-numpy
-sudo apt install fonts-wqy-zenhei
+sudo apt -y install libhdf5-dev libhdf5-103
+sudo apt -y install python3-dev python3-pip python3-numpy
+sudo apt -y install fonts-wqy-zenhei
 
 pip3 install imutils
 pip3 install opencv-contrib-python
@@ -387,10 +387,11 @@ print("[INFO] 清理完成，程序退出")
 
 ```
 
-## 参考资料
-[https://github.com/carolinedunn/facial_recognition](https://github.com/carolinedunn/facial_recognition)
-[https://github.com/justsaumit/opencv-face-recognition-rpi4](https://github.com/justsaumit/opencv-face-recognition-rpi4)
-[https://github.com/ageitgey/face_recognition/blob/master/examples/facerec_from_webcam_faster.py](https://github.com/ageitgey/face_recognition/blob/master/examples/facerec_from_webcam_faster.py)
+Github仓库地址：https://github.com/HelloYu/FaceRecognitionOnRaspberryPi.git
 
-[https://pypi.org/project/face-recognition/#files](https://pypi.org/project/face-recognition/#files)
-[https://mirrors.tuna.tsinghua.edu.cn/help/debian/](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
+## 参考资料
+ - [https://github.com/carolinedunn/facial_recognition](https://github.com/carolinedunn/facial_recognition)
+ - [https://github.com/justsaumit/opencv-face-recognition-rpi4](https://github.com/justsaumit/opencv-face-recognition-rpi4)
+ - [https://github.com/ageitgey/face_recognition/blob/master/examples/facerec_from_webcam_faster.py](https://github.com/ageitgey/face_recognition/blob/master/examples/facerec_from_webcam_faster.py)
+ - [https://pypi.org/project/face-recognition/#files](https://pypi.org/project/face-recognition/#files)
+ - [https://mirrors.tuna.tsinghua.edu.cn/help/debian/](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
