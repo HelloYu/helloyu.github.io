@@ -67,7 +67,7 @@ export const themeConfig: DefaultTheme.Config = {
 				},
 				{
 					text: 'Android开发FAQ',
-					link: '/android/faq/android-faq-aar-not-work/',
+					link: '/android/faq/android-studio-aar-not-work/',
 					activeMatch: '/android/faq/*',
 				},
 			],
