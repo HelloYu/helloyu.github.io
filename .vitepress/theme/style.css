@@ -72,3 +72,7 @@
 .vp-doc a:hover {
 	text-decoration: underline;
 }
+
+.content .vp-doc img {
+	cursor: pointer;
+}
