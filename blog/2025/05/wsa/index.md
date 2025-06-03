@@ -42,9 +42,6 @@ categories:
 ### 1. 开启开发者模式
 1. 打开 **Windows Subsystem for Android™ 设置**
 2. 开启 **开发者模式** → 点击 **IP 地址** 查看端口（默认 `58526`）
-
-![开启开发者模式](https://i.imgur.com/5QjKX3z.png)
-
 ### 2. 连接 ADB
 1. **下载 ADB 工具**：
    - [Android Platform Tools](https://developer.android.com/tools/releases/platform-tools)
